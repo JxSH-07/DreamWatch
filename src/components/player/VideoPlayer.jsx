@@ -20,9 +20,10 @@ import SeekBar from './SeekBar.jsx';
     hostName                 shown to guests
     variant                  'party' | 'solo'
     reactions                floating reactions [{ id, emoji, who, color, left, dx, dur }]
+    overlay                  extra layer over the picture (party camera tiles)
 */
 export default function VideoPlayer({
-  match, events, position, now, getTarget, isPlaying, version, controls, hostName, variant = 'party', reactions = [],
+  match, events, position, now, getTarget, isPlaying, version, controls, hostName, variant = 'party', reactions = [], overlay = null,
 }) {
   const containerRef = useRef(null);
   const { hostRef, playerRef, ready, error } = useYouTubePlayer(match.youtube_id);
@@ -120,6 +121,8 @@ export default function VideoPlayer({
           </div>
         ))}
       </div>
+
+      {overlay}
 
       <Scorebug match={match} events={events} position={position} />
 

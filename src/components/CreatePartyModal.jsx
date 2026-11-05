@@ -60,7 +60,7 @@ export default function CreatePartyModal({ match, onClose }) {
       p_name: name.trim() || 'Watch party',
       p_emails: invites.filter((i) => i.status === 'subscribed').map((i) => i.email),
       p_id: partyId,
-      p_settings: { ai_moderation: aiMod, guests_can_poll: false },
+      p_settings: { ai_moderation: aiMod, guests_can_poll: false, allow_cameras: true },
     });
     setCreating(false);
     if (error) {

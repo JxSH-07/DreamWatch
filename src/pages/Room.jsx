@@ -8,6 +8,8 @@ import ChatTab, { memberLook } from '../components/panel/ChatTab.jsx';
 import TimelineTab, { useFreshEvents, visibleKeyEvents } from '../components/panel/TimelineTab.jsx';
 import PollsTab, { Leaderboard, computeLeaderboard } from '../components/panel/PollsTab.jsx';
 import PeopleTab from '../components/panel/PeopleTab.jsx';
+import { CallAudio, CallControls, CallTile, PipTiles } from '../components/call/CallUI.jsx';
+import { CallProvider, useCall } from '../context/CallContext.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { PartyProvider, useParty } from '../context/PartyContext.jsx';
 import { useToast } from '../context/ToastContext.jsx';
@@ -120,6 +122,7 @@ function RoomHeader({ match, hostName }) {
 function ParticipantStrip({ match, hostId }) {
   const { user } = useAuth();
   const { members, online } = useParty();
+  const { media, layout, speaking } = useCall();
   const joined = members.filter((m) => m.status === 'joined');
   return (
     <div className="strip" aria-label="Participants">
@@ -127,11 +130,19 @@ function ParticipantStrip({ match, hostId }) {
         const look = memberLook(m, match.config);
         const team = m.team_supported ? teamInfo(match.config, m.team_supported) : null;
         const isOnline = online.has(m.user_id);
+        const call = media[m.user_id];
+        const showTile = layout === 'strip' && call?.video;
+        const isSpeaking = speaking.has(m.user_id);
         return (
-          <div key={m.user_id} className={`strip-item ${isOnline ? '' : 'offline'}`} title={isOnline ? 'Online' : 'Offline'}>
-            <Avatar name={look.name} ring={look.ring} size={46} online={isOnline}>
-              {m.muted && <span className="muted-badge" title="Muted in chat"><UserX size={10} strokeWidth={3} aria-hidden="true" /></span>}
-            </Avatar>
+          <div key={m.user_id} className={`strip-item ${isOnline ? '' : 'offline'} ${showTile ? 'has-cam' : ''}`} title={isOnline ? 'Online' : 'Offline'}>
+            {showTile ? (
+              <CallTile stream={call.stream} version={call.version} name={look.name} ring={look.ring} self={call.self}
+                micOff={!call.mic} speaking={isSpeaking} />
+            ) : (
+              <Avatar name={look.name} ring={look.ring} size={46} online={isOnline} className={isSpeaking ? 'speaking' : ''}>
+                {m.muted && <span className="muted-badge" title="Muted in chat"><UserX size={10} strokeWidth={3} aria-hidden="true" /></span>}
+              </Avatar>
+            )}
             <span className="nm">{m.user_id === user.id ? 'You' : look.name}</span>
             <span className="tm" style={{ color: team?.text ?? 'var(--muted-3)' }}>{m.user_id === hostId ? 'HOST · ' : ''}{team?.short ?? '—'}</span>
           </div>
@@ -286,8 +297,14 @@ function RoomInner() {
     { id: 'people', label: `People · ${joinedCount}`, badge: 0 },
   ];
 
+  const callPeople = members.filter((m) => m.status === 'joined').map((m) => {
+    const look = memberLook(m, match.config);
+    return { userId: m.user_id, name: look.name, ring: look.ring };
+  });
+
   return (
-    <>
+    <CallProvider active={row.status === 'live'}>
+      <CallAudio />
       <RoomHeader match={match} hostName={hostName} />
       <div className="room-grid">
         <section className="room-player" aria-label="Match player">
@@ -295,6 +312,7 @@ function RoomInner() {
             match={match} events={events} position={position} now={now} getTarget={getTarget}
             isPlaying={row.status === 'live' && row.is_playing} version={row.playback_version}
             controls={controls} hostName={hostName} variant="party" reactions={floating}
+            overlay={<PipTiles people={callPeople} isHost={isHost} />}
           />
         </section>
 
@@ -306,6 +324,7 @@ function RoomInner() {
               ))}
             </div>
             <span className="hide-md" style={{ fontSize: 12, color: 'var(--muted-3)' }}>Everyone sees reactions</span>
+            <CallControls />
           </div>
           <ParticipantStrip match={match} hostId={row.host_id} />
         </section>
@@ -334,7 +353,7 @@ function RoomInner() {
         </aside>
       </div>
       {row.status === 'ended' && <EndedScreen match={match} events={events} />}
-    </>
+    </CallProvider>
   );
 }
 

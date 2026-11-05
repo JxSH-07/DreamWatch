@@ -22,6 +22,12 @@ Football fans who can't be in the same room end up watching on separate streams 
 - **Sync:** the host writes one row (`parties`: anchor position/time, live delay, playing flag, version). Every client computes the same position from it with `partyPosition()` and corrects the YouTube player when it drifts more than 1.5 s. The same function runs inside the Edge Functions (`npm run sync-shared` copies it), so Gaffer and polls use a position computed on the server, never one sent by the client.
 - **In production** this would use a licensed live data feed and stream timestamps instead of hand-set video offsets.
 
+## Video calls
+
+Party members can turn on their camera and mic in the room. Video tiles appear in the participant strip or over the match picture ("On video"), or can be hidden while audio keeps playing. A speaking glow shows who is talking. The host can stop someone's video, ask a guest to turn theirs on, or turn off guest cameras for the whole party.
+
+Calls are peer-to-peer WebRTC: every participant connects directly to every other one, which suits watch parties of up to about 6 people. The browsers exchange connection details through a Supabase Realtime channel (`call:{partyId}`), so audio and video never pass through our servers. Calls use Google's public STUN server by default. On strict networks (some office Wi-Fi and mobile carriers) a direct connection isn't possible, so set `VITE_ICE_SERVERS` to include a TURN server (see `.env.example`).
+
 ## AI features
 
 - **Gaffer Q&A**: grounded in StatsBomb event data up to the party's current moment, names the relevant IFAB Law, and labels each answer as *from match data*, *likely explanation* or *general rule*. In live mode the server only sends past events, and a spoiler check retries or blocks answers that mention later goals, extra time, penalties or the winner.
@@ -51,6 +57,7 @@ After changing `src/lib/matchTime.js` or `src/lib/playback.js`, run `npm run syn
 - Moderation runs just after a message is posted, so a message can be visible for 1–2 s before it's hidden. A production version would screen messages before posting.
 - Flagged messages are hidden in the UI, but their text can still be read through the API by party members.
 - Embedded YouTube videos depend on the uploader allowing embeds in the viewer's region.
+- Video calls connect everyone to everyone, which suits small parties only. Without a TURN server, some networks can't connect. The call signalling and the host's "stop video" request use public Realtime broadcast, so a technically minded party member could fake them. A production version would use authorized private channels and a media server (SFU) for larger groups.
 
 ## Credits
 

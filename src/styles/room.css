@@ -298,3 +298,28 @@
 .state-card h2 { font-family: var(--font-cond); margin: 0; font-size: 34px; font-weight: 800; letter-spacing: 0.5px; }
 .state-card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
 .recap { width: 100%; text-align: left; padding: 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+
+/* ---------- Video calls ---------- */
+@keyframes speakGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(182, 255, 59, 0); } 50% { box-shadow: 0 0 0 4px rgba(182, 255, 59, 0.35); } }
+.speaking { animation: speakGlow 1.2s ease-in-out infinite; }
+.cam-tile { position: relative; display: block; border-radius: 10px; overflow: hidden; border: 2px solid var(--line-3); flex-shrink: 0; }
+.cam-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: transparent; }
+.cam-tile video.mirror { transform: scaleX(-1); }
+.cam-init { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
+.cam-name { position: absolute; left: 5px; bottom: 4px; font-size: 10px; font-weight: 700; color: var(--text); background: rgba(7, 9, 15, 0.75); padding: 1px 5px; border-radius: 4px; max-width: calc(100% - 10px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cam-mic-off { position: absolute; right: 4px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--live); color: #fff; display: flex; align-items: center; justify-content: center; }
+.pip-tiles { position: absolute; right: 14px; display: flex; gap: 8px; z-index: 4; pointer-events: none; flex-wrap: wrap-reverse; justify-content: flex-end; max-width: 60%; }
+.pip-tiles .cam-tile { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5); }
+.player:fullscreen .pip-tiles .cam-tile { width: 180px !important; height: 106px !important; }
+.call-controls { margin-left: auto; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cam-btn { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line-3); background: var(--card); color: var(--text); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+.cam-btn.on { border-color: var(--accent); background: rgba(182, 255, 59, 0.12); color: var(--accent-soft); }
+.cam-btn.blocked { color: var(--muted-3); }
+.mic-btn { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--line-3); background: var(--card); color: var(--text); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.mic-btn.off { border-color: rgba(255, 59, 71, 0.5); background: rgba(255, 59, 71, 0.12); color: var(--danger); }
+.cam-btn:hover, .mic-btn:hover { filter: brightness(1.2); }
+.segmented.sm button { height: 36px; padding: 0 10px; font-size: 12px; }
+.strip-item.has-cam { width: 120px; }
+.strip-item.has-cam .nm { max-width: 120px; }
+@media (max-width: 1023px) { .call-controls { margin-left: 0; } }
+@media (max-width: 640px) { .pip-tiles .cam-tile { width: 84px !important; height: 50px !important; } .pip-tiles { right: 8px; } }

@@ -70,7 +70,7 @@ create table public.parties (
   anchor_time double precision,
   live_delay_s numeric not null default 0,
   playback_version int not null default 0,
-  settings jsonb not null default '{"ai_moderation": true, "guests_can_poll": false}'::jsonb,
+  settings jsonb not null default '{"ai_moderation": true, "guests_can_poll": false, "allow_cameras": true}'::jsonb,
   created_at timestamptz not null default now(),
   ended_at timestamptz
 );
@@ -253,7 +253,7 @@ begin
   insert into parties (id, match_id, host_id, name, status, settings)
   values (
     coalesce(p_id, gen_random_uuid()), p_match_id, me.id, p_name, 'lobby',
-    coalesce(p_settings, '{"ai_moderation": true, "guests_can_poll": false}'::jsonb)
+    coalesce(p_settings, '{"ai_moderation": true, "guests_can_poll": false, "allow_cameras": true}'::jsonb)
   ) returning id into pid;
 
   insert into party_members (party_id, user_id, role, status, joined_at)

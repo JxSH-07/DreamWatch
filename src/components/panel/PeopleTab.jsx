@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Check } from 'lucide-react';
+import { Check, Video } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.jsx';
 import { useParty } from '../../context/PartyContext.jsx';
+import { useCall } from '../../context/CallContext.jsx';
 import { teamInfo } from '../../lib/format.js';
 import { Avatar, ConfirmDialog, Switch } from '../ui.jsx';
 import TestingAloneHint from '../TestingAloneHint.jsx';
@@ -10,11 +11,13 @@ import { memberLook } from './ChatTab.jsx';
 const SETTINGS = [
   { id: 'ai_moderation', label: 'AI moderation', hint: 'Gaffer hides abusive messages. You can still review them.' },
   { id: 'guests_can_poll', label: 'Guests can create polls', hint: 'Off: only you and Gaffer start polls.' },
+  { id: 'allow_cameras', label: 'Participant cameras', hint: 'Let guests turn on their video. Turning this off stops every guest camera.', defaultOn: true },
 ];
 
 export default function PeopleTab({ match, onEnd }) {
   const { user } = useAuth();
-  const { party, members, online, isHost, updateMember, updateParty } = useParty();
+  const { party, members, online, isHost, updateMember, updateParty, rpc } = useParty();
+  const { media, allowCameras, hostStopVideo, hostAskVideo } = useCall();
   const [confirm, setConfirm] = useState(null);
   const [hintHidden, setHintHidden] = useState(false);
   const config = match.config;
@@ -24,6 +27,14 @@ export default function PeopleTab({ match, onEnd }) {
     .sort((a, b) => (a.role === 'host' ? -1 : b.role === 'host' ? 1 : 0) || (a.status === 'joined' ? -1 : 1));
   const joined = list.filter((m) => m.status === 'joined');
   const hostName = members.find((m) => m.role === 'host')?.profile?.display_name ?? 'The host';
+
+  const changeSetting = async (id, value) => {
+    const ok = await updateParty({ settings: { ...party.settings, [id]: value } });
+    if (ok && id === 'allow_cameras' && !value) {
+      const hostName = members.find((m) => m.user_id === user.id)?.profile?.display_name ?? 'The host';
+      rpc('post_system_message', { p_party: party.id, p_body: `${hostName} turned off guest cameras` });
+    }
+  };
 
   const doConfirm = async () => {
     const c = confirm;
@@ -58,6 +69,11 @@ export default function PeopleTab({ match, onEnd }) {
                       </span>
                       {m.status === 'invited' && <span className="tag-sm" style={{ color: 'var(--muted)', background: 'var(--line)' }}>Invited</span>}
                       {m.muted && <span className="tag-sm" style={{ color: 'var(--bg)', background: 'var(--warn)' }}>Muted</span>}
+                      {media[m.user_id]?.video && (
+                        <span className="tag-sm" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: 'var(--accent-soft)', background: 'var(--accent-a10)' }}>
+                          <Video size={11} strokeWidth={2.4} aria-hidden="true" />Video on
+                        </span>
+                      )}
                     </div>
                     <div className="line2">
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
@@ -78,6 +94,11 @@ export default function PeopleTab({ match, onEnd }) {
                     <button type="button" className="btn btn-xs btn-ghost" onClick={() => updateMember(m.user_id, { muted: !m.muted })}>
                       {m.muted ? 'Unmute in chat' : 'Mute in chat'}
                     </button>
+                    {m.status === 'joined' && (media[m.user_id]?.video || allowCameras) && (
+                      <button type="button" className="btn btn-xs btn-ghost" onClick={() => (media[m.user_id]?.video ? hostStopVideo(m.user_id) : hostAskVideo(m.user_id))}>
+                        {media[m.user_id]?.video ? 'Stop video' : 'Ask to turn on video'}
+                      </button>
+                    )}
                     <button type="button" className="btn btn-xs btn-danger" onClick={() => setConfirm({ kind: 'remove', userId: m.user_id, name: look.name })}>
                       Remove from party
                     </button>
@@ -98,9 +119,9 @@ export default function PeopleTab({ match, onEnd }) {
                   <span className="d">{s.hint}</span>
                 </div>
                 <Switch
-                  checked={!!party.settings?.[s.id]}
+                  checked={s.defaultOn ? party.settings?.[s.id] !== false : !!party.settings?.[s.id]}
                   labelledBy={`set-${s.id}`}
-                  onChange={(v) => updateParty({ settings: { ...party.settings, [s.id]: v } })}
+                  onChange={(v) => changeSetting(s.id, v)}
                 />
               </div>
             ))}
