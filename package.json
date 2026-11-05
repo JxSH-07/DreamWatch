@@ -1,0 +1,25 @@
+{
+  "name": "dream-watch",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "seed": "node supabase/seed/seed.js",
+    "sync-shared": "node scripts/sync-shared.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "dotenv": "^16.4.5",
+    "vite": "^5.4.10"
+  }
+}

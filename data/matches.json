@@ -1,0 +1,182 @@
+[
+ {
+  "id": "arg-fra-2022-final",
+  "mode": "live",
+  "title": "Argentina vs France",
+  "competition": "FIFA World Cup 2022 — Final",
+  "venue": "Lusail Stadium, Lusail",
+  "home": "Argentina",
+  "away": "France",
+  "youtube_id": "RgqKdplLIk4",
+  "period_starts": {
+   "1": 96,
+   "2": 3296,
+   "3": 6604,
+   "4": 7613,
+   "5": 8838
+  },
+  "period_ends": {
+   "1": 3250,
+   "2": 6513,
+   "3": 7568,
+   "4": 8760,
+   "5": 9196
+  },
+  "period_base_minute": {
+   "1": 0,
+   "2": 45,
+   "3": 90,
+   "4": 105
+  },
+  "period_length_min": {
+   "1": 45,
+   "2": 45,
+   "3": 15,
+   "4": 15
+  },
+  "loop": {
+   "start": 96,
+   "end": 9229
+  },
+  "lineups": {
+   "Argentina": {
+    "formation": "4-3-3",
+    "starting_xi": [
+     "Emiliano Martínez (Goalkeeper)",
+     "Nahuel Molina (Right Back)",
+     "Cristian Romero (Right Center Back)",
+     "Nicolás Otamendi (Left Center Back)",
+     "Nicolás Tagliafico (Left Back)",
+     "Enzo Fernandez (Center Defensive Midfield)",
+     "Rodrigo De Paul (Right Center Midfield)",
+     "Alexis Mac Allister (Left Center Midfield)",
+     "Lionel Messi (Right Wing)",
+     "Ángel Di María (Left Wing)",
+     "Julián Álvarez (Center Forward)"
+    ]
+   },
+   "France": {
+    "formation": "4-2-3-1",
+    "starting_xi": [
+     "Hugo Lloris (Goalkeeper)",
+     "Jules Koundé (Right Back)",
+     "Raphaël Varane (Right Center Back)",
+     "Dayotchanculle Upamecano (Left Center Back)",
+     "Theo Hernández (Left Back)",
+     "Aurélien Tchouaméni (Right Defensive Midfield)",
+     "Adrien Rabiot (Left Defensive Midfield)",
+     "Ousmane Dembélé (Right Wing)",
+     "Antoine Griezmann (Center Attacking Midfield)",
+     "Kylian Mbappé (Left Wing)",
+     "Olivier Giroud (Center Forward)"
+    ]
+   }
+  },
+  "events_file": "arg_fra_events.json",
+  "data_credit": "Event data: StatsBomb Open Data (free for non-commercial use)",
+  "teams": {
+   "Argentina": {
+    "short": "ARG",
+    "color": "#7CC4F4",
+    "text": "#A4D8FA"
+   },
+   "France": {
+    "short": "FRA",
+    "color": "#5B6CF5",
+    "text": "#9AA6FF"
+   }
+  }
+ },
+ {
+  "id": "betis-barca-2025-md15",
+  "mode": "replay",
+  "title": "Real Betis vs Barcelona",
+  "competition": "LaLiga 2025/26 — Matchday 15",
+  "venue": "Estadio de La Cartuja, Seville",
+  "date": "2025-12-06",
+  "home": "Real Betis",
+  "away": "Barcelona",
+  "final_score": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "youtube_id": "93LPZJkCW2w",
+  "period_starts": {
+   "1": 353,
+   "2": 3463
+  },
+  "period_ends": {
+   "1": 3353,
+   "2": 6540
+  },
+  "period_base_minute": {
+   "1": 0,
+   "2": 45
+  },
+  "period_length_min": {
+   "1": 45,
+   "2": 45
+  },
+  "lineups": {
+   "Real Betis": {
+    "formation": "4-2-3-1",
+    "manager": "Manuel Pellegrini",
+    "starting_xi": [
+     "Álvaro Valles",
+     "Aitor Ruibal",
+     "Marc Bartra",
+     "Natan",
+     "Valentín Gómez",
+     "Marc Roca",
+     "Sergi Altimira",
+     "Antony",
+     "Pablo Fornals",
+     "Abde Ezzalzouli",
+     "Cucho Hernández"
+    ]
+   },
+   "Barcelona": {
+    "formation": "4-2-3-1",
+    "manager": "Hansi Flick",
+    "starting_xi": [
+     "Joan García",
+     "Jules Koundé",
+     "Pau Cubarsí",
+     "Eric García",
+     "Gerard Martín",
+     "Alejandro Balde",
+     "Pedri",
+     "Lamine Yamal",
+     "Roony Bardghji",
+     "Marcus Rashford",
+     "Ferran Torres"
+    ],
+    "notes": "Lamine Yamal played mostly in an interior, creative midfield role rather than on the right wing. Lewandowski and Raphinha stayed on the bench."
+   }
+  },
+  "full_time_stats": {
+   "possession": "38% – 62%",
+   "shots": "17 – 16",
+   "shots_on_target": "5 – 8",
+   "corners": "7 – 7",
+   "offsides": "6 – 1",
+   "yellow_cards": "4 – 2",
+   "expected_goals": "2.52 – 2.60"
+  },
+  "referee": "Francisco José Hernández Maeso",
+  "events_file": "betis_barca_events.json",
+  "data_credit": "Event data compiled from published match reports; times are approximate to the minute",
+  "teams": {
+   "Real Betis": {
+    "short": "BET",
+    "color": "#2FBF71",
+    "text": "#6FDC9E"
+   },
+   "Barcelona": {
+    "short": "BAR",
+    "color": "#4C8DF6",
+    "text": "#8DB6FF"
+   }
+  }
+ }
+]

@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+supabase/seed/.env
+supabase/.temp
+supabase/.branches
+.vercel
+.DS_Store
+.playwright-mcp
