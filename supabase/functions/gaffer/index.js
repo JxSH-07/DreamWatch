@@ -2,7 +2,7 @@
 import { corsHeaders, json } from '../_shared/cors.js';
 import { adminClient, getCaller, rateLimit } from '../_shared/supabase.js';
 import { loadPartyContext, isMember, buildMatchContext, aboutLabel } from '../_shared/matches.js';
-import { callClaude, parseJson } from '../_shared/claude.js';
+import { callModel, parseJson } from '../_shared/llm.js';
 
 const SYSTEM = `You are Gaffer, the AI match companion inside Dream Watch, a watch-party app where friends watch football together and chat. Fans tag you in the group chat to ask what's happening on the pitch.
 
@@ -148,7 +148,7 @@ Deno.serve(async (req) => {
     const baseSystem = SYSTEM.replace('{MODE_RULES}', (live ? LIVE_RULES : REPLAY_RULES).replaceAll('{clock}', built.clock));
 
     async function ask(extra) {
-      const raw = await callClaude({ system: extra ? `${baseSystem}\n\n${extra}` : baseSystem, user, schema: SCHEMA });
+      const raw = await callModel({ system: extra ? `${baseSystem}\n\n${extra}` : baseSystem, user, schema: SCHEMA });
       try {
         const out = parseJson(raw);
         return { answer: String(out.answer ?? '').trim(), about_event_id: out.about_event_id ?? null, rule: out.rule ?? null, confidence: out.confidence ?? 'general' };

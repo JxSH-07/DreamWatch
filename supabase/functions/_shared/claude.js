@@ -1,12 +1,13 @@
 import Anthropic from 'npm:@anthropic-ai/sdk@0.136.0';
 
-const client = new Anthropic({ apiKey: Deno.env.get('ANTHROPIC_API_KEY') });
 const MODEL = Deno.env.get('GAFFER_MODEL') ?? 'claude-haiku-5-5';
+let client = null; // created on first use so a Gemini-only deployment never needs an Anthropic key
 
 // One short JSON-returning call. `schema` constrains the output via structured
 // outputs; low effort keeps chat replies fast. Thinking tokens count toward
 // max_tokens, so leave headroom above the visible answer length.
 export async function callClaude({ system, user, schema, maxTokens = 2000 }) {
+  client ??= new Anthropic({ apiKey: Deno.env.get('ANTHROPIC_API_KEY') });
   const response = await client.messages.create({
     model: MODEL,
     max_tokens: maxTokens,

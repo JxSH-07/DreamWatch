@@ -8,3 +8,4 @@ supabase/.branches
 .vercel
 .DS_Store
 .playwright-mcp
+supabase/functions/.env

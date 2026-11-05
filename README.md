@@ -17,7 +17,7 @@ Football fans who can't be in the same room end up watching on separate streams 
 
 - **React (Vite, JavaScript)** front end on Vercel. Visual design ported from the Claude Design export: Barlow Condensed and Inter, "Night Match" dark palette, Pitch Lime accent.
 - **Supabase**: Postgres with row-level security, Auth (email + password), Realtime (one channel per party for row changes, broadcast reactions/typing and presence), and Edge Functions.
-- **Claude** is called only from Edge Functions (`gaffer`, `generate-poll`, `moderate-message`) through the Anthropic SDK, with structured JSON outputs. The model comes from `GAFFER_MODEL` (default `claude-haiku-5-5`).
+- **AI** runs only in Edge Functions (`gaffer`, `generate-poll`, `moderate-message`), never in the browser, using structured JSON outputs. The provider is switchable (`supabase/functions/_shared/llm.js`): **Gemini** (`gemini-3.5-flash`, falling back to `gemini-3.1-flash-lite` when Google reports high demand) when `GEMINI_API_KEY` is set, or **Claude** (`claude-haiku-5-5` via the Anthropic SDK) with `ANTHROPIC_API_KEY`.
 - **Simulated live:** the 2022 final plays as a looping broadcast. The live edge is `loop.start + (serverNow − LIVE_EPOCH) mod loopLength`, so every viewer worldwide is at the same point. All clients use the server clock (`get_server_time` RPC) rather than their own.
 - **Sync:** the host writes one row (`parties`: anchor position/time, live delay, playing flag, version). Every client computes the same position from it with `partyPosition()` and corrects the YouTube player when it drifts more than 1.5 s. The same function runs inside the Edge Functions (`npm run sync-shared` copies it), so Gaffer and polls use a position computed on the server, never one sent by the client.
 - **In production** this would use a licensed live data feed and stream timestamps instead of hand-set video offsets.
@@ -31,19 +31,19 @@ Calls are peer-to-peer WebRTC: every participant connects directly to every othe
 ## AI features
 
 - **Gaffer Q&A**: grounded in StatsBomb event data up to the party's current moment, names the relevant IFAB Law, and labels each answer as *from match data*, *likely explanation* or *general rule*. In live mode the server only sends past events, and a spoiler check retries or blocks answers that mention later goals, extra time, penalties or the winner.
-- **AI prediction polls**: Claude writes the question; the server builds the options and time window, and Postgres settles the result from `match_events`, so the model never decides who was right.
+- **AI prediction polls**: the model writes the question; the server builds the options and time window, and Postgres settles the result from `match_events`, so the model never decides who was right.
 - **AI moderation**: flags harassment, hate, threats, sexual content, personal info and spam, while banter is allowed. The host can review and restore. Members can also report messages manually.
 
 ## Setup
 
 ```bash
 npm install
-cp .env.example .env            # VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY
+cp .env.example .env            # VITE_SUPABASE_URL, VITE_SUPABASE_PUBLISHABLE_KEY
 ```
 
 1. Create a Supabase project and run `supabase/migrations/0001_init.sql` (`supabase db push` or the SQL editor).
 2. **Auth → Providers → Email:** enabled, **Confirm email OFF**. **Auth → URL configuration:** Site URL = your Vercel URL.
-3. `supabase secrets set ANTHROPIC_API_KEY=... GAFFER_MODEL=claude-haiku-5-5`
+3. Put the AI secrets in `supabase/functions/.env` (gitignored; see `.env.example`), e.g. `GEMINI_API_KEY=...`, then run `supabase secrets set --env-file supabase/functions/.env`.
 4. `npm run sync-shared && supabase functions deploy gaffer generate-poll moderate-message`
 5. Put the event files in `data/` (`arg_fra_events.json`, `betis_barca_events.json`), add `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` to `supabase/seed/.env`, then run `npm run seed`.
 6. `npm run dev` locally, or deploy to Vercel with the two `VITE_` variables. `vercel.json` rewrites deep links like `/party/<id>`.

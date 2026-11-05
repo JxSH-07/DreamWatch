@@ -2,21 +2,30 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const url = Deno.env.get('SUPABASE_URL');
 
-export const adminClient = createClient(url, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'), {
-  auth: { persistSession: false },
+// Projects on the new API keys expose SUPABASE_SECRET_KEYS ({"default": "sb_secret_…"});
+// older ones SUPABASE_SERVICE_ROLE_KEY. Use whichever is present.
+function serverKey() {
+  const legacy = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+  if (legacy) return legacy;
+  try {
+    const keys = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS') ?? '{}');
+    return keys.default ?? Object.values(keys)[0];
+  } catch {
+    return undefined;
+  }
+}
+
+export const adminClient = createClient(url, serverKey(), {
+  auth: { persistSession: false, autoRefreshToken: false },
 });
 
-// Identify the caller from the request's JWT. Returns { user, userClient } or null.
+// Identify the caller from the request's access token. Returns { user } or null.
 export async function getCaller(req) {
-  const authHeader = req.headers.get('Authorization');
-  if (!authHeader) return null;
-  const userClient = createClient(url, Deno.env.get('SUPABASE_ANON_KEY'), {
-    global: { headers: { Authorization: authHeader } },
-    auth: { persistSession: false },
-  });
-  const { data, error } = await userClient.auth.getUser();
+  const token = req.headers.get('Authorization')?.replace(/^Bearer\s+/i, '');
+  if (!token) return null;
+  const { data, error } = await adminClient.auth.getUser(token);
   if (error || !data?.user) return null;
-  return { user: data.user, userClient };
+  return { user: data.user };
 }
 
 // Sliding one-minute rate limit on ai_requests. Records the request when allowed.

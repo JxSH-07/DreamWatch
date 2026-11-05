@@ -1,7 +1,7 @@
 // AI chat moderation (HANDOFF §15.2). Runs just after posting; flags only clear abuse.
 import { corsHeaders, json } from '../_shared/cors.js';
 import { adminClient, getCaller, rateLimit } from '../_shared/supabase.js';
-import { callClaude, parseJson } from '../_shared/claude.js';
+import { callModel, parseJson } from '../_shared/llm.js';
 
 const REASONS = ['harassment', 'hate', 'threat', 'sexual', 'personal_info', 'spam'];
 const SCHEMA = {
@@ -39,8 +39,15 @@ Deno.serve(async (req) => {
     const ok = await rateLimit({ userId: caller.user.id, partyId: msg.party_id, kind: 'moderation', perUser: 30 });
     if (!ok) return json({ error: 'rate_limited' }, 429);
 
-    const raw = await callClaude({ system: 'You are a careful chat moderator.', user: prompt(msg.body), schema: SCHEMA, maxTokens: 1000 });
-    const out = parseJson(raw);
+    let out;
+    try {
+      const raw = await callModel({ system: 'You are a careful chat moderator.', user: prompt(msg.body), schema: SCHEMA, maxTokens: 1000 });
+      out = parseJson(raw);
+    } catch (err) {
+      // A provider safety block on a chat message is itself a strong abuse signal.
+      if (!err.blocked) throw err;
+      out = { flag: true, reason: null };
+    }
     if (out.flag) {
       await adminClient.from('messages')
         .update({ flagged: true, flag_reason: LABELS[out.reason] ?? 'Flagged by AI moderation' })

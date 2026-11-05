@@ -3,7 +3,7 @@
 import { corsHeaders, json } from '../_shared/cors.js';
 import { adminClient, getCaller, rateLimit } from '../_shared/supabase.js';
 import { loadPartyContext, isMember, buildMatchContext } from '../_shared/matches.js';
-import { callClaude, parseJson } from '../_shared/claude.js';
+import { callModel, parseJson } from '../_shared/llm.js';
 import { periods } from '../_shared/matchTime.js';
 
 const KINDS = ['goal_in_window', 'card_in_window', 'next_goal_team', 'next_card_team', 'player_scores_in_window', 'shootout_kick_scored'];
@@ -69,7 +69,7 @@ Deno.serve(async (req) => {
     const periodEnd = config.period_ends[String(period)];
 
     const built = buildMatchContext({ ...ctx, forPoll: true });
-    const raw = await callClaude({ system: 'You write prediction polls for a football watch-party app.', user: `${built.text}\n\n${INSTRUCTION}`, schema: SCHEMA, maxTokens: 1500 });
+    const raw = await callModel({ system: 'You write prediction polls for a football watch-party app.', user: `${built.text}\n\n${INSTRUCTION}`, schema: SCHEMA, maxTokens: 1500 });
     let out;
     try { out = parseJson(raw); } catch { return json({ error: 'bad_model_output' }, 502); }
 
