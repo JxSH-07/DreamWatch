@@ -7,10 +7,10 @@ Football fans who can't be in the same room end up watching on separate streams 
 ## How to test in 3 minutes
 
 1. Sign up with any email (no confirmation email) and click **Subscribe** → **Yes, subscribe**.
-2. On the live match (Argentina v France), click **Start Watch Party** → **Create party**.
+2. On the live match (Barcelona v Atlético de Madrid), click **Start Watch Party** → **Create party**. Friends who already have a subscribed account can be invited by email: they get a notification in the header bell.
 3. In the lobby, copy the invite link and open it in an **incognito window**. Create a second account, then **Subscribe & join**.
 4. Back in the first window, click **Start party**. Both windows move into the room and stay in sync. Try pause, rewind, Go Live.
-5. In either window, ask `@Gaffer why was that a penalty?` (or use **Ask Gaffer** on any Timeline event).
+5. In either window, ask `@Gaffer why was that a penalty?` once the 35' penalty has happened (or use **Ask Gaffer** on any Timeline event). Anyone can pause or rewind; the chat logs who did.
 6. Vote on the poll Gaffer drops in the Polls tab. It resolves from match data and the leaderboard updates.
 
 ## Architecture
@@ -19,7 +19,7 @@ Football fans who can't be in the same room end up watching on separate streams 
 - **Supabase**: Postgres with row-level security, Auth (email + password), Realtime (one channel per party for row changes, broadcast reactions/typing and presence), and Edge Functions.
 - **AI** runs only in Edge Functions (`gaffer`, `generate-poll`, `moderate-message`), never in the browser, using structured JSON outputs. The provider is switchable (`supabase/functions/_shared/llm.js`): **Gemini** (`gemini-3.5-flash`, falling back to `gemini-3.1-flash-lite` when Google reports high demand) when `GEMINI_API_KEY` is set, or **Claude** (`claude-haiku-5-5` via the Anthropic SDK) with `ANTHROPIC_API_KEY`.
 - **Simulated live:** the 2022 final plays as a looping broadcast. The live edge is `loop.start + (serverNow − LIVE_EPOCH) mod loopLength`, so every viewer worldwide is at the same point. All clients use the server clock (`get_server_time` RPC) rather than their own.
-- **Sync:** the host writes one row (`parties`: anchor position/time, live delay, playing flag, version). Every client computes the same position from it with `partyPosition()` and corrects the YouTube player when it drifts more than 1.5 s. The same function runs inside the Edge Functions (`npm run sync-shared` copies it), so Gaffer and polls use a position computed on the server, never one sent by the client.
+- **Sync:** playback state lives in one row (`parties`: anchor position/time, live delay, playing flag, version). Any member can change it through the `playback_action` RPC, which also writes the "Riya paused the video" chat log; the host can restrict this to themselves. Every client computes the same position from it with `partyPosition()` and corrects the YouTube player when it drifts more than 1.5 s. The same function runs inside the Edge Functions (`npm run sync-shared` copies it), so Gaffer and polls use a position computed on the server, never one sent by the client.
 - **In production** this would use a licensed live data feed and stream timestamps instead of hand-set video offsets.
 
 ## Video calls
@@ -53,6 +53,7 @@ After changing `src/lib/matchTime.js` or `src/lib/playback.js`, run `npm run syn
 ## Known limitations
 
 - Live is simulated with a looping full-match video. Subscriptions are a mock flag with no payment.
+- The 2022 World Cup final (StatsBomb data) is still seeded but hidden (`"listed": false` in `data/matches.json`) because FIFA's video can't be embedded here. Barcelona v Atlético has no lineups in its config, so Gaffer works from the events alone.
 - Betis v Barcelona events come from match reports and are accurate to the minute (marked "≈ minute").
 - Moderation runs just after a message is posted, so a message can be visible for 1–2 s before it's hidden. A production version would screen messages before posting.
 - Flagged messages are hidden in the UI, but their text can still be read through the API by party members.

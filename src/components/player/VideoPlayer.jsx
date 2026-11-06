@@ -23,7 +23,7 @@ import SeekBar from './SeekBar.jsx';
     overlay                  extra layer over the picture (party camera tiles)
 */
 export default function VideoPlayer({
-  match, events, position, now, getTarget, isPlaying, version, controls, hostName, variant = 'party', reactions = [], overlay = null,
+  match, events, position, now, getTarget, isPlaying, version, controls, hostName, pausedBy, variant = 'party', reactions = [], overlay = null,
 }) {
   const containerRef = useRef(null);
   const { hostRef, playerRef, ready, error } = useYouTubePlayer(match.youtube_id);
@@ -110,7 +110,7 @@ export default function VideoPlayer({
           <Play size={30} fill="currentColor" aria-hidden="true" />
         </button>
       ) : (
-        <div className="paused-chip" role="status"><Pause size={16} fill="currentColor" aria-hidden="true" />Paused by {hostName}</div>
+        <div className="paused-chip" role="status"><Pause size={16} fill="currentColor" aria-hidden="true" />Paused by {pausedBy ?? hostName}</div>
       ))}
 
       <div className="reaction-layer" aria-hidden="true">

@@ -1,0 +1,3326 @@
+[
+ {
+  "id": "6404a8e8-afaf-489d-b65e-173a237ffed5",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "1'",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 96.0,
+  "video_time_hms": "0:01:36",
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "1st half begins",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "8932a9c2-693a-4dde-afad-5115c7237e87",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "1'",
+  "elapsed_in_period_s": 19.0,
+  "video_time": 115.0,
+  "video_time_hms": "0:01:55",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Adrien Rabiot",
+  "description": "Foul by Adrien Rabiot (France) on Rodrigo De Paul, attacking third",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "af7e1034-cf84-454b-bcad-7e8b8435d7b3",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "1'",
+  "elapsed_in_period_s": 49.2,
+  "video_time": 145.2,
+  "video_time_hms": "0:02:25",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Aurélien Tchouaméni",
+  "description": "Foul by Aurélien Tchouaméni (France) on Alexis Mac Allister, midfield",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Alexis Mac Allister",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "030b26ca-10a3-4d79-adfe-e8abe1762d07",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "2'",
+  "elapsed_in_period_s": 96.6,
+  "video_time": 192.6,
+  "video_time_hms": "0:03:12",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Foul by Rodrigo De Paul (Argentina) on Adrien Rabiot, midfield",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Adrien Rabiot",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "25548b02-1dca-44b0-a1a5-d97f63a69fbd",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "3'",
+  "elapsed_in_period_s": 148.6,
+  "video_time": 244.6,
+  "video_time_hms": "0:04:04",
+  "type": "offside",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Offside: Rodrigo De Paul (Argentina) passes forward but Julián Álvarez is caught offside",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "passer": "Rodrigo De Paul"
+  }
+ },
+ {
+  "id": "76e5ad79-f6cc-4769-96f4-6f8d2885347e",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "4'",
+  "elapsed_in_period_s": 193.6,
+  "video_time": 289.6,
+  "video_time_hms": "0:04:49",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Dayotchanculle Upamecano",
+  "description": "Foul by Dayotchanculle Upamecano (France) on Lionel Messi, midfield",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Lionel Messi",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "545c2c84-018f-4570-a01c-753823feaeac",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "5'",
+  "elapsed_in_period_s": 280.8,
+  "video_time": 376.8,
+  "video_time_hms": "0:06:16",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Alexis Mac Allister",
+  "description": "Alexis Mac Allister (Argentina) shot — saved, set up by Julián Álvarez (xG 0.02)",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.02,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Julián Álvarez",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "b74c24d6-a0f1-42c4-b216-0b7a54e7834a",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "6'",
+  "elapsed_in_period_s": 344.8,
+  "video_time": 440.8,
+  "video_time_hms": "0:07:20",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Foul by Lionel Messi (Argentina) on Theo Hernández, midfield",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Theo Hernández",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "e03bf54e-7bb7-4de0-bc65-05a64f58f25a",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "7'",
+  "elapsed_in_period_s": 402.3,
+  "video_time": 498.3,
+  "video_time_hms": "0:08:18",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Adrien Rabiot, midfield",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Adrien Rabiot",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "4ad26294-8aaf-4d69-83dd-bbf9ef797b32",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "8'",
+  "elapsed_in_period_s": 456.5,
+  "video_time": 552.5,
+  "video_time_hms": "0:09:12",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Rodrigo De Paul (Argentina) shot — blocked, set up by Ángel Di María (xG 0.06)",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.06,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Ángel Di María",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "b134736d-422a-4c36-8e40-0b6962b8c5ac",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "9'",
+  "elapsed_in_period_s": 521.2,
+  "video_time": 617.2,
+  "video_time_hms": "0:10:17",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Cristian Romero",
+  "description": "Foul by Cristian Romero (Argentina) on Hugo Lloris, inside the opponents' penalty area",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Hugo Lloris",
+   "advantage": false,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "f00c9960-89c8-4cfc-b1d3-056834dc7cca",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "9'",
+  "elapsed_in_period_s": 528.8,
+  "video_time": 624.8,
+  "video_time_hms": "0:10:24",
+  "type": "injury",
+  "importance": "detail",
+  "team": "France",
+  "player": "Hugo Lloris",
+  "description": "Play stopped for an injury to Hugo Lloris (France)",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "e5a4e3e0-5f09-4169-8acc-cba724138019",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "10'",
+  "elapsed_in_period_s": 565.5,
+  "video_time": 661.5,
+  "video_time_hms": "0:11:01",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Emiliano Martínez",
+  "description": "Play stopped for an injury to Emiliano Martínez (Argentina)",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "cdf432a6-8394-4a1c-a454-3cb6a1d0a416",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "13'",
+  "elapsed_in_period_s": 725.7,
+  "video_time": 821.7,
+  "video_time_hms": "0:13:41",
+  "type": "handball",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Handball by Julián Álvarez (Argentina), inside the opponents' penalty area",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": "Handball",
+   "penalty": false,
+   "victim": null,
+   "advantage": false,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "2a0ff535-d44f-4838-a372-140631fb6184",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "14'",
+  "elapsed_in_period_s": 833.5,
+  "video_time": 929.5,
+  "video_time_hms": "0:15:29",
+  "type": "offside",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Ángel Di María",
+  "description": "Offside: Nicolás Tagliafico (Argentina) passes forward but Ángel Di María is caught offside",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "passer": "Nicolás Tagliafico"
+  }
+ },
+ {
+  "id": "6d498191-05f0-432c-8764-03aea4ef9fb8",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "17'",
+  "elapsed_in_period_s": 975.9,
+  "video_time": 1071.9,
+  "video_time_hms": "0:17:51",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Ángel Di María",
+  "description": "Ángel Di María (Argentina) shot — off target (xG 0.11)",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.11,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "01d0ceb3-a2e3-4aee-9b65-d5d0d2f36706",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "19'",
+  "elapsed_in_period_s": 1091.8,
+  "video_time": 1187.8,
+  "video_time_hms": "0:19:47",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Foul by Rodrigo De Paul (Argentina) on Theo Hernández, defensive third",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Theo Hernández",
+   "advantage": false,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "871be616-aa1d-4393-b8e0-54b7d3504966",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "20'",
+  "elapsed_in_period_s": 1143.2,
+  "video_time": 1239.2,
+  "video_time_hms": "0:20:39",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Olivier Giroud",
+  "description": "Foul by Olivier Giroud (France) on Ángel Di María, inside the opponents' penalty area",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Ángel Di María",
+   "advantage": false,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "17cf2f79-db23-48fc-a33c-6969a54dd387",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "21'",
+  "elapsed_in_period_s": 1253.7,
+  "video_time": 1349.7,
+  "video_time_hms": "0:22:29",
+  "type": "penalty_awarded",
+  "importance": "key",
+  "team": "France",
+  "player": "Ousmane Dembélé",
+  "description": "Foul by Ousmane Dembélé (France) on Ángel Di María, inside France's own penalty area — PENALTY to Argentina",
+  "score_after": {
+   "Argentina": 0,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": true,
+   "victim": "Ángel Di María",
+   "advantage": false,
+   "zone": "inside France's own penalty area"
+  }
+ },
+ {
+  "id": "6d527ebc-a948-4cd8-ac82-daced35bb715",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "23'",
+  "elapsed_in_period_s": 1344.1,
+  "video_time": 1440.1,
+  "video_time_hms": "0:24:00",
+  "type": "goal",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "GOAL! Lionel Messi scores for Argentina (penalty). Argentina 1–0 France",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.78,
+   "shot_type": "Penalty",
+   "body_part": "Left Foot",
+   "assist": null
+  }
+ },
+ {
+  "id": "e01f4dce-7585-4868-a780-071ef3b7b60f",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "26'",
+  "elapsed_in_period_s": 1532.5,
+  "video_time": 1628.5,
+  "video_time_hms": "0:27:08",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Cristian Romero",
+  "description": "Foul by Cristian Romero (Argentina) on Olivier Giroud, defensive third",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Olivier Giroud",
+   "advantage": false,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "b5e4c67b-be1f-4dee-a283-059f81a5cbed",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "27'",
+  "elapsed_in_period_s": 1612.1,
+  "video_time": 1708.1,
+  "video_time_hms": "0:28:28",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Theo Hernández",
+  "description": "Foul by Theo Hernández (France) on Lionel Messi, attacking third",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Lionel Messi",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "417f8e9c-a274-4977-82bc-a395452a9721",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "28'",
+  "elapsed_in_period_s": 1620.8,
+  "video_time": 1716.8,
+  "video_time_hms": "0:28:36",
+  "type": "injury",
+  "importance": "detail",
+  "team": "France",
+  "player": "Theo Hernández",
+  "description": "Play stopped for an injury to Theo Hernández (France)",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "e53eb678-359a-45bc-8487-5b01071ceaac",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "28'",
+  "elapsed_in_period_s": 1630.0,
+  "video_time": 1726.0,
+  "video_time_hms": "0:28:46",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Play stopped for an injury to Lionel Messi (Argentina)",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "d49e9601-1cbf-4df7-9a77-16877abe49dc",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "30'",
+  "elapsed_in_period_s": 1746.8,
+  "video_time": 1842.8,
+  "video_time_hms": "0:30:42",
+  "type": "offside",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Offside: Lionel Messi (Argentina) flagged offside",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "f227a92e-d86c-4f3d-aa75-5ccb71adcae6",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "32'",
+  "elapsed_in_period_s": 1895.2,
+  "video_time": 1991.2,
+  "video_time_hms": "0:33:11",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Alexis Mac Allister",
+  "description": "Alexis Mac Allister (Argentina) shot — wayward, set up by Nicolás Tagliafico (xG 0.01)",
+  "score_after": {
+   "Argentina": 1,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.01,
+   "outcome": "Wayward",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Nicolás Tagliafico",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "ef86f4d9-7acd-4ed0-a5ec-9129079e8fbe",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "36'",
+  "elapsed_in_period_s": 2122.6,
+  "video_time": 2218.6,
+  "video_time_hms": "0:36:58",
+  "type": "goal",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Ángel Di María",
+  "description": "GOAL! Ángel Di María scores for Argentina (left foot shot, assisted by Alexis Mac Allister). Argentina 2–0 France",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.3,
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Alexis Mac Allister"
+  }
+ },
+ {
+  "id": "9fea3c7a-e5aa-422e-9b39-f1ac9a66fcab",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "38'",
+  "elapsed_in_period_s": 2229.1,
+  "video_time": 2325.1,
+  "video_time_hms": "0:38:45",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Aurélien Tchouaméni, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Aurélien Tchouaméni",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "b43da17b-3459-43ed-b2c5-65c94a03f78c",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "38'",
+  "elapsed_in_period_s": 2271.7,
+  "video_time": 2367.7,
+  "video_time_hms": "0:39:27",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Jules Koundé",
+  "description": "Foul by Jules Koundé (France) on Alexis Mac Allister, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Alexis Mac Allister",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "8a089b30-1eb8-42e6-9663-7bbc30ce2b70",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "41'",
+  "elapsed_in_period_s": 2411.6,
+  "video_time": 2507.6,
+  "video_time_hms": "0:41:47",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Jules Koundé",
+  "description": "Foul by Jules Koundé (France) on Ángel Di María, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Ángel Di María",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "df245155-92fc-4123-8bcf-66ba2ee77870",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "41'",
+  "elapsed_in_period_s": 2432.6,
+  "video_time": 2528.6,
+  "video_time_hms": "0:42:08",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Substitution France: Randal Kolo Muani ON, Ousmane Dembélé OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "player_on": "Randal Kolo Muani",
+   "player_off": "Ousmane Dembélé",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "bae6c6ee-59b6-419e-992d-7567437736f5",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "elapsed_in_period_s": 2461.5,
+  "video_time": 2557.5,
+  "video_time_hms": "0:42:37",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Marcus Thuram",
+  "description": "Substitution France: Marcus Thuram ON, Olivier Giroud OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "player_on": "Marcus Thuram",
+   "player_off": "Olivier Giroud",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "6452687c-5e26-4eb7-b996-38a785828030",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "elapsed_in_period_s": 2472.2,
+  "video_time": 2568.2,
+  "video_time_hms": "0:42:48",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Foul by Randal Kolo Muani (France) on Nicolás Tagliafico, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Nicolás Tagliafico",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "776e2bb6-b9d4-4455-8965-d7c86afa4ad4",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "elapsed_in_period_s": 2480.1,
+  "video_time": 2576.1,
+  "video_time_hms": "0:42:56",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "France",
+  "player": null,
+  "description": "France change shape to 4-2-3-1",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "formation": "4-2-3-1",
+   "lineup": [
+    "Hugo Lloris (Goalkeeper)",
+    "Jules Koundé (Right Back)",
+    "Raphaël Varane (Right Center Back)",
+    "Dayotchanculle Upamecano (Left Center Back)",
+    "Theo Hernández (Left Back)",
+    "Aurélien Tchouaméni (Right Defensive Midfield)",
+    "Adrien Rabiot (Left Defensive Midfield)",
+    "Randal Kolo Muani (Right Wing)",
+    "Antoine Griezmann (Center Attacking Midfield)",
+    "Marcus Thuram (Left Wing)",
+    "Kylian Mbappé (Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "4a5e7982-23bb-4078-a8c3-40ddd4dd27fd",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "elapsed_in_period_s": 2499.5,
+  "video_time": 2595.5,
+  "video_time_hms": "0:43:15",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Foul by Randal Kolo Muani (France) on Nicolás Tagliafico, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Nicolás Tagliafico",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "dd1f7023-c1a3-496a-9a32-a7f91fc2b53c",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45'",
+  "elapsed_in_period_s": 2648.4,
+  "video_time": 2744.4,
+  "video_time_hms": "0:45:44",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Theo Hernández, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Theo Hernández",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "db38e34b-9d5e-4773-9c49-bc37b3d97c4e",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+2'",
+  "elapsed_in_period_s": 2794.1,
+  "video_time": 2890.1,
+  "video_time_hms": "0:48:10",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Theo Hernández",
+  "description": "Foul by Theo Hernández (France) on Rodrigo De Paul, attacking third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "af8c7775-091a-4905-aeb3-484b9a99de81",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+7'",
+  "elapsed_in_period_s": 3081.1,
+  "video_time": 3177.1,
+  "video_time_hms": "0:52:57",
+  "type": "card",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Foul by Enzo Fernandez (Argentina) on Randal Kolo Muani, midfield — YELLOW CARD for Enzo Fernandez",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Randal Kolo Muani",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "595f7a7f-5d24-4f99-b4e8-bacaeaa2de17",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+8'",
+  "elapsed_in_period_s": 3154.6,
+  "video_time": 3250.6,
+  "video_time_hms": "0:54:10",
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "End of 1st half",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "3e8de8c9-8be8-4921-96ec-1a29ce8fd3d4",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "46'",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 3296.0,
+  "video_time_hms": "0:54:56",
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "2nd half begins",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "13a4889d-ad08-41be-9125-24c4c7d7879a",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "49'",
+  "elapsed_in_period_s": 230.0,
+  "video_time": 3526.0,
+  "video_time_hms": "0:58:45",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Rodrigo De Paul (Argentina) shot — saved, set up by Ángel Di María (xG 0.04)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.04,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Ángel Di María",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "5683007d-fde4-40ee-aa5e-c1624424b24e",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "55'",
+  "elapsed_in_period_s": 552.5,
+  "video_time": 3848.5,
+  "video_time_hms": "1:04:08",
+  "type": "card",
+  "importance": "key",
+  "team": "France",
+  "player": "Adrien Rabiot",
+  "description": "Foul by Adrien Rabiot (France) on Rodrigo De Paul, midfield — YELLOW CARD for Adrien Rabiot",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "3366644c-6060-4544-95ed-7f17dedf70c6",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "55'",
+  "elapsed_in_period_s": 592.5,
+  "video_time": 3888.5,
+  "video_time_hms": "1:04:48",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Play stopped for an injury to Rodrigo De Paul (Argentina)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "b4921423-4114-49ef-b266-386ba0671e2f",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "57'",
+  "elapsed_in_period_s": 663.2,
+  "video_time": 3959.2,
+  "video_time_hms": "1:05:59",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Nicolás Tagliafico",
+  "description": "Foul by Nicolás Tagliafico (Argentina) on Randal Kolo Muani, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Randal Kolo Muani",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "56346f85-1533-4579-bb3c-6df7618b4dbf",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "58'",
+  "elapsed_in_period_s": 747.9,
+  "video_time": 4043.9,
+  "video_time_hms": "1:07:23",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Foul by Kylian Mbappé (France) on Rodrigo De Paul, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "4ddb6b25-2919-47fa-bcdf-9059cd3e6ada",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "58'",
+  "elapsed_in_period_s": 752.9,
+  "video_time": 4048.9,
+  "video_time_hms": "1:07:28",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Rodrigo De Paul",
+  "description": "Play stopped for an injury to Rodrigo De Paul (Argentina)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "43691970-1dad-4e11-bd29-48f640c55ea1",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "59'",
+  "elapsed_in_period_s": 801.4,
+  "video_time": 4097.4,
+  "video_time_hms": "1:08:17",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Julián Álvarez (Argentina) shot — saved, set up by Ángel Di María (xG 0.06)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.06,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Ángel Di María",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "be78b6e9-2f19-4620-9e4b-b518bd562537",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "59'",
+  "elapsed_in_period_s": 835.5,
+  "video_time": 4131.5,
+  "video_time_hms": "1:08:51",
+  "type": "offside",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Offside: Theo Hernández (France) passes forward but Kylian Mbappé is caught offside",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "passer": "Theo Hernández"
+  }
+ },
+ {
+  "id": "9615ffbc-b513-45e6-9ccc-015234483f95",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "60'",
+  "elapsed_in_period_s": 891.8,
+  "video_time": 4187.8,
+  "video_time_hms": "1:09:47",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Lionel Messi (Argentina) shot — off target, set up by Ángel Di María (xG 0.12)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.12,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Ángel Di María",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "3c5d3131-7851-4847-a751-98666932a559",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "61'",
+  "elapsed_in_period_s": 927.9,
+  "video_time": 4223.9,
+  "video_time_hms": "1:10:23",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Raphaël Varane, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Raphaël Varane",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "7e84e10f-aa62-4c47-a090-13277abfebe3",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "63'",
+  "elapsed_in_period_s": 1055.1,
+  "video_time": 4351.1,
+  "video_time_hms": "1:12:31",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Nicolás Tagliafico",
+  "description": "Foul by Nicolás Tagliafico (Argentina) on Antoine Griezmann, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Antoine Griezmann",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "e7e1f696-1fe2-4b3a-b2ec-aeb36b0c8258",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "64'",
+  "elapsed_in_period_s": 1131.9,
+  "video_time": 4427.9,
+  "video_time_hms": "1:13:47",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Marcos Acuña",
+  "description": "Substitution Argentina: Marcos Acuña ON, Ángel Di María OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "player_on": "Marcos Acuña",
+   "player_off": "Ángel Di María",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "88fc5a71-0b1d-4ccd-9cba-0216f28b1262",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "65'",
+  "elapsed_in_period_s": 1149.6,
+  "video_time": 4445.6,
+  "video_time_hms": "1:14:05",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "France",
+  "player": null,
+  "description": "France change shape to 4-2-3-1",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "formation": "4-2-3-1",
+   "lineup": [
+    "Hugo Lloris (Goalkeeper)",
+    "Jules Koundé (Right Back)",
+    "Raphaël Varane (Right Center Back)",
+    "Dayotchanculle Upamecano (Left Center Back)",
+    "Theo Hernández (Left Back)",
+    "Aurélien Tchouaméni (Right Defensive Midfield)",
+    "Adrien Rabiot (Left Defensive Midfield)",
+    "Randal Kolo Muani (Right Wing)",
+    "Antoine Griezmann (Center Attacking Midfield)",
+    "Kylian Mbappé (Left Wing)",
+    "Marcus Thuram (Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "9f6285ff-9b32-4a46-a4a0-74c1ca89276c",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "68'",
+  "elapsed_in_period_s": 1335.1,
+  "video_time": 4631.1,
+  "video_time_hms": "1:17:11",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Randal Kolo Muani (France) shot — off target, set up by Antoine Griezmann (xG 0.1)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.1,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Head",
+   "assist": "Antoine Griezmann",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "50f1d8b0-d889-429d-a11a-6062ccd14478",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "69'",
+  "elapsed_in_period_s": 1420.8,
+  "video_time": 4716.8,
+  "video_time_hms": "1:18:36",
+  "type": "handball",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Handball by Enzo Fernandez (Argentina), midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": "Handball",
+   "penalty": false,
+   "victim": null,
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "b2d43671-a3e6-4709-9c0c-646442c1074c",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "71'",
+  "elapsed_in_period_s": 1509.2,
+  "video_time": 4805.2,
+  "video_time_hms": "1:20:05",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Kylian Mbappé (France) shot — off target (xG 0.05)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.05,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "3c9df00b-0b30-4548-9cd1-ceff03cc9919",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "71'",
+  "elapsed_in_period_s": 1527.9,
+  "video_time": 4823.9,
+  "video_time_hms": "1:20:23",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Eduardo Camavinga",
+  "description": "Substitution France: Eduardo Camavinga ON, Theo Hernández OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "player_on": "Eduardo Camavinga",
+   "player_off": "Theo Hernández",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "43fe1865-0aa9-4bb1-bf33-a2871df4589b",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "71'",
+  "elapsed_in_period_s": 1529.7,
+  "video_time": 4825.7,
+  "video_time_hms": "1:20:25",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Kingsley Coman",
+  "description": "Substitution France: Kingsley Coman ON, Antoine Griezmann OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "player_on": "Kingsley Coman",
+   "player_off": "Antoine Griezmann",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "43b2d123-6945-4a7c-8292-f7792af341f9",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "72'",
+  "elapsed_in_period_s": 1591.2,
+  "video_time": 4887.2,
+  "video_time_hms": "1:21:27",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Enzo Fernandez (Argentina) shot — saved, set up by Lionel Messi (xG 0.04)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "xg": 0.04,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Lionel Messi",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "af7bfb2a-d02f-4512-8430-0fe330aac422",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "73'",
+  "elapsed_in_period_s": 1672.7,
+  "video_time": 4968.7,
+  "video_time_hms": "1:22:48",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "France",
+  "player": null,
+  "description": "France change shape to 4-4-2",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "formation": "4-4-2",
+   "lineup": [
+    "Hugo Lloris (Goalkeeper)",
+    "Jules Koundé (Right Back)",
+    "Raphaël Varane (Right Center Back)",
+    "Dayotchanculle Upamecano (Left Center Back)",
+    "Eduardo Camavinga (Left Back)",
+    "Aurélien Tchouaméni (Right Defensive Midfield)",
+    "Adrien Rabiot (Left Defensive Midfield)",
+    "Kingsley Coman (Right Midfield)",
+    "Randal Kolo Muani (Left Midfield)",
+    "Marcus Thuram (Right Center Forward)",
+    "Kylian Mbappé (Left Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "a70ef6af-a7e2-4f75-90e5-d2348827a91d",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "74'",
+  "elapsed_in_period_s": 1689.5,
+  "video_time": 4985.5,
+  "video_time_hms": "1:23:05",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Aurélien Tchouaméni",
+  "description": "Foul by Aurélien Tchouaméni (France) on Cristian Romero, attacking third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Cristian Romero",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "e454d741-3a2b-4587-89b1-1148803dcdd2",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "75'",
+  "elapsed_in_period_s": 1745.5,
+  "video_time": 5041.5,
+  "video_time_hms": "1:24:01",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "France",
+  "player": null,
+  "description": "France change shape to 4-4-2",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "formation": "4-4-2",
+   "lineup": [
+    "Hugo Lloris (Goalkeeper)",
+    "Jules Koundé (Right Back)",
+    "Raphaël Varane (Right Center Back)",
+    "Dayotchanculle Upamecano (Left Center Back)",
+    "Eduardo Camavinga (Left Back)",
+    "Aurélien Tchouaméni (Right Defensive Midfield)",
+    "Adrien Rabiot (Left Defensive Midfield)",
+    "Kingsley Coman (Right Midfield)",
+    "Marcus Thuram (Left Midfield)",
+    "Randal Kolo Muani (Right Center Forward)",
+    "Kylian Mbappé (Left Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "abb4ccaf-977e-4772-9b30-0e8418cd4534",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "75'",
+  "elapsed_in_period_s": 1788.1,
+  "video_time": 5084.1,
+  "video_time_hms": "1:24:44",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Kingsley Coman, midfield (advantage played)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Kingsley Coman",
+   "advantage": true,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "67e59bb1-c8c5-4657-b189-8d62b0007053",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "77'",
+  "elapsed_in_period_s": 1870.7,
+  "video_time": 5166.7,
+  "video_time_hms": "1:26:06",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Eduardo Camavinga",
+  "description": "Foul by Eduardo Camavinga (France) on Rodrigo De Paul, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "87769b1a-bdca-4e9b-b2fd-e8bb95313063",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "79'",
+  "elapsed_in_period_s": 1993.3,
+  "video_time": 5289.3,
+  "video_time_hms": "1:28:09",
+  "type": "penalty_awarded",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Nicolás Otamendi",
+  "description": "Foul by Nicolás Otamendi (Argentina) on Randal Kolo Muani, inside Argentina's own penalty area — PENALTY to France",
+  "score_after": {
+   "Argentina": 2,
+   "France": 0
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": true,
+   "victim": "Randal Kolo Muani",
+   "advantage": false,
+   "zone": "inside Argentina's own penalty area"
+  }
+ },
+ {
+  "id": "6cc0d5e2-6999-4006-8a7a-34de4cbe3ffd",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "80'",
+  "elapsed_in_period_s": 2065.0,
+  "video_time": 5361.0,
+  "video_time_hms": "1:29:20",
+  "type": "goal",
+  "importance": "key",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "GOAL! Kylian Mbappé scores for France (penalty). Argentina 2–1 France",
+  "score_after": {
+   "Argentina": 2,
+   "France": 1
+  },
+  "data": {
+   "xg": 0.78,
+   "shot_type": "Penalty",
+   "body_part": "Right Foot",
+   "assist": null
+  }
+ },
+ {
+  "id": "03fb2918-e1e7-4ec8-89ff-7bc5531e853d",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "81'",
+  "elapsed_in_period_s": 2159.0,
+  "video_time": 5455.0,
+  "video_time_hms": "1:30:55",
+  "type": "goal",
+  "importance": "key",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "GOAL! Kylian Mbappé scores for France (right foot volley shot, assisted by Marcus Thuram). Argentina 2–2 France",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.1,
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Marcus Thuram"
+  }
+ },
+ {
+  "id": "fe277079-395a-4ff3-bb29-e99d93014014",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "84'",
+  "elapsed_in_period_s": 2303.7,
+  "video_time": 5599.7,
+  "video_time_hms": "1:33:19",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Enzo Fernandez (Argentina) shot — blocked, set up by Marcos Acuña (xG 0.03)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.03,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Marcos Acuña",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "c51e1110-13f7-4b73-8297-80abb4f65e11",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "85'",
+  "elapsed_in_period_s": 2385.3,
+  "video_time": 5681.3,
+  "video_time_hms": "1:34:41",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Aurélien Tchouaméni, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Aurélien Tchouaméni",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "d0463ffb-ee9c-47ef-8175-409eb2c435fa",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "86'",
+  "elapsed_in_period_s": 2446.5,
+  "video_time": 5742.5,
+  "video_time_hms": "1:35:42",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Nicolás Otamendi",
+  "description": "Foul by Nicolás Otamendi (Argentina) on Randal Kolo Muani, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Randal Kolo Muani",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "8f75db1a-1ee2-4ff8-b211-1c46d9a76a69",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "87'",
+  "elapsed_in_period_s": 2484.4,
+  "video_time": 5780.4,
+  "video_time_hms": "1:36:20",
+  "type": "card",
+  "importance": "key",
+  "team": "France",
+  "player": "Marcus Thuram",
+  "description": "Simulation (dive) by Marcus Thuram (France), inside the opponents' penalty area — YELLOW CARD for Marcus Thuram",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": "Dive",
+   "penalty": false,
+   "victim": null,
+   "advantage": false,
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "050c2199-7a48-4fa3-b769-453a2c8c99e7",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "elapsed_in_period_s": 2539.3,
+  "video_time": 5835.3,
+  "video_time_hms": "1:37:15",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Foul by Julián Álvarez (Argentina) on Adrien Rabiot, attacking third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Adrien Rabiot",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "599f811c-d3e2-49f6-b2df-830f4083a179",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "elapsed_in_period_s": 2539.3,
+  "video_time": 5835.3,
+  "video_time_hms": "1:37:15",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Play stopped for an injury to Julián Álvarez (Argentina)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "14c26d07-135f-44b6-8e73-08966f9e5eb6",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "elapsed_in_period_s": 2546.5,
+  "video_time": 5842.5,
+  "video_time_hms": "1:37:22",
+  "type": "injury",
+  "importance": "detail",
+  "team": "France",
+  "player": "Adrien Rabiot",
+  "description": "Play stopped for an injury to Adrien Rabiot (France)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "22fea401-6836-45bb-bfbd-fadd4ed0b237",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+1'",
+  "elapsed_in_period_s": 2718.9,
+  "video_time": 6014.9,
+  "video_time_hms": "1:40:14",
+  "type": "offside",
+  "importance": "detail",
+  "team": "France",
+  "player": "Marcus Thuram",
+  "description": "Offside: Dayotchanculle Upamecano (France) passes forward but Marcus Thuram is caught offside",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "passer": "Dayotchanculle Upamecano"
+  }
+ },
+ {
+  "id": "e762b216-4f72-4123-8ad1-9155bbff07dc",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+2'",
+  "elapsed_in_period_s": 2794.8,
+  "video_time": 6090.8,
+  "video_time_hms": "1:41:30",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Cristian Romero",
+  "description": "Foul by Cristian Romero (Argentina) on Marcus Thuram, defensive third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Marcus Thuram",
+   "advantage": false,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "5dbcde3d-ba75-483d-a65f-72d2b99ff713",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+3'",
+  "elapsed_in_period_s": 2877.9,
+  "video_time": 6173.9,
+  "video_time_hms": "1:42:53",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Kylian Mbappé (France) shot — blocked (xG 0.03)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.03,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "6042d91e-1d3f-48e2-a9f4-3d28d7a25da1",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+4'",
+  "elapsed_in_period_s": 2922.9,
+  "video_time": 6218.9,
+  "video_time_hms": "1:43:38",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Foul by Enzo Fernandez (Argentina) on Kingsley Coman, defensive third (advantage played)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Kingsley Coman",
+   "advantage": true,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "8d2a6599-cc25-41a2-acde-41d10194b5bd",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+4'",
+  "elapsed_in_period_s": 2925.5,
+  "video_time": 6221.5,
+  "video_time_hms": "1:43:41",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Adrien Rabiot",
+  "description": "Adrien Rabiot (France) shot — saved, set up by Eduardo Camavinga (xG 0.09)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.09,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Eduardo Camavinga",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "ed616313-3980-444e-805f-9951a40d8a52",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+5'",
+  "elapsed_in_period_s": 2975.2,
+  "video_time": 6271.2,
+  "video_time_hms": "1:44:31",
+  "type": "card",
+  "importance": "key",
+  "team": "France",
+  "player": "Olivier Giroud",
+  "description": "YELLOW CARD for Olivier Giroud (France) — off-the-ball / unsporting behaviour, not for a foul",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": "Yellow Card",
+   "reason": "Bad behaviour"
+  }
+ },
+ {
+  "id": "21808895-7b00-4b7b-ae22-64d9c1181e59",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+6'",
+  "elapsed_in_period_s": 3048.6,
+  "video_time": 6344.6,
+  "video_time_hms": "1:45:44",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Nicolás Tagliafico",
+  "description": "Foul by Nicolás Tagliafico (Argentina) on Adrien Rabiot, attacking third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Adrien Rabiot",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "867b8791-49c0-4d98-a976-c0b4cfc1cb5a",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+7'",
+  "elapsed_in_period_s": 3097.2,
+  "video_time": 6393.2,
+  "video_time_hms": "1:46:33",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Lionel Messi (Argentina) shot — saved, set up by Rodrigo De Paul (xG 0.04)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.04,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Rodrigo De Paul",
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "4b295434-7285-4337-95b4-26395b799643",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+8'",
+  "elapsed_in_period_s": 3153.6,
+  "video_time": 6449.6,
+  "video_time_hms": "1:47:29",
+  "type": "card",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Marcos Acuña",
+  "description": "Foul by Marcos Acuña (Argentina) on Kingsley Coman, attacking third — YELLOW CARD for Marcos Acuña",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Kingsley Coman",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "440c7e28-8628-4082-8f69-b465068a927b",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+9'",
+  "elapsed_in_period_s": 3217.9,
+  "video_time": 6513.9,
+  "video_time_hms": "1:48:33",
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "End of 2nd half",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "97489f9c-4763-4be3-a1c5-453b71c710a8",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "91'",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 6604.0,
+  "video_time_hms": "1:50:04",
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Extra time 1st half begins",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "c7266755-5003-418c-bf4f-f7da41d47840",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "91'",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 6604.0,
+  "video_time_hms": "1:50:04",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Gonzalo Montiel",
+  "description": "Substitution Argentina: Gonzalo Montiel ON, Nahuel Molina OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Gonzalo Montiel",
+   "player_off": "Nahuel Molina",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "efb58d41-46a0-4a47-98d0-6af184197f37",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "91'",
+  "elapsed_in_period_s": 36.0,
+  "video_time": 6640.0,
+  "video_time_hms": "1:50:40",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Adrien Rabiot",
+  "description": "Foul by Adrien Rabiot (France) on Rodrigo De Paul, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Rodrigo De Paul",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "f0a2ebda-0b49-4b82-9e77-a1560e1fcde8",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "92'",
+  "elapsed_in_period_s": 77.0,
+  "video_time": 6681.0,
+  "video_time_hms": "1:51:20",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Marcus Thuram",
+  "description": "Foul by Marcus Thuram (France) on Gonzalo Montiel, defensive third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Gonzalo Montiel",
+   "advantage": false,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "d8c05bb0-ddb1-4ff2-9dbf-ba17b00a5359",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "93'",
+  "elapsed_in_period_s": 125.4,
+  "video_time": 6729.4,
+  "video_time_hms": "1:52:09",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Alexis Mac Allister",
+  "description": "Alexis Mac Allister (Argentina) shot — off target (xG 0.02)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.02,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "ae7aba18-0984-47c5-a275-248e539a0e0e",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "93'",
+  "elapsed_in_period_s": 172.5,
+  "video_time": 6776.5,
+  "video_time_hms": "1:52:56",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Foul by Lionel Messi (Argentina) on Eduardo Camavinga, attacking third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Eduardo Camavinga",
+   "advantage": false,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "79dbfa4b-2f10-4f17-8b10-816eaff6ef65",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "95'",
+  "elapsed_in_period_s": 274.7,
+  "video_time": 6878.7,
+  "video_time_hms": "1:54:38",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Marcos Acuña",
+  "description": "Foul by Marcos Acuña (Argentina) on Jules Koundé, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Jules Koundé",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "5688fcf1-1b7a-4938-8d14-92b87c198d95",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "96'",
+  "elapsed_in_period_s": 310.4,
+  "video_time": 6914.4,
+  "video_time_hms": "1:55:14",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Youssouf Fofana",
+  "description": "Substitution France: Youssouf Fofana ON, Adrien Rabiot OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Youssouf Fofana",
+   "player_off": "Adrien Rabiot",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "5d536c27-ecb7-4e13-985c-d87f3e2eb925",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "96'",
+  "elapsed_in_period_s": 327.3,
+  "video_time": 6931.3,
+  "video_time_hms": "1:55:31",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Enzo Fernandez",
+  "description": "Foul by Enzo Fernandez (Argentina) on Eduardo Camavinga, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Eduardo Camavinga",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "d341d94a-a4d0-442a-98df-98d1b852280a",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "96'",
+  "elapsed_in_period_s": 358.0,
+  "video_time": 6962.0,
+  "video_time_hms": "1:56:02",
+  "type": "offside",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Offside: Dayotchanculle Upamecano (France) passes forward but Kylian Mbappé is caught offside",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "passer": "Dayotchanculle Upamecano"
+  }
+ },
+ {
+  "id": "17f3767b-c88c-46aa-94dc-5ad2b4a9bcf6",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "97'",
+  "elapsed_in_period_s": 384.1,
+  "video_time": 6988.1,
+  "video_time_hms": "1:56:28",
+  "type": "injury",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Julián Álvarez",
+  "description": "Play stopped for an injury to Julián Álvarez (Argentina)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "cc676ca2-190d-401c-95ee-8acf6a58d694",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "100'",
+  "elapsed_in_period_s": 551.1,
+  "video_time": 7155.1,
+  "video_time_hms": "1:59:15",
+  "type": "foul",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Gonzalo Montiel",
+  "description": "Foul by Gonzalo Montiel (Argentina) on Youssouf Fofana, defensive third",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Youssouf Fofana",
+   "advantage": false,
+   "zone": "defensive third"
+  }
+ },
+ {
+  "id": "db8267ad-256a-450d-997f-382a4d545634",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "100'",
+  "elapsed_in_period_s": 594.5,
+  "video_time": 7198.5,
+  "video_time_hms": "1:59:58",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Youssouf Fofana",
+  "description": "Youssouf Fofana (France) shot — blocked (xG 0.02)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.02,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "bae39b9d-d6b8-4c4b-8840-39b3ac3260e2",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "101'",
+  "elapsed_in_period_s": 626.4,
+  "video_time": 7230.4,
+  "video_time_hms": "2:00:30",
+  "type": "offside",
+  "importance": "detail",
+  "team": "France",
+  "player": "Raphaël Varane",
+  "description": "Offside: Jules Koundé (France) passes forward but Raphaël Varane is caught offside",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "passer": "Jules Koundé"
+  }
+ },
+ {
+  "id": "1ffcf328-9f45-46b6-90ab-0404571f2fe6",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "102'",
+  "elapsed_in_period_s": 679.2,
+  "video_time": 7283.2,
+  "video_time_hms": "2:01:23",
+  "type": "foul",
+  "importance": "detail",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Foul by Randal Kolo Muani (France) on Alexis Mac Allister, midfield",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "card": null,
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Alexis Mac Allister",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "8939a18c-593c-41fc-b86d-308cd189fca1",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "102'",
+  "elapsed_in_period_s": 697.5,
+  "video_time": 7301.5,
+  "video_time_hms": "2:01:41",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Leandro Paredes",
+  "description": "Substitution Argentina: Leandro Paredes ON, Rodrigo De Paul OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Leandro Paredes",
+   "player_off": "Rodrigo De Paul",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "1e6477ea-098a-41d5-96d1-d2944e38f46c",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "102'",
+  "elapsed_in_period_s": 709.3,
+  "video_time": 7313.3,
+  "video_time_hms": "2:01:53",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Substitution Argentina: Lautaro Martínez ON, Julián Álvarez OFF (tactical change)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Lautaro Martínez",
+   "player_off": "Julián Álvarez",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "39376cef-49a0-484a-ab0d-64a9c023024e",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "103'",
+  "elapsed_in_period_s": 736.3,
+  "video_time": 7340.3,
+  "video_time_hms": "2:02:20",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": null,
+  "description": "Argentina change shape to 4-3-3",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "formation": "4-3-3",
+   "lineup": [
+    "Emiliano Martínez (Goalkeeper)",
+    "Gonzalo Montiel (Right Back)",
+    "Cristian Romero (Right Center Back)",
+    "Nicolás Otamendi (Left Center Back)",
+    "Nicolás Tagliafico (Left Back)",
+    "Leandro Paredes (Center Defensive Midfield)",
+    "Enzo Fernandez (Right Center Midfield)",
+    "Alexis Mac Allister (Left Center Midfield)",
+    "Lionel Messi (Right Wing)",
+    "Marcos Acuña (Left Wing)",
+    "Lautaro Martínez (Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "d3ba40fa-09d6-4488-b17d-672aaa2928d7",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "105'",
+  "elapsed_in_period_s": 868.0,
+  "video_time": 7472.0,
+  "video_time_hms": "2:04:32",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Lautaro Martínez (Argentina) shot — blocked, set up by Lionel Messi (xG 0.23)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.23,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Lionel Messi",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "a1654330-3747-4a25-b244-26ba2884c91c",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "105'",
+  "elapsed_in_period_s": 870.4,
+  "video_time": 7474.4,
+  "video_time_hms": "2:04:34",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Gonzalo Montiel",
+  "description": "Gonzalo Montiel (Argentina) shot — blocked (xG 0.02)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.02,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "5d7d4f2f-62da-4de9-90e3-3660ba17c4f3",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "105+1'",
+  "elapsed_in_period_s": 941.2,
+  "video_time": 7545.2,
+  "video_time_hms": "2:05:45",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Lautaro Martínez (Argentina) shot — off target, set up by Marcos Acuña (xG 0.14)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.14,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Marcos Acuña",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "2cc2184c-c5ef-43ba-8347-3d0889ae4703",
+  "period": 3,
+  "period_label": "Extra time 1st half",
+  "clock": "105+2'",
+  "elapsed_in_period_s": 964.6,
+  "video_time": 7568.6,
+  "video_time_hms": "2:06:08",
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "End of extra time 1st half",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "55134cc4-8d38-44e2-9303-ce53ab7feb3d",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "106'",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 7613.0,
+  "video_time_hms": "2:06:53",
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Extra time 2nd half begins",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {}
+ },
+ {
+  "id": "8bb8c7b5-9c14-4dfa-9279-0548ee8076db",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "107'",
+  "elapsed_in_period_s": 115.7,
+  "video_time": 7728.7,
+  "video_time_hms": "2:08:48",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Lionel Messi (Argentina) shot — saved, set up by Gonzalo Montiel (xG 0.02)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.02,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Left Foot",
+   "assist": "Gonzalo Montiel",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "40cbfd91-87d9-4df8-a575-533b5c26767f",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "108'",
+  "elapsed_in_period_s": 177.0,
+  "video_time": 7790.0,
+  "video_time_hms": "2:09:50",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Lautaro Martínez (Argentina) shot — saved, set up by Enzo Fernandez (xG 0.1)",
+  "score_after": {
+   "Argentina": 2,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.1,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Enzo Fernandez",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "54b889ec-6026-49ea-a913-e883dbe6e301",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "108'",
+  "elapsed_in_period_s": 178.1,
+  "video_time": 7791.1,
+  "video_time_hms": "2:09:51",
+  "type": "goal",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "GOAL! Lionel Messi scores for Argentina (right foot half volley shot). Argentina 3–2 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.49,
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null
+  }
+ },
+ {
+  "id": "c001d49f-247b-40d8-b247-38c7adcdebe4",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "113'",
+  "elapsed_in_period_s": 448.1,
+  "video_time": 8061.1,
+  "video_time_hms": "2:14:21",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Ibrahima Konaté",
+  "description": "Substitution France: Ibrahima Konaté ON, Raphaël Varane OFF (injury change)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Ibrahima Konaté",
+   "player_off": "Raphaël Varane",
+   "reason": "Injury"
+  }
+ },
+ {
+  "id": "19e301d2-38dd-4cbd-8bc2-61d2b46b9951",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "114'",
+  "elapsed_in_period_s": 507.1,
+  "video_time": 8120.1,
+  "video_time_hms": "2:15:20",
+  "type": "card",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Leandro Paredes",
+  "description": "Foul by Leandro Paredes (Argentina) on Eduardo Camavinga, midfield — YELLOW CARD for Leandro Paredes",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": null,
+   "penalty": false,
+   "victim": "Eduardo Camavinga",
+   "advantage": false,
+   "zone": "midfield"
+  }
+ },
+ {
+  "id": "6e81c350-5788-4f84-891a-92db9bfbf0db",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "116'",
+  "elapsed_in_period_s": 622.2,
+  "video_time": 8235.2,
+  "video_time_hms": "2:17:15",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Germán Pezzella",
+  "description": "Substitution Argentina: Germán Pezzella ON, Alexis Mac Allister OFF (tactical change)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "player_on": "Germán Pezzella",
+   "player_off": "Alexis Mac Allister",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "de8d4b3f-17eb-47ba-84f0-b8aac05d91c3",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "116'",
+  "elapsed_in_period_s": 632.2,
+  "video_time": 8245.2,
+  "video_time_hms": "2:17:25",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": null,
+  "description": "Argentina change shape to 3-5-2",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "formation": "3-5-2",
+   "lineup": [
+    "Emiliano Martínez (Goalkeeper)",
+    "Cristian Romero (Right Center Back)",
+    "Germán Pezzella (Center Back)",
+    "Nicolás Otamendi (Left Center Back)",
+    "Gonzalo Montiel (Right Wing Back)",
+    "Nicolás Tagliafico (Left Wing Back)",
+    "Leandro Paredes (Center Defensive Midfield)",
+    "Enzo Fernandez (Right Center Midfield)",
+    "Marcos Acuña (Left Center Midfield)",
+    "Lionel Messi (Right Center Forward)",
+    "Lautaro Martínez (Left Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "08f2f203-cdc9-4146-99b6-818c5c32bf70",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "116'",
+  "elapsed_in_period_s": 638.9,
+  "video_time": 8251.9,
+  "video_time_hms": "2:17:31",
+  "type": "shot",
+  "importance": "detail",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Kylian Mbappé (France) shot — blocked (xG 0.03)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "xg": 0.03,
+   "outcome": "Blocked",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": null,
+   "zone": "attacking third"
+  }
+ },
+ {
+  "id": "dcbf6fe6-7b7f-4066-978e-de1a3d6d70ff",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "116'",
+  "elapsed_in_period_s": 639.1,
+  "video_time": 8252.1,
+  "video_time_hms": "2:17:32",
+  "type": "card",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Gonzalo Montiel",
+  "description": "Handball by Gonzalo Montiel (Argentina), inside Argentina's own penalty area — PENALTY to France — YELLOW CARD for Gonzalo Montiel",
+  "score_after": {
+   "Argentina": 3,
+   "France": 2
+  },
+  "data": {
+   "card": "Yellow Card",
+   "foul_type": "Handball",
+   "penalty": true,
+   "victim": null,
+   "advantage": false,
+   "zone": "inside Argentina's own penalty area"
+  }
+ },
+ {
+  "id": "d9b92dbd-4fea-4f48-b2fb-d7222eab2dbd",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "118'",
+  "elapsed_in_period_s": 725.2,
+  "video_time": 8338.2,
+  "video_time_hms": "2:18:58",
+  "type": "goal",
+  "importance": "key",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "GOAL! Kylian Mbappé scores for France (penalty). Argentina 3–3 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "xg": 0.78,
+   "shot_type": "Penalty",
+   "body_part": "Right Foot",
+   "assist": null
+  }
+ },
+ {
+  "id": "838765c8-45c7-4379-857c-f103770acbfc",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+1'",
+  "elapsed_in_period_s": 935.8,
+  "video_time": 8548.8,
+  "video_time_hms": "2:22:28",
+  "type": "substitution",
+  "importance": "key",
+  "team": "France",
+  "player": "Axel Disasi",
+  "description": "Substitution France: Axel Disasi ON, Jules Koundé OFF (tactical change)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "player_on": "Axel Disasi",
+   "player_off": "Jules Koundé",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "27c68f97-cc44-4fb8-9703-0a4de1c9f6ed",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+1'",
+  "elapsed_in_period_s": 946.2,
+  "video_time": 8559.2,
+  "video_time_hms": "2:22:39",
+  "type": "substitution",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Paulo Dybala",
+  "description": "Substitution Argentina: Paulo Dybala ON, Nicolás Tagliafico OFF (tactical change)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "player_on": "Paulo Dybala",
+   "player_off": "Nicolás Tagliafico",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "68fe5a2d-6340-42e3-9c72-1c6d55815da7",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+1'",
+  "elapsed_in_period_s": 948.3,
+  "video_time": 8561.3,
+  "video_time_hms": "2:22:41",
+  "type": "tactical_shift",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": null,
+  "description": "Argentina change shape to 3-5-2",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "formation": "3-5-2",
+   "lineup": [
+    "Emiliano Martínez (Goalkeeper)",
+    "Cristian Romero (Right Center Back)",
+    "Germán Pezzella (Center Back)",
+    "Nicolás Otamendi (Left Center Back)",
+    "Gonzalo Montiel (Right Wing Back)",
+    "Marcos Acuña (Left Wing Back)",
+    "Leandro Paredes (Center Defensive Midfield)",
+    "Enzo Fernandez (Right Center Midfield)",
+    "Paulo Dybala (Left Center Midfield)",
+    "Lionel Messi (Right Center Forward)",
+    "Lautaro Martínez (Left Center Forward)"
+   ]
+  }
+ },
+ {
+  "id": "7963f4cf-e710-42d4-b9ee-2d9b1b7ea12b",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+2'",
+  "elapsed_in_period_s": 1019.8,
+  "video_time": 8632.8,
+  "video_time_hms": "2:23:52",
+  "type": "offside",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Offside: Lionel Messi (Argentina) passes forward but Lautaro Martínez is caught offside",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "passer": "Lionel Messi"
+  }
+ },
+ {
+  "id": "959edead-09fb-40b0-b6a3-72e73bd30d5a",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+3'",
+  "elapsed_in_period_s": 1064.4,
+  "video_time": 8677.4,
+  "video_time_hms": "2:24:37",
+  "type": "shot",
+  "importance": "key",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Big chance: Randal Kolo Muani (France) shot — saved, set up by Ibrahima Konaté (xG 0.28)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "xg": 0.28,
+   "outcome": "Saved",
+   "shot_type": "Open Play",
+   "body_part": "Right Foot",
+   "assist": "Ibrahima Konaté",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "449f2702-ad18-4bc8-a9ef-59fb1dc1a707",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+3'",
+  "elapsed_in_period_s": 1079.8,
+  "video_time": 8692.8,
+  "video_time_hms": "2:24:52",
+  "type": "shot",
+  "importance": "detail",
+  "team": "Argentina",
+  "player": "Lautaro Martínez",
+  "description": "Lautaro Martínez (Argentina) shot — off target, set up by Gonzalo Montiel (xG 0.11)",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "xg": 0.11,
+   "outcome": "Off T",
+   "shot_type": "Open Play",
+   "body_part": "Head",
+   "assist": "Gonzalo Montiel",
+   "zone": "inside the opponents' penalty area"
+  }
+ },
+ {
+  "id": "da654dbc-5e9d-4067-ab4a-2db561a77c8f",
+  "period": 4,
+  "period_label": "Extra time 2nd half",
+  "clock": "120+5'",
+  "elapsed_in_period_s": 1147.5,
+  "video_time": 8760.5,
+  "video_time_hms": "2:26:00",
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "End of extra time 2nd half",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {}
+ },
+ {
+  "id": "f792bb69-f5b3-4945-82f8-3b98382e6605",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 0.0,
+  "video_time": 8838.0,
+  "video_time_hms": "2:27:18",
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Penalty shootout begins",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {}
+ },
+ {
+  "id": "d0f76056-0d67-4aae-b44a-83bef0b1cf27",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 13.4,
+  "video_time": 8851.4,
+  "video_time_hms": "2:27:31",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "France",
+  "player": "Kylian Mbappé",
+  "description": "Kylian Mbappé (France) SCORES in the shootout. Shootout: Argentina 0–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 0,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "2a15edb5-2a54-41d5-afe9-87e447389b18",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 62.2,
+  "video_time": 8900.2,
+  "video_time_hms": "2:28:20",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Lionel Messi",
+  "description": "Lionel Messi (Argentina) SCORES in the shootout. Shootout: Argentina 1–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 1,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "97439112-dfb5-4bd5-9967-554095296096",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 102.0,
+  "video_time": 8940.0,
+  "video_time_hms": "2:29:00",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "France",
+  "player": "Kingsley Coman",
+  "description": "Kingsley Coman (France) MISSES (saved) in the shootout. Shootout: Argentina 1–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Saved",
+   "shootout_after": {
+    "Argentina": 1,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "50dcde1a-faa3-4eec-a0cd-3f09a7cf763a",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 147.2,
+  "video_time": 8985.2,
+  "video_time_hms": "2:29:45",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Paulo Dybala",
+  "description": "Paulo Dybala (Argentina) SCORES in the shootout. Shootout: Argentina 2–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 2,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "54e27ba9-b9ae-44a3-ac8d-fc91e76a1b91",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 209.3,
+  "video_time": 9047.3,
+  "video_time_hms": "2:30:47",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "France",
+  "player": "Aurélien Tchouaméni",
+  "description": "Aurélien Tchouaméni (France) MISSES (off target) in the shootout. Shootout: Argentina 2–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Off T",
+   "shootout_after": {
+    "Argentina": 2,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "bcc6d4ae-f71c-4566-bf2d-c12f910eb526",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 256.7,
+  "video_time": 9094.7,
+  "video_time_hms": "2:31:34",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Leandro Paredes",
+  "description": "Leandro Paredes (Argentina) SCORES in the shootout. Shootout: Argentina 3–1 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 3,
+    "France": 1
+   }
+  }
+ },
+ {
+  "id": "ad6e8237-8cb9-44f4-b9fb-356f066f3b2b",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 297.5,
+  "video_time": 9135.5,
+  "video_time_hms": "2:32:15",
+  "type": "card",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Emiliano Martínez",
+  "description": "YELLOW CARD for Emiliano Martínez (Argentina) — off-the-ball / unsporting behaviour, not for a foul",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "card": "Yellow Card",
+   "reason": "Bad behaviour"
+  }
+ },
+ {
+  "id": "59ebe83e-616a-4288-89fd-a0246b53d48f",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 309.8,
+  "video_time": 9147.8,
+  "video_time_hms": "2:32:27",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "France",
+  "player": "Randal Kolo Muani",
+  "description": "Randal Kolo Muani (France) SCORES in the shootout. Shootout: Argentina 3–2 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 3,
+    "France": 2
+   }
+  }
+ },
+ {
+  "id": "66eaf262-999f-4953-a924-f1b596de4dbf",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 357.9,
+  "video_time": 9195.9,
+  "video_time_hms": "2:33:15",
+  "type": "shootout_kick",
+  "importance": "key",
+  "team": "Argentina",
+  "player": "Gonzalo Montiel",
+  "description": "Gonzalo Montiel (Argentina) SCORES in the shootout. Shootout: Argentina 4–2 France",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {
+   "outcome": "Goal",
+   "shootout_after": {
+    "Argentina": 4,
+    "France": 2
+   }
+  }
+ },
+ {
+  "id": "4f66bdf1-2c51-483a-b45a-89b525bc23c0",
+  "period": 5,
+  "period_label": "Penalty shootout",
+  "clock": "Pens",
+  "elapsed_in_period_s": 358.9,
+  "video_time": 9196.9,
+  "video_time_hms": "2:33:16",
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "End of penalty shootout",
+  "score_after": {
+   "Argentina": 3,
+   "France": 3
+  },
+  "data": {}
+ }
+]

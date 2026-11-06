@@ -9,6 +9,7 @@ import TestingAloneHint from '../TestingAloneHint.jsx';
 import { memberLook } from './ChatTab.jsx';
 
 const SETTINGS = [
+  { id: 'shared_controls', label: 'Everyone controls playback', hint: 'Anyone can pause, seek and go live. Off: only you can.', defaultOn: true },
   { id: 'ai_moderation', label: 'AI moderation', hint: 'Gaffer hides abusive messages. You can still review them.' },
   { id: 'guests_can_poll', label: 'Guests can create polls', hint: 'Off: only you and Gaffer start polls.' },
   { id: 'allow_cameras', label: 'Participant cameras', hint: 'Let guests turn on their video. Turning this off stops every guest camera.', defaultOn: true },
@@ -131,7 +132,7 @@ export default function PeopleTab({ match, onEnd }) {
           </section>
         ) : (
           <p style={{ margin: 0, fontSize: 13, color: 'var(--muted-3)', lineHeight: 1.5 }}>
-            {hostName} is the host. Only the host can control playback, manage participants and change party settings.
+            {hostName} is the host. {party.settings?.shared_controls === false ? 'Only the host can control playback, manage' : 'Everyone can control playback; only the host can manage'} participants and change party settings.
           </p>
         )}
       </div>

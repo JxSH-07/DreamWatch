@@ -1,19 +1,21 @@
 // Loads match data only (no users). Idempotent. Run from the repo root:
 //   node supabase/seed/seed.js
-// Needs SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in supabase/seed/.env.
+// Needs SUPABASE_URL and a server key in supabase/seed/.env: either
+// SUPABASE_SECRET_KEY (sb_secret_…) or the legacy SUPABASE_SERVICE_ROLE_KEY.
 import { createClient } from '@supabase/supabase-js';
 import fs from 'node:fs';
 import dotenv from 'dotenv';
 import { eventVideoTime } from '../../src/lib/matchTime.js';
 
 dotenv.config({ path: 'supabase/seed/.env' });
-const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env;
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in supabase/seed/.env');
+const { SUPABASE_URL } = process.env;
+const serverKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!SUPABASE_URL || !serverKey) {
+  console.error('Missing SUPABASE_URL or SUPABASE_SECRET_KEY (or SUPABASE_SERVICE_ROLE_KEY) in supabase/seed/.env');
   process.exit(1);
 }
 
-const admin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } });
+const admin = createClient(SUPABASE_URL, serverKey, { auth: { persistSession: false } });
 const matches = JSON.parse(fs.readFileSync('data/matches.json', 'utf8'));
 
 function check(error, what) {

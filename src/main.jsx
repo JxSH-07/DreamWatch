@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { ToastProvider } from './context/ToastContext.jsx';
 import { SubscriptionProvider } from './context/SubscriptionContext.jsx';
+import { InvitesProvider } from './context/InvitesContext.jsx';
 import { isConfigured, supabase } from './lib/supabase.js';
 import { syncServerClock } from './lib/serverClock.js';
 import { setLiveEpoch } from './lib/matchTime.js';
@@ -39,7 +40,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <ToastProvider>
           <AuthProvider>
             <SubscriptionProvider>
-              <App />
+              <InvitesProvider>
+                <App />
+              </InvitesProvider>
             </SubscriptionProvider>
           </AuthProvider>
         </ToastProvider>

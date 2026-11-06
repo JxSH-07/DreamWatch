@@ -138,8 +138,8 @@ function LobbyInner() {
               <span className="t">Playback is synced for everyone</span>
               <span className="b">
                 {match.mode === 'live'
-                  ? 'Everyone watches the same moment of the live stream, so a goal never gets spoiled in the chat. The host can rewind and bring everyone back to live.'
-                  : 'The host can pause, rewind and skip for everyone. The timeline and Gaffer only show what the party has already watched.'}
+                  ? 'Everyone watches the same moment of the live stream, so a goal never gets spoiled in the chat. Anyone in the party can rewind and bring everyone back to live, and the chat shows who did it.'
+                  : 'Anyone in the party can pause, rewind and skip for everyone, and the chat shows who did it. The timeline and Gaffer only show what the party has already watched.'}
               </span>
             </div>
           </div>
@@ -190,7 +190,9 @@ function LobbyInner() {
             <span style={{ fontSize: 12, color: 'var(--muted-3)' }}>
               {isHost
                 ? "Everyone in the lobby moves into the room together. Friends still joining drop straight in when they're ready."
-                : `${hostName} controls playback. You can chat, react and ask Gaffer.`}
+                : party.settings?.shared_controls === false
+                  ? `${hostName} controls playback. You can chat, react and ask Gaffer.`
+                  : 'Everyone can pause and rewind, chat, react and ask Gaffer.'}
             </span>
           </div>
         </section>

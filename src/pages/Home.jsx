@@ -5,6 +5,7 @@ import Header from '../components/Header.jsx';
 import CreatePartyModal from '../components/CreatePartyModal.jsx';
 import { Avatar, Loader, ModeBadge, TeamMark } from '../components/ui.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
+import { useInvites } from '../context/InvitesContext.jsx';
 import { useSubscriptionGate } from '../context/SubscriptionContext.jsx';
 import { useMatch, useMatches } from '../hooks/useMatch.js';
 import { useNow } from '../hooks/useNow.js';
@@ -50,7 +51,7 @@ function LiveHero({ match, onParty }) {
       <div className="hero-inner">
         <div className="hero-meta">
           <ModeBadge mode="live" />
-          <span>{config.competition} · {config.venue}</span>
+          <span>{[config.competition, config.venue].filter(Boolean).join(' · ')}</span>
           <span className="viewers tab-num"><Eye size={16} strokeWidth={2} aria-hidden="true" />{viewers} watching</span>
         </div>
         <button type="button" onClick={watch} className="hero-teams" style={{ border: 0, background: 'transparent', color: 'inherit', cursor: 'pointer', padding: 0 }} aria-label={`Watch ${match.title} live`}>
@@ -133,12 +134,13 @@ function ClassicCard({ match, onParty }) {
 
 function YourParties({ matches }) {
   const { user } = useAuth();
+  const { invites } = useInvites();
   const [rows, setRows] = useState([]);
   useEffect(() => {
     let active = true;
     supabase
       .from('party_members')
-      .select('status, role, party:parties(id, name, status, match_id, host_id, created_at, host:profiles(display_name, avatar_color))')
+      .select('status, role, party:parties(id, name, status, match_id, host_id, created_at, host:profiles!parties_host_id_fkey(display_name, avatar_color))')
       .eq('user_id', user.id)
       .neq('status', 'removed')
       .then(({ data }) => {
@@ -147,7 +149,7 @@ function YourParties({ matches }) {
           .sort((a, b) => b.party.created_at.localeCompare(a.party.created_at)));
       });
     return () => { active = false; };
-  }, [user.id]);
+  }, [user.id, invites]);
   const titles = useMemo(() => Object.fromEntries(matches.map((m) => [m.id, m])), [matches]);
   if (!rows.length) return null;
 
@@ -177,8 +179,9 @@ function YourParties({ matches }) {
 export default function Home() {
   const { matches, loading } = useMatches();
   const [partyFor, setPartyFor] = useState(null);
-  const live = matches.find((m) => m.mode === 'live');
-  const classics = matches.filter((m) => m.mode === 'replay');
+  const listed = matches.filter((m) => m.config?.listed !== false);
+  const live = listed.find((m) => m.mode === 'live');
+  const classics = listed.filter((m) => m.mode === 'replay');
 
   return (
     <div className="page">

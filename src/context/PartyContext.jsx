@@ -190,6 +190,23 @@ export function PartyProvider({ partyId, children }) {
     return true;
   }, [partyId, toast, reloadParty]);
 
+  // Any member's playback change (pause, seek, go live…). The server bumps the
+  // version, records who did it and writes the chat log line.
+  const playbackAction = useCallback(async (action, patch, label) => {
+    if (!patch) return false;
+    setParty((prev) => ({ ...prev, ...patch, playback_by: user.id }));
+    const { error } = await supabase.rpc('playback_action', {
+      p_party: partyId, p_action: action, p_patch: patch, p_label: label ?? null,
+    });
+    if (error) {
+      console.error('playback_action failed', error.message);
+      toast(/host controls/.test(error.message) ? 'The host has turned off shared controls' : "Couldn't change playback — try again", 'warn');
+      reloadParty();
+      return false;
+    }
+    return true;
+  }, [partyId, user, toast, reloadParty]);
+
   const updateMember = useCallback(async (userId, patch) => {
     setMembers((prev) => prev.map((m) => (m.user_id === userId ? { ...m, ...patch } : m)));
     const { error } = await supabase.from('party_members').update(patch).eq('party_id', partyId).eq('user_id', userId);
@@ -266,7 +283,7 @@ export function PartyProvider({ partyId, children }) {
   const value = {
     partyId, party, members, memberMap, me, isHost: !!party && party.host_id === user?.id,
     messages, polls, votes, online, typing, thinking, reactions, loading, loadError,
-    updateParty, updateMember, react, sendTyping, sendMessage, vote, rpc, setThinking,
+    updateParty, playbackAction, updateMember, react, sendTyping, sendMessage, vote, rpc, setThinking,
   };
   return <PartyContext.Provider value={value}>{children}</PartyContext.Provider>;
 }

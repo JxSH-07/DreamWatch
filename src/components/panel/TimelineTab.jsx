@@ -104,7 +104,7 @@ export default function TimelineTab({
                     )}
                     {e.approximate && <span className="tag-sm" style={{ color: 'var(--muted-3)', background: 'var(--line)' }}>≈ minute</span>}
                   </div>
-                  {e.player && <span className="player">{e.player}</span>}
+                  {e.player && <span className="tl-player">{e.player}</span>}
                   <span className="desc">{e.description}</span>
                   {(onAsk || onJump) && !future && (
                     <div className="acts">

@@ -22,6 +22,7 @@ import { copyText, inviteLink, teamInfo } from '../lib/format.js';
 import { serverNow } from '../lib/serverClock.js';
 import { supabase } from '../lib/supabase.js';
 import NotFound from './NotFound.jsx';
+import { PanelResizer, usePanelWidth } from '../components/PanelResizer.jsx';
 
 const REACTIONS = [
   ['⚽', 'goal'], ['🔥', 'fire'], ['😱', 'shocked'], ['😂', 'laughing'], ['👏', 'applause'], ['🟨', 'yellow card'], ['🟥', 'red card'],
@@ -196,7 +197,7 @@ function RemovedScreen() {
 function RoomInner() {
   const { user } = useAuth();
   const toast = useToast();
-  const { partyId, party: row, members, me, isHost, messages, polls, votes, reactions, memberMap, loading, loadError, updateParty, react, rpc } = useParty();
+  const { partyId, party: row, members, me, isHost, messages, polls, votes, reactions, memberMap, loading, loadError, updateParty, playbackAction, react, rpc } = useParty();
   const { match, events, keyEvents } = useMatch(row?.match_id);
   const now = useNow(500);
   const [tab, setTab] = useState('chat');
@@ -206,6 +207,8 @@ function RoomInner() {
   const [unreadChat, setUnreadChat] = useState(0);
   const [unreadTl, setUnreadTl] = useState(0);
   const lastReact = useRef(0);
+  const gridRef = useRef(null);
+  const [sideWidth, setSideWidth] = usePanelWidth();
   const rowRef = useRef(row);
   rowRef.current = row;
 
@@ -235,17 +238,24 @@ function RoomInner() {
     polls.filter((p) => p.status === 'open').forEach((p) => rpc('void_poll', { p_poll: p.id }));
   });
 
-  const host = (action, arg) => {
+  // Everyone in the party controls playback unless the host turned shared controls off.
+  const canControl = isHost || row?.settings?.shared_controls !== false;
+  const act = (action, arg) => {
     const r = rowRef.current;
-    updateParty(playbackPatch(action, r, match, serverNow(), arg));
+    const now = serverNow();
+    const patch = playbackPatch(action, r, match, now, arg);
+    if (!patch) return;
+    const label = videoToMatchClock(match.config, partyPosition({ ...r, ...patch }, match, now)).clock;
+    const name = action === 'skip' ? (arg < 0 ? 'skip_back' : 'skip_forward') : action === 'goLive' ? 'go_live' : action;
+    playbackAction(name, patch, action === 'seek' || action === 'skip' ? label : null);
   };
-  const controls = useMemo(() => (isHost ? {
-    seek: (t) => host('seek', t),
-    skip: (d) => host('skip', d),
-    play: () => host('play'),
-    pause: () => host('pause'),
-    goLive: () => host('goLive'),
-  } : null), [isHost, match]); // eslint-disable-line react-hooks/exhaustive-deps
+  const controls = useMemo(() => (canControl ? {
+    seek: (t) => act('seek', t),
+    skip: (d) => act('skip', d),
+    play: () => act('play'),
+    pause: () => act('pause'),
+    goLive: () => act('goLive'),
+  } : null), [canControl, match]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getTarget = useCallback(() => (match && rowRef.current ? partyPosition(rowRef.current, match, serverNow()) : 0), [match]);
 
@@ -306,13 +316,14 @@ function RoomInner() {
     <CallProvider active={row.status === 'live'}>
       <CallAudio />
       <RoomHeader match={match} hostName={hostName} />
-      <div className="room-grid">
+      <div className="room-grid" ref={gridRef} style={{ '--side-w': `${sideWidth}px` }}>
         <section className="room-player" aria-label="Match player">
           <VideoPlayer
             match={match} events={events} position={position} now={now} getTarget={getTarget}
             isPlaying={row.status === 'live' && row.is_playing} version={row.playback_version}
             controls={controls} hostName={hostName} variant="party" reactions={floating}
-            overlay={<PipTiles people={callPeople} isHost={isHost} />}
+            pausedBy={memberMap[row.playback_by]?.profile?.display_name ?? hostName}
+            overlay={<PipTiles people={callPeople} isHost={!!controls} />}
           />
         </section>
 
@@ -330,6 +341,7 @@ function RoomInner() {
         </section>
 
         <aside className="room-side" aria-label="Party panel">
+          <PanelResizer width={sideWidth} setWidth={setSideWidth} containerRef={gridRef} />
           <div className="side-panel">
             <div className="tabs" role="tablist" aria-label="Party panel sections">
               {tabs.map((t) => (
@@ -345,7 +357,7 @@ function RoomInner() {
             )}
             {tab === 'timeline' && (
               <TimelineTab match={match} keyEvents={keyEvents} position={position} now={now} fresh={fresh} highlightId={highlight}
-                onAsk={askAbout} onJump={isHost ? (e) => controls.seek(e.video_time - 8) : null} onGoLive={isHost ? controls.goLive : null} />
+                onAsk={askAbout} onJump={controls ? (e) => controls.seek(e.video_time - 8) : null} onGoLive={controls ? controls.goLive : null} />
             )}
             {tab === 'polls' && <PollsTab match={match} position={position} />}
             {tab === 'people' && <PeopleTab match={match} onEnd={endParty} />}

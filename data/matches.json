@@ -1,5 +1,48 @@
 [
  {
+  "id": "barca-atleti-2025-md19",
+  "mode": "live",
+  "title": "Barcelona vs Atlético de Madrid",
+  "competition": "LaLiga 2025/26 — Matchday 19",
+  "home": "Barcelona",
+  "away": "Atlético de Madrid",
+  "youtube_id": "oW8psSa2hf4",
+  "period_starts": {
+   "1": 186,
+   "2": 3333
+  },
+  "period_ends": {
+   "1": 3186,
+   "2": 6453
+  },
+  "period_base_minute": {
+   "1": 0,
+   "2": 45
+  },
+  "period_length_min": {
+   "1": 45,
+   "2": 45
+  },
+  "loop": {
+   "start": 186,
+   "end": 6520
+  },
+  "events_file": "barca_atleti_events.json",
+  "data_credit": "Event data compiled from published match reports; times are approximate to the minute",
+  "teams": {
+   "Barcelona": {
+    "short": "BAR",
+    "color": "#4C8DF6",
+    "text": "#8DB6FF"
+   },
+   "Atlético de Madrid": {
+    "short": "ATM",
+    "color": "#E5484D",
+    "text": "#FF8B8F"
+   }
+  }
+ },
+ {
   "id": "arg-fra-2022-final",
   "mode": "live",
   "title": "Argentina vs France",
@@ -85,7 +128,8 @@
     "color": "#5B6CF5",
     "text": "#9AA6FF"
    }
-  }
+  },
+  "listed": false
  },
  {
   "id": "betis-barca-2025-md15",

@@ -1,0 +1,626 @@
+[
+ {
+  "id": "barati-001",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "1'",
+  "video_time": 186,
+  "video_time_hms": "0:03:06",
+  "approximate": true,
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "1st half begins",
+  "score_after": {
+   "Barcelona": 0,
+   "Atlético de Madrid": 0
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-002",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "14'",
+  "video_time": 1026,
+  "video_time_hms": "0:17:06",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Koke",
+  "description": "Substitution Atlético: Koke ON, Johnny Cardoso OFF (early change, Cardoso unable to continue)",
+  "score_after": {
+   "Barcelona": 0,
+   "Atlético de Madrid": 0
+  },
+  "data": {
+   "player_on": "Koke",
+   "player_off": "Johnny Cardoso",
+   "reason": "Injury"
+  }
+ },
+ {
+  "id": "barati-003",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "19'",
+  "video_time": 1326,
+  "video_time_hms": "0:22:06",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Álex Baena",
+  "description": "GOAL! Álex Baena gives Atlético the lead — Nahuel Molina's lofted ball over the top catches Barcelona's high defensive line and Baena finishes. Barcelona 0–1 Atlético de Madrid",
+  "score_after": {
+   "Barcelona": 0,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "assist": "Nahuel Molina"
+  }
+ },
+ {
+  "id": "barati-004",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "20'",
+  "video_time": 1386,
+  "video_time_hms": "0:23:06",
+  "approximate": true,
+  "type": "var_decision",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Álex Baena",
+  "description": "VAR check on Álex Baena's goal completed — the goal stands",
+  "score_after": {
+   "Barcelona": 0,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "decision": "Goal stands",
+   "note": "The reason for the check is not in the data"
+  }
+ },
+ {
+  "id": "barati-005",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "26'",
+  "video_time": 1746,
+  "video_time_hms": "0:29:06",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Raphinha",
+  "description": "GOAL! Raphinha equalises — Pedri's through ball sends him clear, his first touch takes him around goalkeeper Jan Oblak and he slots into the empty net with his right foot. Barcelona 1–1 Atlético de Madrid",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "assist": "Pedri"
+  }
+ },
+ {
+  "id": "barati-006",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "30'",
+  "video_time": 1986,
+  "video_time_hms": "0:33:06",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Robert Lewandowski",
+  "description": "Robert Lewandowski's right-footed shot from outside the box is blocked (set up by Raphinha)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-007",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "35'",
+  "video_time": 2286,
+  "video_time_hms": "0:38:06",
+  "approximate": true,
+  "type": "penalty_awarded",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Pablo Barrios",
+  "description": "Foul by Pablo Barrios (Atlético) on Dani Olmo inside the penalty area — PENALTY to Barcelona",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "victim": "Dani Olmo",
+   "penalty": true
+  }
+ },
+ {
+  "id": "barati-008",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "36'",
+  "video_time": 2346,
+  "video_time_hms": "0:39:06",
+  "approximate": true,
+  "type": "penalty_missed",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Robert Lewandowski",
+  "description": "PENALTY MISSED! Robert Lewandowski's right-footed penalty flies high and wide to the left of Oblak's goal",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "outcome": "Off target"
+  }
+ },
+ {
+  "id": "barati-009",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "41'",
+  "video_time": 2646,
+  "video_time_hms": "0:44:06",
+  "approximate": true,
+  "type": "card",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Álex Baena",
+  "description": "YELLOW CARD for Álex Baena (Atlético) — he threw himself on top of Pau Cubarsí with no intention of playing the ball",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "card": "Yellow Card",
+   "victim": "Pau Cubarsí"
+  }
+ },
+ {
+  "id": "barati-010",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+2'",
+  "video_time": 3006,
+  "video_time_hms": "0:50:06",
+  "approximate": true,
+  "type": "card",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Gerard Martín",
+  "description": "YELLOW CARD for Gerard Martín (Barcelona) for a bad, clumsy foul on Giuliano Simeone on the right wing",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "card": "Yellow Card",
+   "victim": "Giuliano Simeone"
+  }
+ },
+ {
+  "id": "barati-011",
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+5'",
+  "video_time": 3186,
+  "video_time_hms": "0:53:06",
+  "approximate": true,
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Half-time: Barcelona 1–1 Atlético de Madrid (4 minutes of added time)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-012",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "46'",
+  "video_time": 3333,
+  "video_time_hms": "0:55:33",
+  "approximate": true,
+  "type": "period_start",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "2nd half begins",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-013",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "46'",
+  "video_time": 3333,
+  "video_time_hms": "0:55:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Conor Gallagher",
+  "description": "Substitution Atlético: Conor Gallagher ON, Nico González OFF",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Conor Gallagher",
+   "player_off": "Nico González"
+  }
+ },
+ {
+  "id": "barati-014",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "57'",
+  "video_time": 4053,
+  "video_time_hms": "1:07:33",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Robert Lewandowski",
+  "description": "Foul by Robert Lewandowski (Barcelona)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-015",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "58'",
+  "video_time": 4113,
+  "video_time_hms": "1:08:33",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Dani Olmo",
+  "description": "Dani Olmo's right-footed shot from outside the box goes over (set up by Lewandowski)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-016",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "58'",
+  "video_time": 4113,
+  "video_time_hms": "1:08:33",
+  "approximate": true,
+  "type": "injury",
+  "importance": "detail",
+  "team": "Atlético de Madrid",
+  "player": "Álex Baena",
+  "description": "Play stopped for an injury to Álex Baena (Atlético)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-017",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "62'",
+  "video_time": 4353,
+  "video_time_hms": "1:12:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Thiago Almada",
+  "description": "Substitution Atlético: Thiago Almada ON, Álex Baena OFF (Baena was on a yellow card and had needed treatment)",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Thiago Almada",
+   "player_off": "Álex Baena"
+  }
+ },
+ {
+  "id": "barati-018",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "63'",
+  "video_time": 4413,
+  "video_time_hms": "1:13:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Alexander Sørloth",
+  "description": "Substitution Atlético: Alexander Sørloth ON, Giuliano Simeone OFF",
+  "score_after": {
+   "Barcelona": 1,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Alexander Sørloth",
+   "player_off": "Giuliano Simeone"
+  }
+ },
+ {
+  "id": "barati-019",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "65'",
+  "video_time": 4533,
+  "video_time_hms": "1:15:33",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Dani Olmo",
+  "description": "GOAL! Dani Olmo puts Barcelona ahead — a flowing team move ends with his left-footed shot from the centre of the box across Oblak into the bottom corner. Barcelona 2–1 Atlético de Madrid",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-020",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "65'",
+  "video_time": 4533,
+  "video_time_hms": "1:15:33",
+  "approximate": true,
+  "type": "injury",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Dani Olmo",
+  "description": "Play stopped for an injury to Dani Olmo (Barcelona) — he hurt his shoulder in the move that led to his goal",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-021",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "66'",
+  "video_time": 4593,
+  "video_time_hms": "1:16:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Marcus Rashford",
+  "description": "Substitution Barcelona: Marcus Rashford ON, Dani Olmo OFF (injury)",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Marcus Rashford",
+   "player_off": "Dani Olmo",
+   "reason": "Injury"
+  }
+ },
+ {
+  "id": "barati-022",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "67'",
+  "video_time": 4653,
+  "video_time_hms": "1:17:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "Substitution Barcelona: Ferran Torres ON, Robert Lewandowski OFF",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Ferran Torres",
+   "player_off": "Robert Lewandowski"
+  }
+ },
+ {
+  "id": "barati-023",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "74'",
+  "video_time": 5073,
+  "video_time_hms": "1:24:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Dro Fernández",
+  "description": "Substitution Barcelona: Dro Fernández ON, Raphinha OFF",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Dro Fernández",
+   "player_off": "Raphinha"
+  }
+ },
+ {
+  "id": "barati-024",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "74'",
+  "video_time": 5073,
+  "video_time_hms": "1:24:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Marc Casadó",
+  "description": "Substitution Barcelona: Marc Casadó ON, Pedri OFF",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Marc Casadó",
+   "player_off": "Pedri"
+  }
+ },
+ {
+  "id": "barati-025",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "75'",
+  "video_time": 5133,
+  "video_time_hms": "1:25:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Antoine Griezmann",
+  "description": "Substitution Atlético: Antoine Griezmann ON, Koke OFF",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Antoine Griezmann",
+   "player_off": "Koke"
+  }
+ },
+ {
+  "id": "barati-026",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "80'",
+  "video_time": 5433,
+  "video_time_hms": "1:30:33",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Atlético de Madrid",
+  "player": "Thiago Almada",
+  "description": "Big chance: Thiago Almada beats a couple of Barcelona defenders inside the area and nearly equalises",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ },
+ {
+  "id": "barati-027",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "video_time": 5913,
+  "video_time_hms": "1:38:33",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Andreas Christensen",
+  "description": "Substitution Barcelona: Andreas Christensen ON, Lamine Yamal OFF (a defensive change to protect the lead)",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "player_on": "Andreas Christensen",
+   "player_off": "Lamine Yamal"
+  }
+ },
+ {
+  "id": "barati-028",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+1'",
+  "video_time": 6093,
+  "video_time_hms": "1:41:33",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Atlético de Madrid",
+  "player": "Antoine Griezmann",
+  "description": "Antoine Griezmann's left-footed shot from the centre of the box misses to the right (set up by Thiago Almada)",
+  "score_after": {
+   "Barcelona": 2,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "note": "minute approximate"
+  }
+ },
+ {
+  "id": "barati-029",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+6'",
+  "video_time": 6393,
+  "video_time_hms": "1:46:33",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "GOAL! Ferran Torres seals it — left unmarked, he finishes Alejandro Balde's cross with a right-footed shot from very close range. Barcelona 3–1 Atlético de Madrid",
+  "score_after": {
+   "Barcelona": 3,
+   "Atlético de Madrid": 1
+  },
+  "data": {
+   "assist": "Alejandro Balde"
+  }
+ },
+ {
+  "id": "barati-030",
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+7'",
+  "video_time": 6453,
+  "video_time_hms": "1:47:33",
+  "approximate": true,
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Full time: Barcelona 3–1 Atlético de Madrid (6 minutes of added time)",
+  "score_after": {
+   "Barcelona": 3,
+   "Atlético de Madrid": 1
+  },
+  "data": {}
+ }
+]

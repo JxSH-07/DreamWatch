@@ -35,6 +35,8 @@ export function eventMeta(e, config) {
     }
     case 'penalty_awarded':
       return { title: 'Penalty awarded', icon: 'pen', banner: `PENALTY · ${(e.team ? config.teams?.[e.team]?.short ?? e.team : '').toUpperCase()}`, bannerBg: '#FFB020' };
+    case 'penalty_missed':
+      return { title: 'Penalty missed', icon: 'pen', banner: `PENALTY MISSED · ${shortName(e.player).toUpperCase()}`, bannerBg: '#FFB020' };
     case 'var_decision':
       return { title: 'VAR decision', icon: 'var', banner: 'VAR CHECK', bannerBg: '#FFB020' };
     case 'substitution': return { title: 'Substitution', icon: 'sub' };

@@ -83,7 +83,7 @@ export function aboutLabel(e) {
   const who = e.player ? e.player.split(' ').slice(-1)[0] : e.team ?? '';
   const type = {
     goal: 'Goal', shot: 'Shot', card: /red/i.test(JSON.stringify(e.data ?? {}) + e.description) ? 'Red card' : 'Yellow card',
-    foul: 'Foul', handball: 'Handball', penalty_awarded: 'Penalty', offside: 'Offside', substitution: 'Substitution',
+    foul: 'Foul', handball: 'Handball', penalty_awarded: 'Penalty', penalty_missed: 'Penalty miss', offside: 'Offside', substitution: 'Substitution',
     tactical_shift: 'Tactical change', injury: 'Injury', shootout_kick: 'Shootout kick', var_decision: 'VAR decision',
   }[e.type] ?? e.type;
   return `${e.clock ?? ''} ${who} ${type.toLowerCase()}`.replace(/\s+/g, ' ').trim();
