@@ -28,10 +28,22 @@ export function eventVideoTime(config, e) {
   return Number(e.video_time);
 }
 
+// Sorted by video time; events at the same second keep their source order (`seq`).
 export function normalizeEvents(config, events) {
   return events
     .map((e) => ({ ...e, video_time: eventVideoTime(config, e) }))
-    .sort((a, b) => a.video_time - b.video_time);
+    .sort((a, b) => a.video_time - b.video_time || (a.seq ?? 0) - (b.seq ?? 0));
+}
+
+// Running team stats at video time t (from the latest event's `stats_after`), or null.
+export function statsAt(events, t) {
+  let stats = null;
+  for (const e of events) {
+    if (e.video_time > t) break;
+    const s = e.stats_after ?? e.data?.stats_after; // seeded rows keep it inside `data`
+    if (s) stats = s;
+  }
+  return stats;
 }
 
 // The seekable range of the video: the loop for live, kick-off − 5 s → final whistle for replay.

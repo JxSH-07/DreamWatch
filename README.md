@@ -2,7 +2,7 @@
 
 Football fans who can't be in the same room end up watching on separate streams a few seconds apart, with a group chat on the side and a goal spoiled by whoever's stream is ahead. Dream Watch puts the party inside the streaming app: everyone watches the same moment, chats and reacts over the video, votes on prediction polls, and can tag **@Gaffer**, an AI match expert who explains offsides, handballs, cards and tactical changes from real match event data, without spoiling what hasn't happened yet.
 
-**Live URL:** _add after deploying_
+**Live URL:** https://dream-watch-eight.vercel.app
 
 ## How to test in 3 minutes
 

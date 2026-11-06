@@ -1,6 +1,7 @@
 // Brand and football icons from the design export. Generic UI icons come from lucide-react.
 import {
-  ArrowUpDown, Activity, Crosshair, Flag, Goal as GoalNet, Hand, RectangleVertical, Shuffle, Target, TriangleAlert, Tv,
+  ArrowUpDown, Activity, CornerDownRight, Crosshair, Flag, Goal as GoalNet, Hand, RectangleVertical, Shuffle, Target, Timer,
+  TriangleAlert, Tv,
 } from 'lucide-react';
 
 export function LogoMark({ size = 30, ring = '#0A0D16' }) {
@@ -75,6 +76,8 @@ const ICONS = {
   tactic: Shuffle,
   injury: Activity,
   shootout: Target,
+  corner: CornerDownRight,
+  added: Timer,
   yellow: RectangleVertical,
   red: RectangleVertical,
 };

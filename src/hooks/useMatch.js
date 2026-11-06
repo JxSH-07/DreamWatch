@@ -11,7 +11,7 @@ async function fetchMatch(matchId) {
     if (error) throw error;
     if (!match) return null;
     const { data: events, error: evErr } = await supabase
-      .from('match_events').select('*').eq('match_id', matchId).order('video_time');
+      .from('match_events').select('*').eq('match_id', matchId).order('video_time').order('seq');
     if (evErr) throw evErr;
     const all = normalizeEvents(match.config, events ?? []);
     return { match, events: all, keyEvents: all.filter((e) => e.importance === 'key') };

@@ -46,8 +46,10 @@ for (const [i, m] of matches.entries()) {
   const rows = events.map((e) => ({
     id: e.id, match_id: m.id, period: e.period, elapsed_in_period_s: e.elapsed_in_period_s ?? null,
     video_time: eventVideoTime(m, e), clock: e.clock, type: e.type, importance: e.importance, team: e.team ?? null,
-    player: e.player ?? null, description: e.description, score_after: e.score_after ?? null, data: e.data ?? {},
-    approximate: !!e.approximate,
+    player: e.player ?? null, description: e.description, score_after: e.score_after ?? null,
+    // Running team stats ride along in `data` so the schema stays the same.
+    data: e.stats_after ? { ...(e.data ?? {}), stats_after: e.stats_after } : (e.data ?? {}),
+    approximate: !!e.approximate, seq: e.seq ?? null,
   }));
   for (let j = 0; j < rows.length; j += 200) {
     const { error } = await admin.from('match_events').insert(rows.slice(j, j + 200));

@@ -17,9 +17,9 @@ export function shortName(player) {
 }
 
 export function cardColor(e) {
-  const hay = `${JSON.stringify(e.data ?? {})} ${e.description}`;
+  const hay = `${e.data?.card ?? ''} ${e.description}`;
   if (/second yellow/i.test(hay)) return 'second';
-  return /red/i.test(hay) ? 'red' : 'yellow';
+  return /\bred card\b/i.test(hay) ? 'red' : 'yellow';
 }
 
 // Title, icon kind and optional player banner for a match event.
@@ -40,6 +40,8 @@ export function eventMeta(e, config) {
     case 'var_decision':
       return { title: 'VAR decision', icon: 'var', banner: 'VAR CHECK', bannerBg: '#FFB020' };
     case 'substitution': return { title: 'Substitution', icon: 'sub' };
+    case 'corner': return { title: 'Corner', icon: 'corner' };
+    case 'added_time': return { title: `${e.data?.minutes ?? ''} min added time`.trim(), icon: 'added' };
     case 'offside': return { title: 'Offside', icon: 'offside' };
     case 'handball': return { title: 'Handball', icon: 'hand' };
     case 'foul': return { title: 'Foul', icon: 'foul' };

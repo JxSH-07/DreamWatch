@@ -55,11 +55,18 @@ function surname(name) {
   return String(name).trim().split(/\s+/).slice(-1)[0].toLowerCase();
 }
 
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const SCORING = '(scores?|scored|(?<!goal-)scoring|nets?|netted|finish(?:es|ed)?|strikes?|struck|hat-?trick|brace)';
+
 // Live mode only: does the answer reveal anything after `position`? (§12.4)
 function spoils(answer, { events, position, config }) {
   const text = answer.toLowerCase();
   const future = events.filter((e) => e.video_time > position);
-  const pastGoals = events.filter((e) => e.type === 'goal' && e.video_time <= position);
+  const seen = events.filter((e) => e.video_time <= position);
+  const pastGoals = seen.filter((e) => e.type === 'goal');
+  // Scorelines already mentioned in what the party has seen (e.g. "a chance to make it 2–1")
+  // aren't spoilers when Gaffer repeats them.
+  const seenText = seen.map((e) => e.description).join(' ').toLowerCase().replace(/[-—]/g, '–');
 
   for (const g of future.filter((e) => e.type === 'goal')) {
     const s = g.score_after;
@@ -67,13 +74,18 @@ function spoils(answer, { events, position, config }) {
       const h = s[config.home];
       const a = s[config.away];
       for (const [x, y] of [[h, a], [a, h]]) {
+        if (seenText.includes(`${x}–${y}`)) continue;
         if (new RegExp(`\\b${x}\\s*[-–—]\\s*${y}\\b`).test(text)) return true;
       }
     }
     if (g.player) {
-      const n = surname(g.player);
+      // Only a name *next to* a scoring phrase counts ("Olmo scores", "Olmo's goal", "goal from Olmo"),
+      // so explaining a foul on Olmo or "a goal-scoring chance" doesn't trip it.
+      const n = escapeRe(surname(g.player));
       const scoredAlready = pastGoals.some((p) => p.player === g.player);
-      if (text.includes(n) && (/hat-?trick/.test(text) || (!scoredAlready && /\b(scores?|scored|goal)\b/.test(text)))) return true;
+      const nearScoring = new RegExp(`\\b${n}\\b[^.!?]{0,25}\\b${SCORING}\\b|\\b${n}'s (?:\\w+ )?goal\\b|\\bgoal (?:from|by) (?:\\w+ )?${n}\\b`);
+      if (/hat-?trick/.test(text) && text.includes(surname(g.player))) return true;
+      if (!scoredAlready && nearScoring.test(text)) return true;
     }
   }
   const currentPeriod = Math.max(0, ...events.filter((e) => e.video_time <= position).map((e) => e.period));

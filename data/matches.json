@@ -4,6 +4,8 @@
   "mode": "live",
   "title": "Barcelona vs Atlético de Madrid",
   "competition": "LaLiga 2025/26 — Matchday 19",
+  "venue": "Spotify Camp Nou, Barcelona",
+  "date": "2025-12-02",
   "home": "Barcelona",
   "away": "Atlético de Madrid",
   "youtube_id": "oW8psSa2hf4",
@@ -12,8 +14,8 @@
    "2": 3333
   },
   "period_ends": {
-   "1": 3186,
-   "2": 6453
+   "1": 3156,
+   "2": 6491
   },
   "period_base_minute": {
    "1": 0,
@@ -25,10 +27,8 @@
   },
   "loop": {
    "start": 186,
-   "end": 6520
+   "end": 6491
   },
-  "events_file": "barca_atleti_events.json",
-  "data_credit": "Event data compiled from published match reports; times are approximate to the minute",
   "teams": {
    "Barcelona": {
     "short": "BAR",
@@ -39,6 +39,150 @@
     "short": "ATM",
     "color": "#E5484D",
     "text": "#FF8B8F"
+   }
+  },
+  "lineups": {
+   "Barcelona": {
+    "formation": "4-2-3-1",
+    "manager": "Hansi Flick",
+    "starting_xi": [
+     "Joan García",
+     "Jules Koundé",
+     "Pau Cubarsí",
+     "Gerard Martín",
+     "Alejandro Balde",
+     "Eric García",
+     "Pedri",
+     "Lamine Yamal",
+     "Dani Olmo",
+     "Raphinha",
+     "Robert Lewandowski"
+    ]
+   },
+   "Atlético de Madrid": {
+    "formation": "4-2-3-1",
+    "manager": "Diego Simeone",
+    "starting_xi": [
+     "Jan Oblak",
+     "Nahuel Molina",
+     "José María Giménez",
+     "Clément Lenglet",
+     "Dávid Hancko",
+     "Johnny Cardoso",
+     "Pablo Barrios",
+     "Giuliano Simeone",
+     "Álex Baena",
+     "Nico González",
+     "Julián Alvarez"
+    ]
+   }
+  },
+  "referee": "Ricardo de Burgos Bengoetxea (VAR: Pablo González Fuertes)",
+  "full_time_stats": {
+   "possession": "58.2% – 41.8%",
+   "shots": "19 – 7",
+   "shots_on_target": "6 – 2",
+   "expected_goals": "3.88 – 0.97",
+   "corners": "5 – 4",
+   "fouls": "12 – 9",
+   "offsides": "1 – 4",
+   "yellow_cards": "1 – 1",
+   "penalties": "1 (0 scored) – 0"
+  },
+  "events_file": "barca_atleti_events.json",
+  "data_credit": "Event data compiled from LaLiga's official minute-by-minute match record and published match reports; times accurate to the minute"
+ },
+ {
+  "id": "betis-barca-2025-md15",
+  "mode": "replay",
+  "title": "Real Betis vs Barcelona",
+  "competition": "LaLiga 2025/26 — Matchday 15",
+  "venue": "Estadio de La Cartuja, Seville",
+  "date": "2025-12-06",
+  "home": "Real Betis",
+  "away": "Barcelona",
+  "final_score": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "youtube_id": "93LPZJkCW2w",
+  "period_starts": {
+   "1": 353,
+   "2": 3463
+  },
+  "period_ends": {
+   "1": 3353,
+   "2": 6540
+  },
+  "period_base_minute": {
+   "1": 0,
+   "2": 45
+  },
+  "period_length_min": {
+   "1": 45,
+   "2": 45
+  },
+  "lineups": {
+   "Real Betis": {
+    "formation": "4-2-3-1",
+    "manager": "Manuel Pellegrini",
+    "starting_xi": [
+     "Álvaro Valles",
+     "Aitor Ruibal",
+     "Marc Bartra",
+     "Natan",
+     "Valentín Gómez",
+     "Marc Roca",
+     "Sergi Altimira",
+     "Antony",
+     "Pablo Fornals",
+     "Abde Ezzalzouli",
+     "Cucho Hernández"
+    ]
+   },
+   "Barcelona": {
+    "formation": "4-2-3-1",
+    "manager": "Hansi Flick",
+    "starting_xi": [
+     "Joan García",
+     "Jules Koundé",
+     "Pau Cubarsí",
+     "Eric García",
+     "Gerard Martín",
+     "Alejandro Balde",
+     "Pedri",
+     "Lamine Yamal",
+     "Roony Bardghji",
+     "Marcus Rashford",
+     "Ferran Torres"
+    ],
+    "notes": "Lamine Yamal played mostly in an interior, creative midfield role rather than on the right wing. Lewandowski and Raphinha stayed on the bench."
+   }
+  },
+  "full_time_stats": {
+   "possession": "37.8% – 62.2%",
+   "shots": "17 – 16",
+   "shots_on_target": "5 – 8",
+   "expected_goals": "2.52 – 2.60",
+   "corners": "7 – 7",
+   "fouls": "14 – 9",
+   "offsides": "6 – 1",
+   "yellow_cards": "4 – 2",
+   "penalties": "1 (1 scored) – 1 (1 scored)"
+  },
+  "referee": "Francisco José Hernández Maeso",
+  "events_file": "betis_barca_events.json",
+  "data_credit": "Event data compiled from LaLiga's official minute-by-minute match record and published match reports; times accurate to the minute",
+  "teams": {
+   "Real Betis": {
+    "short": "BET",
+    "color": "#2FBF71",
+    "text": "#6FDC9E"
+   },
+   "Barcelona": {
+    "short": "BAR",
+    "color": "#4C8DF6",
+    "text": "#8DB6FF"
    }
   }
  },
@@ -130,97 +274,5 @@
    }
   },
   "listed": false
- },
- {
-  "id": "betis-barca-2025-md15",
-  "mode": "replay",
-  "title": "Real Betis vs Barcelona",
-  "competition": "LaLiga 2025/26 — Matchday 15",
-  "venue": "Estadio de La Cartuja, Seville",
-  "date": "2025-12-06",
-  "home": "Real Betis",
-  "away": "Barcelona",
-  "final_score": {
-   "Real Betis": 3,
-   "Barcelona": 5
-  },
-  "youtube_id": "93LPZJkCW2w",
-  "period_starts": {
-   "1": 353,
-   "2": 3463
-  },
-  "period_ends": {
-   "1": 3353,
-   "2": 6540
-  },
-  "period_base_minute": {
-   "1": 0,
-   "2": 45
-  },
-  "period_length_min": {
-   "1": 45,
-   "2": 45
-  },
-  "lineups": {
-   "Real Betis": {
-    "formation": "4-2-3-1",
-    "manager": "Manuel Pellegrini",
-    "starting_xi": [
-     "Álvaro Valles",
-     "Aitor Ruibal",
-     "Marc Bartra",
-     "Natan",
-     "Valentín Gómez",
-     "Marc Roca",
-     "Sergi Altimira",
-     "Antony",
-     "Pablo Fornals",
-     "Abde Ezzalzouli",
-     "Cucho Hernández"
-    ]
-   },
-   "Barcelona": {
-    "formation": "4-2-3-1",
-    "manager": "Hansi Flick",
-    "starting_xi": [
-     "Joan García",
-     "Jules Koundé",
-     "Pau Cubarsí",
-     "Eric García",
-     "Gerard Martín",
-     "Alejandro Balde",
-     "Pedri",
-     "Lamine Yamal",
-     "Roony Bardghji",
-     "Marcus Rashford",
-     "Ferran Torres"
-    ],
-    "notes": "Lamine Yamal played mostly in an interior, creative midfield role rather than on the right wing. Lewandowski and Raphinha stayed on the bench."
-   }
-  },
-  "full_time_stats": {
-   "possession": "38% – 62%",
-   "shots": "17 – 16",
-   "shots_on_target": "5 – 8",
-   "corners": "7 – 7",
-   "offsides": "6 – 1",
-   "yellow_cards": "4 – 2",
-   "expected_goals": "2.52 – 2.60"
-  },
-  "referee": "Francisco José Hernández Maeso",
-  "events_file": "betis_barca_events.json",
-  "data_credit": "Event data compiled from published match reports; times are approximate to the minute",
-  "teams": {
-   "Real Betis": {
-    "short": "BET",
-    "color": "#2FBF71",
-    "text": "#6FDC9E"
-   },
-   "Barcelona": {
-    "short": "BAR",
-    "color": "#4C8DF6",
-    "text": "#8DB6FF"
-   }
-  }
  }
 ]

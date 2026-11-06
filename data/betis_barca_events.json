@@ -1,6 +1,7 @@
 [
  {
   "id": "betbar-001",
+  "seq": 1,
   "period": 1,
   "period_label": "1st half",
   "clock": "1'",
@@ -11,223 +12,1715 @@
   "importance": "key",
   "team": null,
   "player": null,
-  "description": "1st half begins",
+  "description": "Kick-off: 1st half begins",
   "score_after": {
    "Real Betis": 0,
    "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 0,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 0,
+    "offsides": 0,
+    "yellow_cards": 0
+   }
   },
   "data": {}
  },
  {
   "id": "betbar-002",
+  "seq": 2,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "1'",
+  "video_time": 413,
+  "video_time_hms": "0:06:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "Foul by Ferran Torres (Barcelona) on Antony; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 0,
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 0,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Antony",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-003",
+  "seq": 3,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "2'",
+  "video_time": 473,
+  "video_time_hms": "0:07:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Aitor Ruibal",
+  "description": "Foul by Aitor Ruibal (Real Betis) on Pedri; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 0,
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Pedri",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-004",
+  "seq": 4,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "5'",
+  "video_time": 653,
+  "video_time_hms": "0:10:53",
+  "approximate": true,
+  "type": "offside",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Alejandro Balde",
+  "description": "Offside: Alejandro Balde (Barcelona) is flagged offside",
+  "score_after": {
+   "Real Betis": 0,
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-005",
+  "seq": 5,
   "period": 1,
   "period_label": "1st half",
   "clock": "6'",
-  "video_time": 653,
-  "video_time_hms": "0:10:53",
+  "video_time": 713,
+  "video_time_hms": "0:11:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Pablo Fornals",
+  "description": "Chance for Real Betis: Pablo Fornals's right-footed shot from the centre of the box is blocked by a defender (set up by Cucho Hernández)",
+  "score_after": {
+   "Real Betis": 0,
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 1,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "the centre of the box",
+   "assist": "Cucho Hernández",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-006",
+  "seq": 6,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "6'",
+  "video_time": 713,
+  "video_time_hms": "0:11:53",
   "approximate": true,
   "type": "goal",
   "importance": "key",
   "team": "Real Betis",
   "player": "Antony",
-  "description": "GOAL! Antony puts Betis ahead — right-footed finish from the centre of the box into the top right corner after a scramble of blocks and deflections (set up by Pablo Fornals). Real Betis 1–0 Barcelona",
+  "description": "GOAL! Antony scores for Real Betis — right foot from the centre of the box, into the top right corner. He finishes after a goalmouth scramble of blocks and deflections. Score: Real Betis 1–0 Barcelona",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 0
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
   "data": {
-   "assist": "Pablo Fornals"
+   "body_part": "right foot",
+   "location": "the centre of the box",
+   "placement": "top right corner",
+   "assist": null,
+   "assist_type": null,
+   "penalty": false
   }
  },
  {
-  "id": "betbar-003",
+  "id": "betbar-007",
+  "seq": 7,
   "period": 1,
   "period_label": "1st half",
   "clock": "9'",
-  "video_time": 833,
-  "video_time_hms": "0:13:53",
+  "video_time": 893,
+  "video_time_hms": "0:14:53",
   "approximate": true,
   "type": "foul",
   "importance": "detail",
   "team": "Real Betis",
   "player": "Valentín Gómez",
-  "description": "Foul by Valentín Gómez (Betis) on Lamine Yamal",
+  "description": "Foul by Valentín Gómez (Real Betis) on Lamine Yamal; Barcelona get a free kick in their own half",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 0
   },
-  "data": {
-   "victim": "Lamine Yamal"
-  }
- },
- {
-  "id": "betbar-004",
-  "period": 1,
-  "period_label": "1st half",
-  "clock": "11'",
-  "video_time": 953,
-  "video_time_hms": "0:15:53",
-  "approximate": true,
-  "type": "goal",
-  "importance": "key",
-  "team": "Barcelona",
-  "player": "Ferran Torres",
-  "description": "GOAL! Ferran Torres equalises — slips behind the defensive line and taps in Jules Koundé's squared pass (move involving Lamine Yamal). Real Betis 1–1 Barcelona",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 1
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 0,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
   },
   "data": {
-   "assist": "Jules Koundé"
-  }
- },
- {
-  "id": "betbar-005",
-  "period": 1,
-  "period_label": "1st half",
-  "clock": "13'",
-  "video_time": 1073,
-  "video_time_hms": "0:17:53",
-  "approximate": true,
-  "type": "goal",
-  "importance": "key",
-  "team": "Barcelona",
-  "player": "Ferran Torres",
-  "description": "GOAL! Ferran Torres again, two minutes later — acrobatic volley from Roony Bardghji's cross, through the legs of goalkeeper Álvaro Valles. Real Betis 1–2 Barcelona",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 2
-  },
-  "data": {
-   "assist": "Roony Bardghji"
-  }
- },
- {
-  "id": "betbar-006",
-  "period": 1,
-  "period_label": "1st half",
-  "clock": "21'",
-  "video_time": 1553,
-  "video_time_hms": "0:25:53",
-  "approximate": true,
-  "type": "card",
-  "importance": "key",
-  "team": "Real Betis",
-  "player": "Sergi Altimira",
-  "description": "YELLOW CARD for Sergi Altimira (Betis) for a foul",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 2
-  },
-  "data": {
-   "card": "Yellow Card"
-  }
- },
- {
-  "id": "betbar-007",
-  "period": 1,
-  "period_label": "1st half",
-  "clock": "21'",
-  "video_time": 1553,
-  "video_time_hms": "0:25:53",
-  "approximate": true,
-  "type": "card",
-  "importance": "detail",
-  "team": "Real Betis",
-  "player": "Manuel Pellegrini",
-  "description": "Betis manager Manuel Pellegrini is booked for protesting (dissent from the touchline)",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 2
-  },
-  "data": {
-   "card": "Yellow Card",
-   "note": "minute approximate"
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
   }
  },
  {
   "id": "betbar-008",
+  "seq": 8,
   "period": 1,
   "period_label": "1st half",
-  "clock": "31'",
-  "video_time": 2153,
-  "video_time_hms": "0:35:53",
+  "clock": "9'",
+  "video_time": 893,
+  "video_time_hms": "0:14:53",
   "approximate": true,
-  "type": "goal",
-  "importance": "key",
+  "type": "corner",
+  "importance": "detail",
   "team": "Barcelona",
-  "player": "Roony Bardghji",
-  "description": "GOAL! Roony Bardghji — powerful strike from just inside the area, his first goal for Barcelona (assisted by Pedri). Real Betis 1–3 Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Valentín Gómez)",
   "score_after": {
    "Real Betis": 1,
-   "Barcelona": 3
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 0,
+    "shots_on_target": 0,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
   },
   "data": {
-   "assist": "Pedri"
+   "conceded_by": "Valentín Gómez"
   }
  },
  {
   "id": "betbar-009",
+  "seq": 9,
   "period": 1,
   "period_label": "1st half",
-  "clock": "40'",
-  "video_time": 2693,
-  "video_time_hms": "0:44:53",
+  "clock": "10'",
+  "video_time": 953,
+  "video_time_hms": "0:15:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Marcus Rashford",
+  "description": "Chance for Barcelona: Marcus Rashford's left-footed shot from the left side of the box is saved — Valles saves low to his left",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 0
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 1,
+    "shots_on_target": 1,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "saved",
+   "body_part": "Left foot",
+   "location": "the left side of the box",
+   "assist": null,
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-010",
+  "seq": 10,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "11'",
+  "video_time": 1013,
+  "video_time_hms": "0:16:53",
   "approximate": true,
   "type": "goal",
   "importance": "key",
   "team": "Barcelona",
   "player": "Ferran Torres",
-  "description": "GOAL! Ferran Torres completes his first-half hat-trick — shot from outside the box takes a deflection off a defender and wrong-foots Valles (assisted by Pedri). Real Betis 1–4 Barcelona",
+  "description": "GOAL! Ferran Torres scores for Barcelona — right foot from the centre of the box, into the bottom right corner (assist: Jules Koundé). Torres slipped in behind the defensive line to finish Koundé's pass. Score: Real Betis 1–1 Barcelona",
   "score_after": {
    "Real Betis": 1,
-   "Barcelona": 4
+   "Barcelona": 1
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 0,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 2,
+    "shots_on_target": 2,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
   },
   "data": {
-   "assist": "Pedri",
-   "deflected": true
+   "body_part": "right foot",
+   "location": "the centre of the box",
+   "placement": "bottom right corner",
+   "assist": "Jules Koundé",
+   "assist_type": null,
+   "penalty": false
   }
  },
  {
-  "id": "betbar-010",
-  "period": 1,
-  "period_label": "1st half",
-  "clock": "45'",
-  "video_time": 2993,
-  "video_time_hms": "0:49:53",
-  "approximate": true,
-  "type": "shot",
-  "importance": "detail",
-  "team": "Barcelona",
-  "player": "Marcus Rashford",
-  "description": "Marcus Rashford's left-footed shot from the left of the box is saved by Valles",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 4
-  },
-  "data": {}
- },
- {
   "id": "betbar-011",
+  "seq": 11,
   "period": 1,
   "period_label": "1st half",
-  "clock": "45+5'",
-  "video_time": 3293,
-  "video_time_hms": "0:54:53",
+  "clock": "13'",
+  "video_time": 1133,
+  "video_time_hms": "0:18:53",
   "approximate": true,
-  "type": "period_end",
-  "importance": "key",
-  "team": null,
-  "player": null,
-  "description": "Half-time: Real Betis 1–4 Barcelona (5 minutes of added time)",
+  "type": "offside",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Pablo Fornals",
+  "description": "Offside: Pablo Fornals (Real Betis) is flagged offside",
   "score_after": {
    "Real Betis": 1,
-   "Barcelona": 4
+   "Barcelona": 1
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 2,
+    "shots_on_target": 2,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
   },
   "data": {}
  },
  {
   "id": "betbar-012",
+  "seq": 12,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "13'",
+  "video_time": 1133,
+  "video_time_hms": "0:18:53",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "GOAL! Ferran Torres scores for Barcelona — right foot from the centre of the box, into the centre of the goal (assist: Roony Bardghji, with a cross). A volley from Bardghji's cross that went through goalkeeper Álvaro Valles' legs. Score: Real Betis 1–2 Barcelona",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 0,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "body_part": "right foot",
+   "location": "the centre of the box",
+   "placement": "centre of the goal",
+   "assist": "Roony Bardghji",
+   "assist_type": "with a cross",
+   "penalty": false
+  }
+ },
+ {
+  "id": "betbar-013",
+  "seq": 13,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "15'",
+  "video_time": 1253,
+  "video_time_hms": "0:20:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Gerard Martín)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 1,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Gerard Martín"
+  }
+ },
+ {
+  "id": "betbar-014",
+  "seq": 14,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "15'",
+  "video_time": 1253,
+  "video_time_hms": "0:20:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Jules Koundé)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Jules Koundé"
+  }
+ },
+ {
+  "id": "betbar-015",
+  "seq": 15,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "20'",
+  "video_time": 1553,
+  "video_time_hms": "0:25:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Sergi Altimira",
+  "description": "Foul by Sergi Altimira (Real Betis) on Pedri; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Pedri",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-016",
+  "seq": 16,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "21'",
+  "video_time": 1613,
+  "video_time_hms": "0:26:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Sergi Altimira",
+  "description": "Foul by Sergi Altimira (Real Betis) on Lamine Yamal; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 0
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-017",
+  "seq": 17,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "21'",
+  "video_time": 1613,
+  "video_time_hms": "0:26:53",
+  "approximate": true,
+  "type": "card",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Sergi Altimira",
+  "description": "YELLOW CARD: Sergi Altimira (Real Betis) is booked — a bad foul on Lamine Yamal. His second foul in two minutes",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 1,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "card": "Yellow Card",
+   "reason": "a bad foul on Lamine Yamal",
+   "is_manager": false
+  }
+ },
+ {
+  "id": "betbar-018",
+  "seq": 18,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "22'",
+  "video_time": 1673,
+  "video_time_hms": "0:27:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Eric García",
+  "description": "Foul by Eric García (Barcelona) on Marc Roca; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 2,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Marc Roca",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-019",
+  "seq": 19,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "23'",
+  "video_time": 1733,
+  "video_time_hms": "0:28:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Abde Ezzalzouli",
+  "description": "Chance for Real Betis: Abde Ezzalzouli's left-footed shot from the left side of the box goes off target (set up by Aitor Ruibal)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 1,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Left foot",
+   "location": "the left side of the box",
+   "assist": "Aitor Ruibal",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-020",
+  "seq": 20,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "23'",
+  "video_time": 1733,
+  "video_time_hms": "0:28:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Sergi Altimira)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 3,
+    "shots_on_target": 3,
+    "corners": 2,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Sergi Altimira"
+  }
+ },
+ {
+  "id": "betbar-021",
+  "seq": 21,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "25'",
+  "video_time": 1853,
+  "video_time_hms": "0:30:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Roony Bardghji",
+  "description": "Chance for Barcelona: Roony Bardghji's left-footed shot from the centre of the box goes off target",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 4,
+    "shots_on_target": 3,
+    "corners": 2,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Left foot",
+   "location": "the centre of the box",
+   "assist": null,
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-022",
+  "seq": 22,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "25'",
+  "video_time": 1853,
+  "video_time_hms": "0:30:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Marc Bartra)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 4,
+    "shots_on_target": 3,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Marc Bartra"
+  }
+ },
+ {
+  "id": "betbar-023",
+  "seq": 23,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "30'",
+  "video_time": 2153,
+  "video_time_hms": "0:35:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Valentín Gómez",
+  "description": "Foul by Valentín Gómez (Real Betis) on Lamine Yamal; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 2
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 5,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 4,
+    "shots_on_target": 3,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-024",
+  "seq": 24,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "31'",
+  "video_time": 2213,
+  "video_time_hms": "0:36:53",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Roony Bardghji",
+  "description": "GOAL! Roony Bardghji scores for Barcelona — right foot from the right side of the box, into the top right corner (assist: Pedri). A powerful strike — his first goal for Barcelona. Score: Real Betis 1–3 Barcelona",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 3,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 5,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 5,
+    "shots_on_target": 4,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "body_part": "right foot",
+   "location": "the right side of the box",
+   "placement": "top right corner",
+   "assist": "Pedri",
+   "assist_type": null,
+   "penalty": false
+  }
+ },
+ {
+  "id": "betbar-025",
+  "seq": 25,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "33'",
+  "video_time": 2333,
+  "video_time_hms": "0:38:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Antony",
+  "description": "Chance for Real Betis: Antony's left-footed shot from outside the box is blocked by a defender",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 5,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 5,
+    "shots_on_target": 4,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Left foot",
+   "location": "outside the box",
+   "assist": null,
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-026",
+  "seq": 26,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "34'",
+  "video_time": 2393,
+  "video_time_hms": "0:39:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Marc Roca",
+  "description": "Foul by Marc Roca (Real Betis) on Lamine Yamal; Barcelona get a free kick in the opponents' half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 5,
+    "shots_on_target": 4,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in the opponents' half"
+  }
+ },
+ {
+  "id": "betbar-027",
+  "seq": 27,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "35'",
+  "video_time": 2453,
+  "video_time_hms": "0:40:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Marcus Rashford",
+  "description": "Chance for Barcelona: Marcus Rashford's right-footed shot from outside the box is blocked by a defender",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 6,
+    "shots_on_target": 4,
+    "corners": 3,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "outside the box",
+   "assist": null,
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-028",
+  "seq": 28,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "35'",
+  "video_time": 2453,
+  "video_time_hms": "0:40:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Cucho Hernández)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 6,
+    "shots_on_target": 4,
+    "corners": 4,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Cucho Hernández"
+  }
+ },
+ {
+  "id": "betbar-029",
+  "seq": 29,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "38'",
+  "video_time": 2633,
+  "video_time_hms": "0:43:53",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Marc Bartra)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 3
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 6,
+    "shots_on_target": 4,
+    "corners": 5,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "conceded_by": "Marc Bartra"
+  }
+ },
+ {
+  "id": "betbar-030",
+  "seq": 30,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "40'",
+  "video_time": 2753,
+  "video_time_hms": "0:45:53",
+  "approximate": true,
+  "type": "goal",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "GOAL! Ferran Torres scores for Barcelona — right foot from outside the box, into the bottom right corner (assist: Pedri). Hat-trick for Torres; match reports say the shot took a deflection off a defender and wrong-footed Valles. Score: Real Betis 1–4 Barcelona",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 7,
+    "shots_on_target": 5,
+    "corners": 5,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "body_part": "right foot",
+   "location": "outside the box",
+   "placement": "bottom right corner",
+   "assist": "Pedri",
+   "assist_type": null,
+   "penalty": false
+  }
+ },
+ {
+  "id": "betbar-031",
+  "seq": 31,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "video_time": 2873,
+  "video_time_hms": "0:47:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "Chance for Barcelona: Ferran Torres's right-footed shot from the right side of the box is saved — Valles saves in the centre of the goal (set up by Lamine Yamal, with a through ball)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "saved",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Lamine Yamal",
+   "assist_type": "with a through ball"
+  }
+ },
+ {
+  "id": "betbar-032",
+  "seq": 32,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "42'",
+  "video_time": 2873,
+  "video_time_hms": "0:47:53",
+  "approximate": true,
+  "type": "injury",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Natan",
+  "description": "Play stopped for treatment to Natan (Real Betis)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 4,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-033",
+  "seq": 33,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45'",
+  "video_time": 3053,
+  "video_time_hms": "0:50:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Sergi Altimira",
+  "description": "Chance for Real Betis: Sergi Altimira's left-footed shot from outside the box goes off target — high and wide (set up by Abde Ezzalzouli)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 5,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 2,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Left foot",
+   "location": "outside the box",
+   "assist": "Abde Ezzalzouli",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-034",
+  "seq": 34,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45'",
+  "video_time": 3053,
+  "video_time_hms": "0:50:53",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Alejandro Balde",
+  "description": "Foul by Alejandro Balde (Barcelona) on Antony; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 5,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Antony",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-035",
+  "seq": 35,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45'",
+  "video_time": 3053,
+  "video_time_hms": "0:50:53",
+  "approximate": true,
+  "type": "added_time",
+  "importance": "detail",
+  "team": null,
+  "player": null,
+  "description": "Fourth official signals 5 minutes of added time",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 5,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "minutes": 5
+  }
+ },
+ {
+  "id": "betbar-036",
+  "seq": 36,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+1'",
+  "video_time": 3113,
+  "video_time_hms": "0:51:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Cucho Hernández",
+  "description": "Chance for Real Betis: Cucho Hernández's header from the centre of the box goes off target — just wide (set up by Aitor Ruibal, with a cross)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 6,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Head",
+   "location": "the centre of the box",
+   "assist": "Aitor Ruibal",
+   "assist_type": "with a cross"
+  }
+ },
+ {
+  "id": "betbar-037",
+  "seq": 37,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+2'",
+  "video_time": 3173,
+  "video_time_hms": "0:52:53",
+  "approximate": true,
+  "type": "injury",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Jules Koundé",
+  "description": "Play stopped for treatment to Jules Koundé (Barcelona)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 6,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-038",
+  "seq": 38,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+4'",
+  "video_time": 3293,
+  "video_time_hms": "0:54:53",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Aitor Ruibal",
+  "description": "Chance for Real Betis: Aitor Ruibal's right-footed shot from the right side of the box goes off target — just wide (set up by Pablo Fornals)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Pablo Fornals",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-039",
+  "seq": 39,
+  "period": 1,
+  "period_label": "1st half",
+  "clock": "45+5'",
+  "video_time": 3353,
+  "video_time_hms": "0:55:53",
+  "approximate": true,
+  "type": "period_end",
+  "importance": "key",
+  "team": null,
+  "player": null,
+  "description": "Half-time (5 minutes of added time were played)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "added_minutes": 5
+  }
+ },
+ {
+  "id": "betbar-040",
+  "seq": 40,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "46'",
+  "video_time": 3463,
+  "video_time_hms": "0:57:43",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Nelson Deossa",
+  "description": "Substitution, Real Betis: Nelson Deossa comes on for Sergi Altimira. Altimira was on a yellow card",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "player_on": "Nelson Deossa",
+   "player_off": "Sergi Altimira",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "betbar-041",
+  "seq": 41,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "46'",
+  "video_time": 3463,
+  "video_time_hms": "0:57:43",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Andreas Christensen",
+  "description": "Substitution, Barcelona: Andreas Christensen comes on for Alejandro Balde",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "player_on": "Andreas Christensen",
+   "player_off": "Alejandro Balde",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "betbar-042",
+  "seq": 42,
   "period": 2,
   "period_label": "2nd half",
   "clock": "46'",
@@ -243,433 +1736,2048 @@
    "Real Betis": 1,
    "Barcelona": 4
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
   "data": {}
  },
  {
-  "id": "betbar-013",
+  "id": "betbar-043",
+  "seq": 43,
   "period": 2,
   "period_label": "2nd half",
   "clock": "46'",
-  "video_time": 3463,
-  "video_time_hms": "0:57:43",
+  "video_time": 3523,
+  "video_time_hms": "0:58:43",
   "approximate": true,
-  "type": "substitution",
-  "importance": "key",
+  "type": "foul",
+  "importance": "detail",
   "team": "Real Betis",
   "player": "Nelson Deossa",
-  "description": "Substitution Betis: Nelson Deossa ON, Sergi Altimira OFF (Altimira was on a yellow card)",
+  "description": "Foul by Nelson Deossa (Real Betis) on Lamine Yamal; Barcelona get a free kick in their own half",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
-  "data": {
-   "player_on": "Nelson Deossa",
-   "player_off": "Sergi Altimira"
-  }
- },
- {
-  "id": "betbar-014",
-  "period": 2,
-  "period_label": "2nd half",
-  "clock": "46'",
-  "video_time": 3463,
-  "video_time_hms": "0:57:43",
-  "approximate": true,
-  "type": "substitution",
-  "importance": "key",
-  "team": "Barcelona",
-  "player": "Andreas Christensen",
-  "description": "Substitution Barcelona: Andreas Christensen ON, Alejandro Balde OFF",
-  "score_after": {
-   "Real Betis": 1,
-   "Barcelona": 4
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 8,
+    "shots_on_target": 6,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
   },
   "data": {
-   "player_on": "Andreas Christensen",
-   "player_off": "Alejandro Balde"
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
   }
  },
  {
-  "id": "betbar-015",
+  "id": "betbar-044",
+  "seq": 44,
   "period": 2,
   "period_label": "2nd half",
   "clock": "47'",
-  "video_time": 3523,
-  "video_time_hms": "0:58:43",
+  "video_time": 3583,
+  "video_time_hms": "0:59:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Ferran Torres",
+  "description": "Chance for Barcelona: Ferran Torres's header from the centre of the box is saved — Valles saves low to his left (set up by Jules Koundé, with a cross)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 9,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "saved",
+   "body_part": "Head",
+   "location": "the centre of the box",
+   "assist": "Jules Koundé",
+   "assist_type": "with a cross"
+  }
+ },
+ {
+  "id": "betbar-045",
+  "seq": 45,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "47'",
+  "video_time": 3583,
+  "video_time_hms": "0:59:43",
   "approximate": true,
   "type": "shot",
   "importance": "detail",
   "team": "Barcelona",
   "player": "Marcus Rashford",
-  "description": "Marcus Rashford shoots wide on a fast break",
+  "description": "Chance for Barcelona: Marcus Rashford's right-footed shot from the right side of the box goes off target — wide, on a fast break",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 3,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": null,
+   "assist_type": null
+  }
  },
  {
-  "id": "betbar-016",
+  "id": "betbar-046",
+  "seq": 46,
   "period": 2,
   "period_label": "2nd half",
   "clock": "48'",
-  "video_time": 3583,
-  "video_time_hms": "0:59:43",
+  "video_time": 3643,
+  "video_time_hms": "1:00:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Gerard Martín",
+  "description": "Foul by Gerard Martín (Barcelona) on Antony; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 0
+   }
+  },
+  "data": {
+   "victim": "Antony",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-047",
+  "seq": 47,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "48'",
+  "video_time": 3643,
+  "video_time_hms": "1:00:43",
   "approximate": true,
   "type": "card",
   "importance": "key",
   "team": "Barcelona",
   "player": "Gerard Martín",
-  "description": "YELLOW CARD for Gerard Martín (Barcelona) for a bad foul on Antony",
+  "description": "YELLOW CARD: Gerard Martín (Barcelona) is booked — a bad foul on Antony",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 7,
+    "shots_on_target": 1,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
   },
   "data": {
    "card": "Yellow Card",
-   "victim": "Antony"
+   "reason": "a bad foul on Antony",
+   "is_manager": false
   }
  },
  {
-  "id": "betbar-017",
+  "id": "betbar-048",
+  "seq": 48,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "53'",
-  "video_time": 3883,
-  "video_time_hms": "1:04:43",
+  "clock": "49'",
+  "video_time": 3703,
+  "video_time_hms": "1:01:43",
   "approximate": true,
   "type": "shot",
-  "importance": "detail",
+  "importance": "key",
   "team": "Real Betis",
   "player": "Antony",
-  "description": "Antony's shot from the right of the box is saved by Joan García (set up by Aitor Ruibal)",
+  "description": "Chance for Real Betis: Antony's right-footed shot from the right side of the box is saved — Joan García saves low to his left (set up by Aitor Ruibal)",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 4,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "saved",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Aitor Ruibal",
+   "assist_type": null
+  }
  },
  {
-  "id": "betbar-018",
+  "id": "betbar-049",
+  "seq": 49,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "50'",
+  "video_time": 3763,
+  "video_time_hms": "1:02:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Lamine Yamal",
+  "description": "Foul by Lamine Yamal (Barcelona) on Abde Ezzalzouli; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 5,
+    "fouls": 5,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Abde Ezzalzouli",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-050",
+  "seq": 50,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "51'",
+  "video_time": 3823,
+  "video_time_hms": "1:03:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Marc Bartra)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 5,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Marc Bartra"
+  }
+ },
+ {
+  "id": "betbar-051",
+  "seq": 51,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "52'",
+  "video_time": 3883,
+  "video_time_hms": "1:04:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Jules Koundé",
+  "description": "Foul by Jules Koundé (Barcelona) on Natan; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Natan",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-052",
+  "seq": 52,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "53'",
+  "video_time": 3943,
+  "video_time_hms": "1:05:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Pablo Fornals",
+  "description": "Foul by Pablo Fornals (Real Betis) on Eric García; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 4
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 10,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Eric García",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-053",
+  "seq": 53,
   "period": 2,
   "period_label": "2nd half",
   "clock": "54'",
-  "video_time": 3943,
-  "video_time_hms": "1:05:43",
+  "video_time": 4003,
+  "video_time_hms": "1:06:43",
   "approximate": true,
   "type": "shot",
   "importance": "detail",
   "team": "Barcelona",
   "player": "Marcus Rashford",
-  "description": "Rashford's shot from the left of the box is blocked (set up by Gerard Martín)",
+  "description": "Chance for Barcelona: Marcus Rashford's right-footed shot from the left side of the box is blocked by a defender (set up by Gerard Martín)",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 11,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "the left side of the box",
+   "assist": "Gerard Martín",
+   "assist_type": null
+  }
  },
  {
-  "id": "betbar-019",
+  "id": "betbar-054",
+  "seq": 54,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "57'",
-  "video_time": 4123,
-  "video_time_hms": "1:08:43",
+  "clock": "54'",
+  "video_time": 4003,
+  "video_time_hms": "1:06:43",
   "approximate": true,
-  "type": "var_decision",
+  "type": "penalty_awarded",
   "importance": "key",
   "team": "Real Betis",
   "player": "Marc Bartra",
-  "description": "VAR: penalty awarded to Barcelona — Marcus Rashford's shot struck the raised arm of Marc Bartra inside the penalty area (handball)",
+  "description": "PENALTY to Barcelona: handball by Marc Bartra (Real Betis) inside the penalty area. Rashford's shot struck Bartra's arm; the decision went to a VAR review",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 11,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
-   "decision": "Penalty awarded",
    "offence": "Handball",
-   "victim_team": "Barcelona"
+   "victim": null,
+   "penalty_for": "Barcelona"
   }
  },
  {
-  "id": "betbar-020",
+  "id": "betbar-055",
+  "seq": 55,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "59'",
-  "video_time": 4243,
-  "video_time_hms": "1:10:43",
+  "clock": "57'",
+  "video_time": 4183,
+  "video_time_hms": "1:09:43",
   "approximate": true,
-  "type": "card",
+  "type": "var_decision",
   "importance": "key",
-  "team": "Real Betis",
-  "player": "Nelson Deossa",
-  "description": "YELLOW CARD for Nelson Deossa (Betis) for arguing with the referee (dissent)",
+  "team": "Barcelona",
+  "player": null,
+  "description": "VAR decision: Penalty to Barcelona confirmed. After the review, the handball by Marc Bartra is given as a penalty",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 4
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 11,
+    "shots_on_target": 7,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
-   "card": "Yellow Card",
-   "reason": "Dissent"
+   "decision": "Penalty to Barcelona confirmed"
   }
  },
  {
-  "id": "betbar-021",
+  "id": "betbar-056",
+  "seq": 56,
   "period": 2,
   "period_label": "2nd half",
   "clock": "59'",
-  "video_time": 4243,
-  "video_time_hms": "1:10:43",
+  "video_time": 4303,
+  "video_time_hms": "1:11:43",
   "approximate": true,
   "type": "goal",
   "importance": "key",
   "team": "Barcelona",
   "player": "Lamine Yamal",
-  "description": "GOAL! Lamine Yamal converts the penalty. Real Betis 1–5 Barcelona",
+  "description": "GOAL! Lamine Yamal scores the penalty for Barcelona (left foot, bottom left corner). Score: Real Betis 1–5 Barcelona",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 1
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
-   "shot_type": "Penalty"
+   "body_part": "left foot",
+   "location": null,
+   "placement": "bottom left corner",
+   "assist": null,
+   "assist_type": null,
+   "penalty": true
   }
  },
  {
-  "id": "betbar-022",
+  "id": "betbar-057",
+  "seq": 57,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "59'",
+  "video_time": 4303,
+  "video_time_hms": "1:11:43",
+  "approximate": true,
+  "type": "card",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Nelson Deossa",
+  "description": "YELLOW CARD: Nelson Deossa (Real Betis) is booked — dissent (arguing with the referee), according to match reports",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "card": "Yellow Card",
+   "reason": "dissent (arguing with the referee), according to match reports",
+   "is_manager": false
+  }
+ },
+ {
+  "id": "betbar-058",
+  "seq": 58,
   "period": 2,
   "period_label": "2nd half",
   "clock": "60'",
-  "video_time": 4303,
-  "video_time_hms": "1:11:43",
+  "video_time": 4363,
+  "video_time_hms": "1:12:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Real Betis",
   "player": "Junior Firpo",
-  "description": "Substitution Betis: Junior Firpo ON, Natan OFF",
+  "description": "Substitution, Real Betis: Junior Firpo comes on for Natan",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Junior Firpo",
-   "player_off": "Natan"
+   "player_off": "Natan",
+   "reason": "Tactical"
   }
  },
  {
-  "id": "betbar-023",
+  "id": "betbar-059",
+  "seq": 59,
   "period": 2,
   "period_label": "2nd half",
   "clock": "60'",
-  "video_time": 4303,
-  "video_time_hms": "1:11:43",
+  "video_time": 4363,
+  "video_time_hms": "1:12:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Real Betis",
   "player": "Diego Llorente",
-  "description": "Substitution Betis: Diego Llorente ON, Marc Bartra OFF",
+  "description": "Substitution, Real Betis: Diego Llorente comes on for Marc Bartra",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Diego Llorente",
-   "player_off": "Marc Bartra"
+   "player_off": "Marc Bartra",
+   "reason": "Tactical"
   }
  },
  {
-  "id": "betbar-024",
+  "id": "betbar-060",
+  "seq": 60,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "61'",
+  "video_time": 4423,
+  "video_time_hms": "1:13:43",
+  "approximate": true,
+  "type": "offside",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Cucho Hernández",
+  "description": "Offside: Cucho Hernández (Real Betis) is flagged offside",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 2,
+    "fouls": 9,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-061",
+  "seq": 61,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "62'",
+  "video_time": 4483,
+  "video_time_hms": "1:14:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Lamine Yamal)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 8,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 9,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Lamine Yamal"
+  }
+ },
+ {
+  "id": "betbar-062",
+  "seq": 62,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "62'",
+  "video_time": 4483,
+  "video_time_hms": "1:14:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Cucho Hernández",
+  "description": "Chance for Real Betis: Cucho Hernández's right-footed shot from outside the box is blocked by a defender (set up by Antony)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 9,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "outside the box",
+   "assist": "Antony",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-063",
+  "seq": 63,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "62'",
+  "video_time": 4483,
+  "video_time_hms": "1:14:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Nelson Deossa",
+  "description": "Foul by Nelson Deossa (Real Betis) on Lamine Yamal; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Lamine Yamal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-064",
+  "seq": 64,
   "period": 2,
   "period_label": "2nd half",
   "clock": "63'",
-  "video_time": 4483,
-  "video_time_hms": "1:14:43",
+  "video_time": 4543,
+  "video_time_hms": "1:15:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Barcelona",
   "player": "Frenkie de Jong",
-  "description": "Substitution Barcelona: Frenkie de Jong ON, Gerard Martín OFF (Martín was on a yellow card)",
+  "description": "Substitution, Barcelona: Frenkie de Jong comes on for Gerard Martín. Martín was on a yellow card",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Frenkie de Jong",
-   "player_off": "Gerard Martín"
+   "player_off": "Gerard Martín",
+   "reason": "Tactical"
   }
  },
  {
-  "id": "betbar-025",
+  "id": "betbar-065",
+  "seq": 65,
   "period": 2,
   "period_label": "2nd half",
   "clock": "63'",
-  "video_time": 4483,
-  "video_time_hms": "1:14:43",
+  "video_time": 4543,
+  "video_time_hms": "1:15:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Barcelona",
   "player": "Marc Bernal",
-  "description": "Substitution Barcelona: Marc Bernal ON, Pedri OFF",
+  "description": "Substitution, Barcelona: Marc Bernal comes on for Pedri",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 12,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Marc Bernal",
-   "player_off": "Pedri"
+   "player_off": "Pedri",
+   "reason": "Tactical"
   }
  },
  {
-  "id": "betbar-026",
+  "id": "betbar-066",
+  "seq": 66,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "66'",
+  "video_time": 4723,
+  "video_time_hms": "1:18:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Roony Bardghji",
+  "description": "Chance for Barcelona: Roony Bardghji's right-footed shot from the right side of the box goes off target (set up by Lamine Yamal)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 13,
+    "shots_on_target": 8,
+    "corners": 6,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Lamine Yamal",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-067",
+  "seq": 67,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "66'",
+  "video_time": 4723,
+  "video_time_hms": "1:18:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": null,
+  "description": "Corner to Barcelona (conceded by Aitor Ruibal)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 2
+   },
+   "Barcelona": {
+    "shots": 13,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Aitor Ruibal"
+  }
+ },
+ {
+  "id": "betbar-068",
+  "seq": 68,
   "period": 2,
   "period_label": "2nd half",
   "clock": "67'",
-  "video_time": 4723,
-  "video_time_hms": "1:18:43",
+  "video_time": 4783,
+  "video_time_hms": "1:19:43",
   "approximate": true,
   "type": "card",
   "importance": "key",
   "team": "Real Betis",
   "player": "Aitor Ruibal",
-  "description": "YELLOW CARD for Aitor Ruibal (Betis)",
+  "description": "YELLOW CARD: Aitor Ruibal (Real Betis) is booked — a caution (the official record gives no reason)",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 13,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
-   "card": "Yellow Card"
+   "card": "Yellow Card",
+   "reason": "a caution (the official record gives no reason)",
+   "is_manager": false
   }
  },
  {
-  "id": "betbar-027",
+  "id": "betbar-069",
+  "seq": 69,
   "period": 2,
   "period_label": "2nd half",
   "clock": "68'",
-  "video_time": 4783,
-  "video_time_hms": "1:19:43",
+  "video_time": 4843,
+  "video_time_hms": "1:20:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Barcelona",
   "player": "Fermín López",
-  "description": "Substitution Barcelona: Fermín López ON, Roony Bardghji OFF — Fermín returning after missing two games with a leg injury",
+  "description": "Substitution, Barcelona: Fermín López comes on for Roony Bardghji. Fermín returns after missing two games with a leg injury",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 2,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 13,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Fermín López",
-   "player_off": "Roony Bardghji"
+   "player_off": "Roony Bardghji",
+   "reason": "Tactical"
   }
  },
  {
-  "id": "betbar-028",
+  "id": "betbar-070",
+  "seq": 70,
   "period": 2,
   "period_label": "2nd half",
   "clock": "69'",
-  "video_time": 4843,
-  "video_time_hms": "1:20:43",
+  "video_time": 4903,
+  "video_time_hms": "1:21:43",
   "approximate": true,
   "type": "offside",
   "importance": "detail",
   "team": "Real Betis",
   "player": "Nelson Deossa",
-  "description": "Offside: Antony plays a through ball but Nelson Deossa is in an offside position",
+  "description": "Offside: Nelson Deossa (Real Betis) is flagged offside",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 3,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 13,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-071",
+  "seq": 71,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "70'",
+  "video_time": 4963,
+  "video_time_hms": "1:22:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Fermín López",
+  "description": "Chance for Barcelona: Fermín López's right-footed shot from outside the box goes off target — high and wide (set up by Ferran Torres)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 9,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 3,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
-   "passer": "Antony"
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "outside the box",
+   "assist": "Ferran Torres",
+   "assist_type": null
   }
  },
  {
-  "id": "betbar-029",
+  "id": "betbar-072",
+  "seq": 72,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "75'",
+  "clock": "71'",
+  "video_time": 5023,
+  "video_time_hms": "1:23:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Abde Ezzalzouli",
+  "description": "Chance for Real Betis: Abde Ezzalzouli's right-footed shot from the left side of the box is blocked by a defender (set up by Marc Roca)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 10,
+    "shots_on_target": 2,
+    "corners": 3,
+    "fouls": 10,
+    "offsides": 3,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "the left side of the box",
+   "assist": "Marc Roca",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-073",
+  "seq": 73,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "71'",
+  "video_time": 5023,
+  "video_time_hms": "1:23:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Jules Koundé)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 10,
+    "shots_on_target": 2,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 3,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Jules Koundé"
+  }
+ },
+ {
+  "id": "betbar-074",
+  "seq": 74,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "72'",
+  "video_time": 5083,
+  "video_time_hms": "1:24:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Antony",
+  "description": "Chance for Real Betis: Antony's left-footed shot from the right side of the box is saved — Joan García saves low to his left (set up by Abde Ezzalzouli)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 3,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "saved",
+   "body_part": "Left foot",
+   "location": "the right side of the box",
+   "assist": "Abde Ezzalzouli",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-075",
+  "seq": 75,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "74'",
   "video_time": 5203,
   "video_time_hms": "1:26:43",
   "approximate": true,
-  "type": "shot",
+  "type": "offside",
   "importance": "detail",
-  "team": "Barcelona",
-  "player": "Fermín López",
-  "description": "Fermín López shoots high and wide from outside the box (set up by Ferran Torres)",
+  "team": "Real Betis",
+  "player": "Pablo Fornals",
+  "description": "Offside: Pablo Fornals (Real Betis) is flagged offside",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 4,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {}
  },
  {
-  "id": "betbar-030",
+  "id": "betbar-076",
+  "seq": 76,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "75'",
+  "video_time": 5263,
+  "video_time_hms": "1:27:43",
+  "approximate": true,
+  "type": "substitution",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Pablo García",
+  "description": "Substitution, Real Betis: Pablo García comes on for Antony",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 4,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 14,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "player_on": "Pablo García",
+   "player_off": "Antony",
+   "reason": "Tactical"
+  }
+ },
+ {
+  "id": "betbar-077",
+  "seq": 77,
   "period": 2,
   "period_label": "2nd half",
   "clock": "77'",
-  "video_time": 5323,
-  "video_time_hms": "1:28:43",
+  "video_time": 5383,
+  "video_time_hms": "1:29:43",
   "approximate": true,
   "type": "shot",
   "importance": "detail",
   "team": "Barcelona",
   "player": "Fermín López",
-  "description": "Fermín López shoots wide from the right of the box (set up by Lamine Yamal)",
+  "description": "Chance for Barcelona: Fermín López's right-footed shot from the right side of the box goes off target (set up by Lamine Yamal)",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 4,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 6,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Lamine Yamal",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-078",
+  "seq": 78,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "78'",
+  "video_time": 5443,
+  "video_time_hms": "1:30:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Eric García",
+  "description": "Foul by Eric García (Barcelona) on Pablo García; Real Betis get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 4,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Pablo García",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-079",
+  "seq": 79,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "79'",
+  "video_time": 5503,
+  "video_time_hms": "1:31:43",
+  "approximate": true,
+  "type": "offside",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Cucho Hernández",
+  "description": "Offside: Cucho Hernández (Real Betis) is flagged offside",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 5,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {}
  },
  {
-  "id": "betbar-031",
+  "id": "betbar-080",
+  "seq": 80,
   "period": 2,
   "period_label": "2nd half",
   "clock": "81'",
-  "video_time": 5563,
-  "video_time_hms": "1:32:43",
+  "video_time": 5623,
+  "video_time_hms": "1:33:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Barcelona",
   "player": "Jofre Torrents",
-  "description": "Substitution Barcelona: Jofre Torrents ON, Eric García OFF",
+  "description": "Substitution, Barcelona: Jofre Torrents comes on for Eric García (injury)",
   "score_after": {
    "Real Betis": 1,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 5,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Jofre Torrents",
-   "player_off": "Eric García"
+   "player_off": "Eric García",
+   "reason": "Injury"
   }
  },
  {
-  "id": "betbar-032",
+  "id": "betbar-081",
+  "seq": 81,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "82'",
+  "video_time": 5683,
+  "video_time_hms": "1:34:43",
+  "approximate": true,
+  "type": "offside",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Pablo García",
+  "description": "Offside: Pablo García (Real Betis) is flagged offside",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 10,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-082",
+  "seq": 82,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "82'",
+  "video_time": 5683,
+  "video_time_hms": "1:34:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Nelson Deossa",
+  "description": "Foul by Nelson Deossa (Real Betis) on Frenkie de Jong; Barcelona get a free kick in the opponents' half",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 11,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Frenkie de Jong",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in the opponents' half"
+  }
+ },
+ {
+  "id": "betbar-083",
+  "seq": 83,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "82'",
+  "video_time": 5683,
+  "video_time_hms": "1:34:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Abde Ezzalzouli",
+  "description": "Chance for Real Betis: Abde Ezzalzouli's right-footed shot from outside the box is blocked by a defender (set up by Pablo Fornals)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 12,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "blocked",
+   "body_part": "Right foot",
+   "location": "outside the box",
+   "assist": "Pablo Fornals",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-084",
+  "seq": 84,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "83'",
+  "video_time": 5743,
+  "video_time_hms": "1:35:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Aitor Ruibal",
+  "description": "Chance for Real Betis: Aitor Ruibal's right-footed shot from the right side of the box goes off target (set up by Pablo García)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 13,
+    "shots_on_target": 3,
+    "corners": 4,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Pablo García",
+   "assist_type": null
+  }
+ },
+ {
+  "id": "betbar-085",
+  "seq": 85,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "84'",
+  "video_time": 5803,
+  "video_time_hms": "1:36:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Andreas Christensen)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 13,
+    "shots_on_target": 3,
+    "corners": 5,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Andreas Christensen"
+  }
+ },
+ {
+  "id": "betbar-086",
+  "seq": 86,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "84'",
+  "video_time": 5803,
+  "video_time_hms": "1:36:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Marcus Rashford)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 13,
+    "shots_on_target": 3,
+    "corners": 6,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "conceded_by": "Marcus Rashford"
+  }
+ },
+ {
+  "id": "betbar-087",
+  "seq": 87,
   "period": 2,
   "period_label": "2nd half",
   "clock": "85'",
-  "video_time": 5803,
-  "video_time_hms": "1:36:43",
+  "video_time": 5863,
+  "video_time_hms": "1:37:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Abde Ezzalzouli",
+  "description": "Chance for Real Betis: Abde Ezzalzouli's header from very close range goes off target — just wide (set up by Pablo Fornals, with a cross from a corner)",
+  "score_after": {
+   "Real Betis": 1,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 14,
+    "shots_on_target": 3,
+    "corners": 6,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Head",
+   "location": "very close range",
+   "assist": "Pablo Fornals",
+   "assist_type": "with a cross from a corner"
+  }
+ },
+ {
+  "id": "betbar-088",
+  "seq": 88,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "85'",
+  "video_time": 5863,
+  "video_time_hms": "1:37:43",
   "approximate": true,
   "type": "goal",
   "importance": "key",
   "team": "Real Betis",
   "player": "Diego Llorente",
-  "description": "GOAL! Diego Llorente pulls one back for Betis. Real Betis 2–5 Barcelona",
+  "description": "GOAL! Diego Llorente scores for Real Betis — right foot from very close range, into the bottom right corner (assist: Abde Ezzalzouli, following a corner). Score: Real Betis 2–5 Barcelona",
   "score_after": {
    "Real Betis": 2,
    "Barcelona": 5
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 15,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "body_part": "right foot",
+   "location": "very close range",
+   "placement": "bottom right corner",
+   "assist": "Abde Ezzalzouli",
+   "assist_type": "following a corner",
+   "penalty": false
+  }
  },
  {
-  "id": "betbar-033",
+  "id": "betbar-089",
+  "seq": 89,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "88'",
+  "clock": "86'",
+  "video_time": 5923,
+  "video_time_hms": "1:38:43",
+  "approximate": true,
+  "type": "shot",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Marcus Rashford",
+  "description": "Chance for Barcelona: Marcus Rashford's right-footed shot from the right side of the box goes off target (set up by Frenkie de Jong, with a through ball)",
+  "score_after": {
+   "Real Betis": 2,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 11,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Right foot",
+   "location": "the right side of the box",
+   "assist": "Frenkie de Jong",
+   "assist_type": "with a through ball"
+  }
+ },
+ {
+  "id": "betbar-090",
+  "seq": 90,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "87'",
+  "video_time": 5983,
+  "video_time_hms": "1:39:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Valentín Gómez",
+  "description": "Foul by Valentín Gómez (Real Betis) on Marc Bernal; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 2,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 3
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "victim": "Marc Bernal",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-091",
+  "seq": 91,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "87'",
   "video_time": 5983,
   "video_time_hms": "1:39:43",
   "approximate": true,
@@ -677,66 +3785,247 @@
   "importance": "key",
   "team": "Real Betis",
   "player": "Valentín Gómez",
-  "description": "YELLOW CARD for Valentín Gómez (Betis)",
+  "description": "YELLOW CARD: Valentín Gómez (Real Betis) is booked — a bad foul on Marc Bernal",
   "score_after": {
    "Real Betis": 2,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "card": "Yellow Card",
-   "note": "minute approximate"
+   "reason": "a bad foul on Marc Bernal",
+   "is_manager": false
   }
  },
  {
-  "id": "betbar-034",
+  "id": "betbar-092",
+  "seq": 92,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "video_time": 6043,
+  "video_time_hms": "1:40:43",
+  "approximate": true,
+  "type": "injury",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Junior Firpo",
+  "description": "Play stopped for treatment to Junior Firpo (Real Betis)",
+  "score_after": {
+   "Real Betis": 2,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {}
+ },
+ {
+  "id": "betbar-093",
+  "seq": 93,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "88'",
+  "video_time": 6043,
+  "video_time_hms": "1:40:43",
+  "approximate": true,
+  "type": "card",
+  "importance": "key",
+  "team": "Real Betis",
+  "player": "Manuel Pellegrini",
+  "description": "YELLOW CARD: Manuel Pellegrini (Real Betis, manager) is booked — protesting from the touchline",
+  "score_after": {
+   "Real Betis": 2,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "card": "Yellow Card",
+   "reason": "protesting from the touchline",
+   "is_manager": true
+  }
+ },
+ {
+  "id": "betbar-094",
+  "seq": 94,
   "period": 2,
   "period_label": "2nd half",
   "clock": "89'",
-  "video_time": 6043,
-  "video_time_hms": "1:40:43",
+  "video_time": 6103,
+  "video_time_hms": "1:41:43",
   "approximate": true,
   "type": "substitution",
   "importance": "key",
   "team": "Real Betis",
   "player": "Ricardo Rodríguez",
-  "description": "Substitution Betis: Ricardo Rodríguez ON, Junior Firpo OFF",
+  "description": "Substitution, Real Betis: Ricardo Rodríguez comes on for Junior Firpo (injury)",
   "score_after": {
    "Real Betis": 2,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 7,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
   "data": {
    "player_on": "Ricardo Rodríguez",
-   "player_off": "Junior Firpo"
+   "player_off": "Junior Firpo",
+   "reason": "Injury"
   }
  },
  {
-  "id": "betbar-035",
+  "id": "betbar-095",
+  "seq": 95,
   "period": 2,
   "period_label": "2nd half",
   "clock": "90'",
-  "video_time": 6103,
-  "video_time_hms": "1:41:43",
+  "video_time": 6163,
+  "video_time_hms": "1:42:43",
+  "approximate": true,
+  "type": "penalty_awarded",
+  "importance": "key",
+  "team": "Barcelona",
+  "player": "Jules Koundé",
+  "description": "PENALTY to Real Betis: Jules Koundé (Barcelona) fouls Abde Ezzalzouli inside the penalty area",
+  "score_after": {
+   "Real Betis": 2,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 1
+   }
+  },
+  "data": {
+   "offence": "Foul",
+   "victim": "Abde Ezzalzouli",
+   "penalty_for": "Real Betis"
+  }
+ },
+ {
+  "id": "betbar-096",
+  "seq": 96,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90'",
+  "video_time": 6163,
+  "video_time_hms": "1:42:43",
   "approximate": true,
   "type": "card",
   "importance": "key",
   "team": "Barcelona",
   "player": "Jules Koundé",
-  "description": "Foul by Jules Koundé (Barcelona) on Abde Ezzalzouli inside the penalty area — PENALTY to Betis — YELLOW CARD for Koundé",
+  "description": "YELLOW CARD: Jules Koundé (Barcelona) is booked — the foul on Abde Ezzalzouli that gave away the penalty",
   "score_after": {
    "Real Betis": 2,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 15,
+    "shots_on_target": 4,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
   "data": {
    "card": "Yellow Card",
-   "penalty": true,
-   "victim": "Abde Ezzalzouli"
+   "reason": "the foul on Abde Ezzalzouli that gave away the penalty",
+   "is_manager": false
   }
  },
  {
-  "id": "betbar-036",
+  "id": "betbar-097",
+  "seq": 97,
   "period": 2,
   "period_label": "2nd half",
-  "clock": "90+1'",
+  "clock": "90'",
   "video_time": 6163,
   "video_time_hms": "1:42:43",
   "approximate": true,
@@ -744,51 +4033,326 @@
   "importance": "key",
   "team": "Real Betis",
   "player": "Cucho Hernández",
-  "description": "GOAL! Cucho Hernández converts the penalty into the bottom corner. Real Betis 3–5 Barcelona",
+  "description": "GOAL! Cucho Hernández scores the penalty for Real Betis (right foot, centre of the goal). Score: Real Betis 3–5 Barcelona",
   "score_after": {
    "Real Betis": 3,
    "Barcelona": 5
   },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 16,
+    "shots_on_target": 5,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
   "data": {
-   "shot_type": "Penalty"
+   "body_part": "right foot",
+   "location": null,
+   "placement": "centre of the goal",
+   "assist": null,
+   "assist_type": null,
+   "penalty": true
   }
  },
  {
-  "id": "betbar-037",
+  "id": "betbar-098",
+  "seq": 98,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90'",
+  "video_time": 6163,
+  "video_time_hms": "1:42:43",
+  "approximate": true,
+  "type": "added_time",
+  "importance": "detail",
+  "team": null,
+  "player": null,
+  "description": "Fourth official signals 6 minutes of added time",
+  "score_after": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 16,
+    "shots_on_target": 5,
+    "corners": 6,
+    "fouls": 12,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "minutes": 6
+  }
+ },
+ {
+  "id": "betbar-099",
+  "seq": 99,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+1'",
+  "video_time": 6223,
+  "video_time_hms": "1:43:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Pablo Fornals",
+  "description": "Foul by Pablo Fornals (Real Betis) on Pau Cubarsí; Barcelona get a free kick in their own half",
+  "score_after": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 16,
+    "shots_on_target": 5,
+    "corners": 6,
+    "fouls": 13,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "victim": "Pau Cubarsí",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "in their own half"
+  }
+ },
+ {
+  "id": "betbar-100",
+  "seq": 100,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+2'",
+  "video_time": 6283,
+  "video_time_hms": "1:44:43",
+  "approximate": true,
+  "type": "corner",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": null,
+  "description": "Corner to Real Betis (conceded by Frenkie de Jong)",
+  "score_after": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 16,
+    "shots_on_target": 5,
+    "corners": 7,
+    "fouls": 13,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "conceded_by": "Frenkie de Jong"
+  }
+ },
+ {
+  "id": "betbar-101",
+  "seq": 101,
   "period": 2,
   "period_label": "2nd half",
   "clock": "90+3'",
-  "video_time": 6283,
-  "video_time_hms": "1:44:43",
+  "video_time": 6343,
+  "video_time_hms": "1:45:43",
   "approximate": true,
   "type": "shot",
   "importance": "detail",
   "team": "Real Betis",
   "player": "Abde Ezzalzouli",
-  "description": "Abde Ezzalzouli heads off target",
+  "description": "Chance for Real Betis: Abde Ezzalzouli's header from the centre of the box goes off target — over the bar (set up by Pablo Fornals, with a cross from a corner)",
   "score_after": {
    "Real Betis": 3,
    "Barcelona": 5
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 17,
+    "shots_on_target": 5,
+    "corners": 7,
+    "fouls": 13,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "outcome": "off target",
+   "body_part": "Head",
+   "location": "the centre of the box",
+   "assist": "Pablo Fornals",
+   "assist_type": "with a cross from a corner"
+  }
  },
  {
-  "id": "betbar-038",
+  "id": "betbar-102",
+  "seq": 102,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+4'",
+  "video_time": 6403,
+  "video_time_hms": "1:46:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Real Betis",
+  "player": "Valentín Gómez",
+  "description": "Foul by Valentín Gómez (Real Betis) on Marcus Rashford; Barcelona get a free kick on the left wing",
+  "score_after": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 17,
+    "shots_on_target": 5,
+    "corners": 7,
+    "fouls": 14,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 8,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "victim": "Marcus Rashford",
+   "free_kick_for": "Barcelona",
+   "free_kick_zone": "on the left wing"
+  }
+ },
+ {
+  "id": "betbar-103",
+  "seq": 103,
+  "period": 2,
+  "period_label": "2nd half",
+  "clock": "90+5'",
+  "video_time": 6463,
+  "video_time_hms": "1:47:43",
+  "approximate": true,
+  "type": "foul",
+  "importance": "detail",
+  "team": "Barcelona",
+  "player": "Lamine Yamal",
+  "description": "Foul by Lamine Yamal (Barcelona) on Abde Ezzalzouli; Real Betis get a free kick on the left wing",
+  "score_after": {
+   "Real Betis": 3,
+   "Barcelona": 5
+  },
+  "stats_after": {
+   "Real Betis": {
+    "shots": 17,
+    "shots_on_target": 5,
+    "corners": 7,
+    "fouls": 14,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "victim": "Abde Ezzalzouli",
+   "free_kick_for": "Real Betis",
+   "free_kick_zone": "on the left wing"
+  }
+ },
+ {
+  "id": "betbar-104",
+  "seq": 104,
   "period": 2,
   "period_label": "2nd half",
   "clock": "90+6'",
-  "video_time": 6463,
-  "video_time_hms": "1:47:43",
+  "video_time": 6523,
+  "video_time_hms": "1:48:43",
   "approximate": true,
   "type": "period_end",
   "importance": "key",
   "team": null,
   "player": null,
-  "description": "Full time: Real Betis 3–5 Barcelona (6 minutes of added time)",
+  "description": "Full time (6 minutes of added time were played)",
   "score_after": {
    "Real Betis": 3,
    "Barcelona": 5
   },
-  "data": {}
+  "stats_after": {
+   "Real Betis": {
+    "shots": 17,
+    "shots_on_target": 5,
+    "corners": 7,
+    "fouls": 14,
+    "offsides": 6,
+    "yellow_cards": 4
+   },
+   "Barcelona": {
+    "shots": 16,
+    "shots_on_target": 8,
+    "corners": 7,
+    "fouls": 9,
+    "offsides": 1,
+    "yellow_cards": 2
+   }
+  },
+  "data": {
+   "added_minutes": 6
+  }
  }
 ]
