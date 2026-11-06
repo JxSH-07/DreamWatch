@@ -32,6 +32,14 @@ const readLayout = () => {
   try { return localStorage.getItem(LAYOUT_KEY) || 'strip'; } catch { return 'strip'; }
 };
 
+// Camera tile width per layout (height follows at 5:3), resizable by dragging a tile's corner.
+const TILE_KEY = 'dw.camTileWidth';
+export const TILE_DEFAULTS = { strip: 120, pip: 112 };
+export const TILE_LIMITS = { strip: [96, 400], pip: [84, 340] };
+const readTileWidths = () => {
+  try { return { ...TILE_DEFAULTS, ...JSON.parse(localStorage.getItem(TILE_KEY) || '{}') }; } catch { return { ...TILE_DEFAULTS }; }
+};
+
 export function CallProvider({ active, children }) {
   const { user } = useAuth();
   const { partyId, party, isHost, memberMap, rpc } = useParty();
@@ -49,6 +57,7 @@ export function CallProvider({ active, children }) {
   const [remote, setRemote] = useState({}); // peerId -> { stream, version }
   const [peerMedia, setPeerMedia] = useState({}); // peerId -> { cam, mic }
   const [layout, setLayoutState] = useState(readLayout);
+  const [tileWidths, setTileWidths] = useState(readTileWidths);
   const [consented, setConsented] = useState(false);
   const [askConsent, setAskConsent] = useState(false);
 
@@ -59,6 +68,16 @@ export function CallProvider({ active, children }) {
     setLayoutState(l);
     try { localStorage.setItem(LAYOUT_KEY, l); } catch { /* per-viewer convenience only */ }
   };
+
+  // width null = reset to default for that layout.
+  const setTileWidth = useCallback((which, width) => {
+    setTileWidths((t) => {
+      const [min, max] = TILE_LIMITS[which];
+      const next = { ...t, [which]: width == null ? TILE_DEFAULTS[which] : Math.round(Math.min(max, Math.max(min, width))) };
+      try { localStorage.setItem(TILE_KEY, JSON.stringify(next)); } catch { /* per-viewer convenience only */ }
+      return next;
+    });
+  }, []);
 
   const send = useCallback((payload) => {
     channelRef.current?.send({ type: 'broadcast', event: 'signal', payload: { ...payload, from: me } });
@@ -329,7 +348,7 @@ export function CallProvider({ active, children }) {
   const speaking = useSpeaking(audioStreams, audioKey);
 
   const value = {
-    camOn, micOn, toggleCam, toggleMic, layout, setLayout, media, allowCameras, speaking,
+    camOn, micOn, toggleCam, toggleMic, layout, setLayout, tileWidths, setTileWidth, media, allowCameras, speaking,
     askConsent, confirmCam, cancelConsent: () => setAskConsent(false), hostStopVideo, hostAskVideo,
   };
   return <CallContext.Provider value={value}>{children}</CallContext.Provider>;

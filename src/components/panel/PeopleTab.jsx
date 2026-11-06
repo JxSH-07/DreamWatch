@@ -24,7 +24,7 @@ export default function PeopleTab({ match, onEnd }) {
   const config = match.config;
 
   const list = members
-    .filter((m) => m.status !== 'removed')
+    .filter((m) => (m.status === 'joined' || m.status === 'invited'))
     .sort((a, b) => (a.role === 'host' ? -1 : b.role === 'host' ? 1 : 0) || (a.status === 'joined' ? -1 : 1));
   const joined = list.filter((m) => m.status === 'joined');
   const hostName = members.find((m) => m.role === 'host')?.profile?.display_name ?? 'The host';

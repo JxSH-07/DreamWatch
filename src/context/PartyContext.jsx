@@ -11,6 +11,7 @@ const GAFFER_TIMEOUT_MS = 20_000;
 // One realtime channel per party (`party:{id}`): postgres changes, broadcast and presence.
 export function PartyProvider({ partyId, children }) {
   const { user, profile } = useAuth();
+  const userId = user?.id ?? null;
   const toast = useToast();
   const [party, setParty] = useState(null);
   const [members, setMembers] = useState([]);
@@ -66,7 +67,7 @@ export function PartyProvider({ partyId, children }) {
 
   // ---------- Initial load ----------
   useEffect(() => {
-    if (!user) return undefined;
+    if (!userId) return undefined;
     let active = true;
     (async () => {
       setLoading(true);
@@ -74,9 +75,9 @@ export function PartyProvider({ partyId, children }) {
       if (!active) return;
       if (!p) {
         // Removed members can no longer read the party, but can read their own row.
-        const { data: mine } = await supabase.from('party_members').select('status').eq('party_id', partyId).eq('user_id', user.id).maybeSingle();
+        const { data: mine } = await supabase.from('party_members').select('status').eq('party_id', partyId).eq('user_id', userId).maybeSingle();
         if (!active) return;
-        setLoadError(mine?.status === 'removed' ? 'removed' : 'not_found');
+        setLoadError(mine?.status === 'removed' ? 'removed' : mine?.status === 'left' ? 'left' : 'not_found');
         setLoading(false);
         return;
       }
@@ -98,14 +99,14 @@ export function PartyProvider({ partyId, children }) {
       setLoading(false);
     })();
     return () => { active = false; };
-  }, [partyId, user, loadMembers]);
+  }, [partyId, userId, loadMembers]);
 
   // ---------- Realtime ----------
   useEffect(() => {
-    if (!user) return undefined;
+    if (!userId) return undefined;
     const filter = `party_id=eq.${partyId}`;
     const ch = supabase.channel(`party:${partyId}`, {
-      config: { presence: { key: user.id }, broadcast: { self: false } },
+      config: { presence: { key: userId }, broadcast: { self: false } },
     });
     ch
       .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'parties', filter: `id=eq.${partyId}` },
@@ -132,7 +133,7 @@ export function PartyProvider({ partyId, children }) {
       channelRef.current = null;
       supabase.removeChannel(ch);
     };
-  }, [partyId, user, loadMembers, addMessage, upsertPoll, pushReaction]);
+  }, [partyId, userId, loadMembers, addMessage, upsertPoll, pushReaction]);
 
   const me = members.find((m) => m.user_id === user?.id) ?? null;
 

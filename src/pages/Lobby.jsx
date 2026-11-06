@@ -74,7 +74,7 @@ function LobbyInner() {
   }, [party?.status, party?.id, navigate]);
 
   if (loading) return <Loader label="Opening the lobby…" />;
-  if (loadError === 'removed') return <Navigate to={`/invite/${partyId}`} replace />;
+  if (loadError === 'removed' || loadError === 'left') return <Navigate to={`/invite/${partyId}`} replace />;
   if (loadError || !party) return <NotFound embedded />;
   if (!me || me.status !== 'joined') return <Navigate to={`/invite/${party.id}`} replace />;
   if (party.status === 'ended') return <Navigate to={`/party/${party.id}`} replace />;
@@ -84,7 +84,7 @@ function LobbyInner() {
   const link = inviteLink(party.id);
   const host = members.find((m) => m.role === 'host');
   const hostName = host?.profile?.display_name ?? 'The host';
-  const list = members.filter((m) => m.status !== 'removed');
+  const list = members.filter((m) => m.status === 'joined' || m.status === 'invited');
   const joined = list.filter((m) => m.status === 'joined');
 
   const copy = async () => {

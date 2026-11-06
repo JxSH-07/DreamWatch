@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Check, Lock, Maximize, Minimize, Pause, Play, RotateCcw, RotateCw, Volume2, VolumeX } from 'lucide-react';
-import { useYouTubePlayer } from '../../hooks/useYouTubePlayer.js';
+import { YT_STATE, useYouTubePlayer } from '../../hooks/useYouTubePlayer.js';
 import { usePlayerSync } from '../../hooks/usePlayerSync.js';
 import { behindLive, playbackRange } from '../../lib/matchTime.js';
 import { fmtDuration } from '../../lib/format.js';
@@ -24,14 +24,18 @@ import SeekBar from './SeekBar.jsx';
 */
 export default function VideoPlayer({
   match, events, position, now, getTarget, isPlaying, version, controls, hostName, pausedBy, variant = 'party', reactions = [], overlay = null,
+  resumeKey = null,
 }) {
   const containerRef = useRef(null);
   const { hostRef, playerRef, ready, error } = useYouTubePlayer(match.youtube_id);
   const [started, setStarted] = useState(false);
   const [volume, setVolume] = useState(80);
   const [muted, setMuted] = useState(false);
+  const [needsUnmute, setNeedsUnmute] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
   const sync = usePlayerSync({ playerRef, ready, started, getTarget, isPlaying, version });
+  const isPlayingRef = useRef(isPlaying);
+  isPlayingRef.current = isPlaying;
 
   const live = match.mode === 'live';
   const config = match.config;
@@ -54,6 +58,48 @@ export default function VideoPlayer({
     p.unMute();
     p.setVolume(volume);
     setStarted(true);
+    if (resumeKey) try { sessionStorage.setItem(resumeKey, '1'); } catch { /* resume is a convenience */ }
+  };
+
+  // Someone who already joined this stream in this tab (e.g. then reloaded the page)
+  // drops straight back in. Browsers may refuse sound without a fresh click: then
+  // keep the stream playing muted with a "Tap to unmute" pill, and only fall back to
+  // the Join button if even muted playback is blocked.
+  useEffect(() => {
+    if (!ready || started || !resumeKey) return undefined;
+    let remembered = false;
+    try { remembered = sessionStorage.getItem(resumeKey) === '1'; } catch { /* no storage */ }
+    const p = playerRef.current;
+    if (!remembered || !p) return undefined;
+    p.seekTo(getTarget(), true);
+    p.unMute();
+    p.setVolume(volume);
+    p.playVideo();
+    setStarted(true);
+    const playing = () => [YT_STATE.PLAYING, YT_STATE.BUFFERING].includes(p.getPlayerState?.());
+    let t2;
+    const t1 = setTimeout(() => {
+      if (!isPlayingRef.current || playing()) return;
+      p.mute();
+      setMuted(true);
+      p.playVideo();
+      t2 = setTimeout(() => {
+        if (playing()) setNeedsUnmute(true);
+        else setStarted(false);
+      }, 1500);
+    }, 1500);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  // Runs once when the player becomes ready.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ready]);
+
+  const unmute = () => {
+    const p = playerRef.current;
+    if (!p) return;
+    p.unMute();
+    p.setVolume(volume || 80);
+    setMuted(false);
+    setNeedsUnmute(false);
   };
 
   const applyVolume = (v, m) => {
@@ -96,7 +142,8 @@ export default function VideoPlayer({
           <a className="btn btn-ghost btn-sm" href={`https://www.youtube.com/watch?v=${match.youtube_id}`} target="_blank" rel="noreferrer">Open on YouTube</a>
         </div>
       ) : !started ? (
-        <div className="player-overlay">
+        /* Opaque: YouTube's thumbnail behind it can show the final score. */
+        <div className="player-overlay pre">
           <button type="button" className="join-btn" onClick={join} disabled={!ready}>
             {ready ? <Play size={20} fill="currentColor" aria-hidden="true" /> : <Spinner size={18} />}
             {ready ? joinLabel : 'Loading stream…'}
@@ -112,6 +159,12 @@ export default function VideoPlayer({
       ) : (
         <div className="paused-chip" role="status"><Pause size={16} fill="currentColor" aria-hidden="true" />Paused by {pausedBy ?? hostName}</div>
       ))}
+
+      {needsUnmute && muted && (
+        <button type="button" className="unmute-pill rise-in" onClick={unmute}>
+          <VolumeX size={16} aria-hidden="true" />Tap to unmute
+        </button>
+      )}
 
       <div className="reaction-layer" aria-hidden="true">
         {reactions.map((r) => (

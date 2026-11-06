@@ -19,7 +19,7 @@ export async function loadPartyContext(partyId) {
 
 export async function isMember(partyId, userId) {
   const { data } = await adminClient.from('party_members').select('status, role').eq('party_id', partyId).eq('user_id', userId).maybeSingle();
-  return data && data.status !== 'removed' ? data : null;
+  return data && (data.status === 'joined' || data.status === 'invited') ? data : null;
 }
 
 function evLine(e) {

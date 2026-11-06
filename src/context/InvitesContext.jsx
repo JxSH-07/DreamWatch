@@ -7,7 +7,7 @@ import { useToast } from './ToastContext.jsx';
 const InvitesContext = createContext({ invites: [], reload: () => {} });
 
 // parties has two links to profiles (host_id, playback_by), so name the one we mean.
-const INVITE_COLUMNS = 'party_id, status, party:parties(id, name, status, match_id, created_at, host:profiles!parties_host_id_fkey(display_name, avatar_color), match:matches(title, mode))';
+const INVITE_COLUMNS = 'party_id, status, party:parties(id, name, status, match_id, created_at, deleted_at, host:profiles!parties_host_id_fkey(display_name, avatar_color), match:matches(title, mode))';
 
 // Pending watch-party invites for the signed-in user, live-updated. A new invite
 // arriving while the app is open shows a toast with a Join button.
@@ -30,7 +30,7 @@ export function InvitesProvider({ children }) {
       console.error('invites load failed', error.message);
       return [];
     }
-    const list = (data ?? []).filter((r) => r.party && r.party.status !== 'ended')
+    const list = (data ?? []).filter((r) => r.party && r.party.status !== 'ended' && !r.party.deleted_at)
       .sort((a, b) => b.party.created_at.localeCompare(a.party.created_at));
     setInvites(list);
     return list;

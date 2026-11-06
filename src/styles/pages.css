@@ -131,3 +131,5 @@
   .watch-side { padding: 16px; }
   .watch-side .tl-box { max-height: none; }
 }
+.party-row-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+@media (max-width: 520px) { .party-row-actions { width: 100%; } .party-row-actions > * { flex: 1; } }

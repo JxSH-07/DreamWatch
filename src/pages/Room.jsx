@@ -22,7 +22,7 @@ import { copyText, inviteLink, teamInfo } from '../lib/format.js';
 import { serverNow } from '../lib/serverClock.js';
 import { supabase } from '../lib/supabase.js';
 import NotFound from './NotFound.jsx';
-import { PanelResizer, usePanelWidth } from '../components/PanelResizer.jsx';
+import { VideoResizer, usePlayerWidth } from '../components/VideoResizer.jsx';
 
 const REACTIONS = [
   ['⚽', 'goal'], ['🔥', 'fire'], ['😱', 'shocked'], ['😂', 'laughing'], ['👏', 'applause'], ['🟨', 'yellow card'], ['🟥', 'red card'],
@@ -123,7 +123,8 @@ function RoomHeader({ match, hostName }) {
 function ParticipantStrip({ match, hostId }) {
   const { user } = useAuth();
   const { members, online } = useParty();
-  const { media, layout, speaking } = useCall();
+  const { media, layout, speaking, tileWidths, setTileWidth } = useCall();
+  const stripResize = { corner: 'br', onResize: (w) => setTileWidth('strip', w), onReset: () => setTileWidth('strip', null) };
   const joined = members.filter((m) => m.status === 'joined');
   return (
     <div className="strip" aria-label="Participants">
@@ -135,10 +136,10 @@ function ParticipantStrip({ match, hostId }) {
         const showTile = layout === 'strip' && call?.video;
         const isSpeaking = speaking.has(m.user_id);
         return (
-          <div key={m.user_id} className={`strip-item ${isOnline ? '' : 'offline'} ${showTile ? 'has-cam' : ''}`} title={isOnline ? 'Online' : 'Offline'}>
+          <div key={m.user_id} className={`strip-item ${isOnline ? '' : 'offline'} ${showTile ? 'has-cam' : ''}`} style={showTile ? { width: tileWidths.strip } : undefined} title={isOnline ? 'Online' : 'Offline'}>
             {showTile ? (
               <CallTile stream={call.stream} version={call.version} name={look.name} ring={look.ring} self={call.self}
-                micOff={!call.mic} speaking={isSpeaking} />
+                micOff={!call.mic} speaking={isSpeaking} width={tileWidths.strip} resize={stripResize} />
             ) : (
               <Avatar name={look.name} ring={look.ring} size={46} online={isOnline} className={isSpeaking ? 'speaking' : ''}>
                 {m.muted && <span className="muted-badge" title="Muted in chat"><UserX size={10} strokeWidth={3} aria-hidden="true" /></span>}
@@ -166,7 +167,7 @@ function EndedScreen({ match, events }) {
       <div className="state-card" role="dialog" aria-modal="true" aria-labelledby="end-t">
         <span style={{ color: 'var(--accent)' }}><WhistleIcon size={44} strokeWidth={1.8} /></span>
         <h2 id="end-t">Party ended</h2>
-        <p>{party.name} is over. Thanks for watching together.</p>
+        <p>{party.deleted_at ? `The host deleted ${party.name}.` : `${party.name} is over.`} Thanks for watching together.</p>
         <div className="recap">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
             <span className="cond" style={{ fontSize: 22, fontWeight: 700 }}>{config.home} {score.home}–{score.away} {config.away}</span>
@@ -208,7 +209,8 @@ function RoomInner() {
   const [unreadTl, setUnreadTl] = useState(0);
   const lastReact = useRef(0);
   const gridRef = useRef(null);
-  const [sideWidth, setSideWidth] = usePanelWidth();
+  const playerBoxRef = useRef(null);
+  const [playerWidth, setPlayerWidth] = usePlayerWidth();
   const rowRef = useRef(row);
   rowRef.current = row;
 
@@ -287,6 +289,7 @@ function RoomInner() {
 
   if (loading) return <Loader label="Joining the party…" />;
   if (loadError === 'removed' || me?.status === 'removed') return <RemovedScreen />;
+  if (loadError === 'left') return <Navigate to={`/invite/${partyId}`} replace />;
   if (loadError || !row) return <NotFound embedded />;
   if (!me || me.status !== 'joined') return <Navigate to={`/invite/${partyId}`} replace />;
   if (row.status === 'lobby') return <Navigate to={`/party/${partyId}/lobby`} replace />;
@@ -316,15 +319,19 @@ function RoomInner() {
     <CallProvider active={row.status === 'live'}>
       <CallAudio />
       <RoomHeader match={match} hostName={hostName} />
-      <div className="room-grid" ref={gridRef} style={{ '--side-w': `${sideWidth}px` }}>
+      <div className={`room-grid ${playerWidth ? 'custom-w' : ''}`} ref={gridRef} style={playerWidth ? { '--player-w': `${playerWidth}px` } : undefined}>
         <section className="room-player" aria-label="Match player">
-          <VideoPlayer
-            match={match} events={events} position={position} now={now} getTarget={getTarget}
-            isPlaying={row.status === 'live' && row.is_playing} version={row.playback_version}
-            controls={controls} hostName={hostName} variant="party" reactions={floating}
-            pausedBy={memberMap[row.playback_by]?.profile?.display_name ?? hostName}
-            overlay={<PipTiles people={callPeople} isHost={!!controls} />}
-          />
+          <div className="player-box" ref={playerBoxRef}>
+            <VideoPlayer
+              match={match} events={events} position={position} now={now} getTarget={getTarget}
+              isPlaying={row.status === 'live' && row.is_playing} version={row.playback_version}
+              controls={controls} hostName={hostName} variant="party" reactions={floating}
+              pausedBy={memberMap[row.playback_by]?.profile?.display_name ?? hostName}
+              resumeKey={`dw.joined.${partyId}`}
+              overlay={<PipTiles people={callPeople} isHost={!!controls} />}
+            />
+            <VideoResizer width={playerWidth} setWidth={setPlayerWidth} containerRef={gridRef} playerRef={playerBoxRef} />
+          </div>
         </section>
 
         <section className="room-below" aria-label="Reactions and people">
@@ -341,7 +348,6 @@ function RoomInner() {
         </section>
 
         <aside className="room-side" aria-label="Party panel">
-          <PanelResizer width={sideWidth} setWidth={setSideWidth} containerRef={gridRef} />
           <div className="side-panel">
             <div className="tabs" role="tablist" aria-label="Party panel sections">
               {tabs.map((t) => (

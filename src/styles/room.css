@@ -302,7 +302,7 @@
 /* ---------- Video calls ---------- */
 @keyframes speakGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(182, 255, 59, 0); } 50% { box-shadow: 0 0 0 4px rgba(182, 255, 59, 0.35); } }
 .speaking { animation: speakGlow 1.2s ease-in-out infinite; }
-.cam-tile { position: relative; display: block; border-radius: 10px; overflow: hidden; border: 2px solid var(--line-3); flex-shrink: 0; }
+.cam-tile { position: relative; display: block; aspect-ratio: 5 / 3; border-radius: 10px; overflow: hidden; border: 2px solid var(--line-3); flex-shrink: 0; max-width: 100%; }
 .cam-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: transparent; }
 .cam-tile video.mirror { transform: scaleX(-1); }
 .cam-init { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
@@ -310,7 +310,6 @@
 .cam-mic-off { position: absolute; right: 4px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--live); color: #fff; display: flex; align-items: center; justify-content: center; }
 .pip-tiles { position: absolute; right: 14px; display: flex; gap: 8px; z-index: 4; pointer-events: none; flex-wrap: wrap-reverse; justify-content: flex-end; max-width: 60%; }
 .pip-tiles .cam-tile { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5); }
-.player:fullscreen .pip-tiles .cam-tile { width: 180px !important; height: 106px !important; }
 .call-controls { margin-left: auto; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .cam-btn { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line-3); background: var(--card); color: var(--text); font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
 .cam-btn.on { border-color: var(--accent); background: rgba(182, 255, 59, 0.12); color: var(--accent-soft); }
@@ -319,22 +318,42 @@
 .mic-btn.off { border-color: rgba(255, 59, 71, 0.5); background: rgba(255, 59, 71, 0.12); color: var(--danger); }
 .cam-btn:hover, .mic-btn:hover { filter: brightness(1.2); }
 .segmented.sm button { height: 36px; padding: 0 10px; font-size: 12px; }
-.strip-item.has-cam { width: 120px; }
-.strip-item.has-cam .nm { max-width: 120px; }
+.strip-item.has-cam .nm { max-width: 100%; }
 @media (max-width: 1023px) { .call-controls { margin-left: 0; } }
-@media (max-width: 640px) { .pip-tiles .cam-tile { width: 84px !important; height: 50px !important; } .pip-tiles { right: 8px; } }
+@media (max-width: 640px) { .pip-tiles .cam-tile { max-width: 28vw; } .pip-tiles { right: 8px; } }
 
-/* ---------- Resizable video / side panel ---------- */
-.room-grid, .watch-grid { --side-w: 400px; grid-template-columns: minmax(0, 1fr) var(--side-w); }
-.room-side, .watch-side { position: relative; }
-.panel-resizer { position: absolute; left: -16px; top: 0; bottom: 0; width: 12px; cursor: col-resize; display: flex; align-items: center; justify-content: center; touch-action: none; z-index: 5; border-radius: 6px; }
-.panel-resizer .grip { width: 4px; height: 56px; border-radius: 2px; background: var(--line-3); transition: background 0.15s, height 0.15s; }
-.panel-resizer:hover .grip, .panel-resizer:focus-visible .grip, .panel-resizer.active .grip { background: var(--accent); height: 96px; }
-.panel-resizer.active { background: rgba(182, 255, 59, 0.06); }
-/* Keep the 16:9 picture within the window height when the panel is narrow. */
-.room-player .player, .watch-main .player { max-width: calc((100vh - 150px) * 16 / 9); margin: 0 auto; }
+/* ---------- Resizable video ---------- */
+/* Default: video takes the free space, panel 400px. After a drag, the video column
+   has a fixed width and the panel takes the rest. */
+.room-grid.custom-w, .watch-grid.custom-w { grid-template-columns: var(--player-w) minmax(300px, 1fr); }
+.player-box { position: relative; max-width: calc((100vh - 150px) * 16 / 9); margin: 0 auto; }
+.video-resizer { position: absolute; top: 0; bottom: 0; right: -15px; width: 12px; cursor: ew-resize; display: flex; align-items: center; justify-content: center; touch-action: none; z-index: 6; border-radius: 6px; }
+.video-resizer .grip { width: 4px; height: 64px; border-radius: 2px; background: var(--line-4); transition: background 0.15s, height 0.15s; }
+.video-resizer:hover .grip, .video-resizer:focus-visible .grip, .video-resizer.active .grip { background: var(--accent); height: 120px; }
+.video-resizer.active { background: rgba(182, 255, 59, 0.06); }
+.video-resizer-corner { position: absolute; right: -20px; bottom: -10px; width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--muted-3); background: var(--card); border: 1px solid var(--line-3); cursor: nwse-resize; touch-action: none; z-index: 7; }
+.video-resizer-corner:hover, .video-resizer-corner.active { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+.video-size-tip { position: absolute; top: 12px; right: 12px; z-index: 8; font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: var(--accent); color: var(--on-accent); pointer-events: none; }
 @media (max-width: 1023px) {
-  .room-grid, .watch-grid { grid-template-columns: minmax(0, 1fr); }
-  .panel-resizer { display: none; }
-  .room-player .player, .watch-main .player { max-width: none; }
+  .room-grid.custom-w, .watch-grid.custom-w { grid-template-columns: minmax(0, 1fr); }
+  .video-resizer, .video-resizer-corner, .video-size-tip { display: none; }
+  .player-box { max-width: none; }
 }
+
+/* Camera tile resize grip (shown on hover; always on touch screens). */
+.cam-resize { position: absolute; width: 22px; height: 22px; padding: 0; border: 0; border-radius: 6px; background: rgba(7, 9, 15, 0.8); color: var(--text); display: flex; align-items: center; justify-content: center; cursor: nwse-resize; touch-action: none; opacity: 0; transition: opacity 0.15s, background 0.15s; pointer-events: auto; z-index: 2; }
+.cam-resize.br { right: 3px; bottom: 3px; }
+.cam-resize.tl { left: 3px; top: 3px; }
+.cam-resize.tl svg { transform: rotate(180deg); }
+.cam-tile:hover .cam-resize, .cam-resize:focus-visible, .cam-resize.active { opacity: 1; }
+.cam-resize:hover, .cam-resize.active { background: var(--accent); color: var(--on-accent); }
+.cam-tile:has(.cam-resize.active) { border-color: var(--accent) !important; }
+@media (hover: none) { .cam-resize { opacity: 0.85; } }
+/* Over-video tiles must receive hover so their grip can appear (the layer itself stays click-through). */
+.pip-tiles .cam-tile { pointer-events: auto; }
+.cam-resize:hover { opacity: 1; }
+
+/* Pre-start screen is opaque so YouTube's thumbnail (which can show the score) stays hidden. */
+.player-overlay.pre { background: radial-gradient(ellipse at center, #10261a 0%, #07090f 85%); }
+.unmute-pill { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 6; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 22px; border: 0; background: var(--accent); color: var(--on-accent); font-size: 14px; font-weight: 700; cursor: pointer; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); }
+.unmute-pill:hover { background: var(--accent-hover); }

@@ -16,7 +16,7 @@ import { initialPlayback, partyPosition, playbackPatch } from '../lib/playback.j
 import { playbackRange } from '../lib/matchTime.js';
 import { serverNow } from '../lib/serverClock.js';
 import NotFound from './NotFound.jsx';
-import { PanelResizer, usePanelWidth } from '../components/PanelResizer.jsx';
+import { VideoResizer, usePlayerWidth } from '../components/VideoResizer.jsx';
 
 // Solo viewing: the same player, with playback state kept locally instead of in the DB.
 function SoloPlayer({ match, events, keyEvents }) {
@@ -24,7 +24,8 @@ function SoloPlayer({ match, events, keyEvents }) {
   const [state, setState] = useState(() => initialPlayback(match, serverNow()));
   const stateRef = useRef(state);
   const gridRef = useRef(null);
-  const [sideWidth, setSideWidth] = usePanelWidth();
+  const playerBoxRef = useRef(null);
+  const [playerWidth, setPlayerWidth] = usePlayerWidth();
   stateRef.current = state;
   const now = useNow(500);
   const position = partyPosition(state, match, now);
@@ -56,12 +57,16 @@ function SoloPlayer({ match, events, keyEvents }) {
   const fresh = useFreshEvents(visibleKeyEvents(keyEvents, position).map((e) => e.id));
 
   return (
-    <div className="watch-grid" ref={gridRef} style={{ '--side-w': `${sideWidth}px` }}>
+    <div className={`watch-grid ${playerWidth ? 'custom-w' : ''}`} ref={gridRef} style={playerWidth ? { '--player-w': `${playerWidth}px` } : undefined}>
       <div className="watch-main">
-        <VideoPlayer
-          match={match} events={events} position={position} now={now} getTarget={getTarget}
-          isPlaying={state.is_playing} version={state.playback_version} controls={controls} variant="solo"
-        />
+        <div className="player-box" ref={playerBoxRef}>
+          <VideoPlayer
+            match={match} events={events} position={position} now={now} getTarget={getTarget}
+            isPlaying={state.is_playing} version={state.playback_version} controls={controls} variant="solo"
+            resumeKey={`dw.watching.${match.id}`}
+          />
+          <VideoResizer width={playerWidth} setWidth={setPlayerWidth} containerRef={gridRef} playerRef={playerBoxRef} />
+        </div>
         <div className="watch-title">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
             <ModeBadge mode={match.mode} small />
@@ -71,7 +76,6 @@ function SoloPlayer({ match, events, keyEvents }) {
         </div>
       </div>
       <aside className="watch-side">
-        <PanelResizer width={sideWidth} setWidth={setSideWidth} containerRef={gridRef} />
         <StartPartyCard match={match} />
         <div className="tl-box">
           <TimelineTab match={match} keyEvents={keyEvents} position={position} now={now} fresh={fresh}

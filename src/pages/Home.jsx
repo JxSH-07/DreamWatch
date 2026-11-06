@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Eye, Lock, Play, RotateCcw, Timer, UserPlus } from 'lucide-react';
+import { Eye, Lock, LogOut, Play, RotateCcw, Timer, Trash2, UserPlus } from 'lucide-react';
 import Header from '../components/Header.jsx';
 import CreatePartyModal from '../components/CreatePartyModal.jsx';
-import { Avatar, Loader, ModeBadge, TeamMark } from '../components/ui.jsx';
+import { Avatar, ConfirmDialog, Loader, ModeBadge, TeamMark } from '../components/ui.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useInvites } from '../context/InvitesContext.jsx';
 import { useSubscriptionGate } from '../context/SubscriptionContext.jsx';
+import { useToast } from '../context/ToastContext.jsx';
 import { useMatch, useMatches } from '../hooks/useMatch.js';
 import { useNow } from '../hooks/useNow.js';
 import { liveEdge, scoreAt, videoToMatchClock } from '../lib/matchTime.js';
@@ -134,24 +135,61 @@ function ClassicCard({ match, onParty }) {
 
 function YourParties({ matches }) {
   const { user } = useAuth();
-  const { invites } = useInvites();
+  const { invites, reload: reloadInvites } = useInvites();
+  const toast = useToast();
   const [rows, setRows] = useState([]);
+  const [confirm, setConfirm] = useState(null); // { kind: 'delete' | 'leave' | 'decline', party }
+  const [busy, setBusy] = useState(null);
+
   useEffect(() => {
     let active = true;
     supabase
       .from('party_members')
-      .select('status, role, party:parties(id, name, status, match_id, host_id, created_at, host:profiles!parties_host_id_fkey(display_name, avatar_color))')
+      .select('status, role, party:parties(id, name, status, match_id, host_id, created_at, deleted_at, host:profiles!parties_host_id_fkey(display_name, avatar_color))')
       .eq('user_id', user.id)
-      .neq('status', 'removed')
+      .in('status', ['invited', 'joined'])
       .then(({ data }) => {
         if (!active) return;
-        setRows((data ?? []).filter((r) => r.party && r.party.status !== 'ended')
+        setRows((data ?? []).filter((r) => r.party && r.party.status !== 'ended' && !r.party.deleted_at)
           .sort((a, b) => b.party.created_at.localeCompare(a.party.created_at)));
       });
     return () => { active = false; };
   }, [user.id, invites]);
   const titles = useMemo(() => Object.fromEntries(matches.map((m) => [m.id, m])), [matches]);
+
+  const run = async () => {
+    const { kind, party } = confirm;
+    setConfirm(null);
+    setBusy(party.id);
+    const { error } = await supabase.rpc(kind === 'delete' ? 'delete_party' : 'leave_party', { p_party: party.id });
+    setBusy(null);
+    if (error) {
+      toast(kind === 'delete' ? "Couldn't delete the party — try again" : "Couldn't leave the party — try again", 'warn');
+      return;
+    }
+    setRows((r) => r.filter((x) => x.party.id !== party.id));
+    reloadInvites();
+    toast(kind === 'delete' ? `Deleted ${party.name}` : kind === 'decline' ? 'Invite declined' : `You left ${party.name}`);
+  };
+
   if (!rows.length) return null;
+  const dialog = confirm && {
+    delete: {
+      title: `Delete ${confirm.party.name}?`,
+      body: 'The party ends for everyone still watching, and it disappears from everyone\'s list. The invite link stops working. This can\'t be undone.',
+      cta: 'Delete party',
+    },
+    leave: {
+      title: `Leave ${confirm.party.name}?`,
+      body: 'It will disappear from your parties. You can rejoin later with the invite link.',
+      cta: 'Leave party',
+    },
+    decline: {
+      title: `Decline the invite to ${confirm.party.name}?`,
+      body: 'It will disappear from your parties and invites. You can still join later with the invite link.',
+      cta: 'Decline',
+    },
+  }[confirm.kind];
 
   return (
     <section aria-labelledby="yp-h" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -159,6 +197,7 @@ function YourParties({ matches }) {
       {rows.map(({ party, role, status }) => {
         const m = titles[party.match_id];
         const href = party.status === 'live' ? `/party/${party.id}` : status === 'joined' ? `/party/${party.id}/lobby` : `/invite/${party.id}`;
+        const secondary = role === 'host' ? 'delete' : status === 'joined' ? 'leave' : 'decline';
         return (
           <div key={party.id} className="party-row">
             <Avatar name={party.host?.display_name} ring={party.host?.avatar_color} size={40} />
@@ -168,10 +207,26 @@ function YourParties({ matches }) {
                 {role === 'host' ? 'You host' : `${party.host?.display_name} invited you`} · {m?.title} · {party.status === 'live' ? 'Watching now' : 'In the lobby'}
               </div>
             </div>
-            <Link to={href} className="btn btn-primary btn-lift" style={{ height: 44 }}>{status === 'joined' ? 'Rejoin' : 'Join party'}</Link>
+            <div className="party-row-actions">
+              <button
+                type="button"
+                className={`btn ${secondary === 'delete' ? 'btn-danger' : 'btn-ghost'}`}
+                style={{ height: 44 }}
+                disabled={busy === party.id}
+                onClick={() => setConfirm({ kind: secondary, party })}
+              >
+                {secondary === 'delete' ? <Trash2 size={15} strokeWidth={2.2} aria-hidden="true" /> : <LogOut size={15} strokeWidth={2.2} aria-hidden="true" />}
+                {secondary === 'delete' ? 'Delete' : secondary === 'leave' ? 'Leave' : 'Decline'}
+              </button>
+              <Link to={href} className="btn btn-primary btn-lift" style={{ height: 44 }}>{status === 'joined' ? 'Rejoin' : 'Join party'}</Link>
+            </div>
           </div>
         );
       })}
+      {dialog && (
+        <ConfirmDialog title={dialog.title} body={dialog.body} cta={dialog.cta} danger
+          onCancel={() => setConfirm(null)} onConfirm={run} />
+      )}
     </section>
   );
 }

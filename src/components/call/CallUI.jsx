@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Mic, MicOff, Video, VideoOff } from 'lucide-react';
 import { useCall } from '../../context/CallContext.jsx';
 import { useParty } from '../../context/PartyContext.jsx';
@@ -11,8 +11,63 @@ function tint(hex, a) {
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
 }
 
+// Grip on a tile's corner. Dragging resizes every camera tile in that layout (5:3).
+// corner 'br' grows down-right (strip); 'tl' grows up-left (tiles anchored bottom-right on the video).
+function TileResizeGrip({ corner, width, onResize, onReset }) {
+  const drag = useRef(null);
+  const [active, setActive] = useState(false);
+  const sign = corner === 'tl' ? -1 : 1;
+
+  const onPointerDown = (e) => {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    e.stopPropagation();
+    drag.current = { x: e.clientX, y: e.clientY, w: width };
+    e.currentTarget.setPointerCapture(e.pointerId);
+    setActive(true);
+  };
+  const onPointerMove = (e) => {
+    if (!drag.current) return;
+    const dx = e.clientX - drag.current.x;
+    const dy = (e.clientY - drag.current.y) / TILE_RATIO;
+    onResize(drag.current.w + sign * (Math.abs(dx) > Math.abs(dy) ? dx : dy));
+  };
+  const end = () => {
+    drag.current = null;
+    setActive(false);
+  };
+  const onKeyDown = (e) => {
+    const step = e.shiftKey ? 48 : 16;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === '+') { e.preventDefault(); onResize(width + step); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === '-') { e.preventDefault(); onResize(width - step); }
+    if (e.key === 'Escape') { e.preventDefault(); onReset(); }
+  };
+
+  return (
+    <button
+      type="button"
+      className={`cam-resize ${corner} ${active ? 'active' : ''}`}
+      aria-label="Resize camera tiles"
+      title="Drag to resize cameras · double-click to reset"
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={end}
+      onPointerCancel={end}
+      onDoubleClick={onReset}
+      onKeyDown={onKeyDown}
+    >
+      <svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true">
+        <path d="M11 3 3 11M11 7 7 11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    </button>
+  );
+}
+
+const TILE_RATIO = 0.6; // height / width
+
 // A participant's camera tile. Audio plays through <CallAudio>, so video is always muted here.
-export function CallTile({ stream, version, name, ring, self, micOff, speaking, width = 120, height = 72, label }) {
+// `resize` = { corner, onResize(width), onReset() } adds a drag grip.
+export function CallTile({ stream, version, name, ring, self, micOff, speaking, width = 120, label, resize }) {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
@@ -25,9 +80,9 @@ export function CallTile({ stream, version, name, ring, self, micOff, speaking, 
   return (
     <span
       className={`cam-tile ${speaking ? 'speaking' : ''}`}
-      role="img"
+      role="group"
       aria-label={label ?? `${self ? 'Your' : `${name}'s`} camera${micOff ? ', mic off' : ''}`}
-      style={{ width, height, borderColor: ring, background: `linear-gradient(160deg, ${tint(ring, 0.38)} 0%, #101727 75%)` }}
+      style={{ width, borderColor: ring, background: `linear-gradient(160deg, ${tint(ring, 0.38)} 0%, #101727 75%)` }}
     >
       <video ref={ref} autoPlay playsInline muted className={self ? 'mirror' : ''} />
       {!stream && <span className="cam-init" aria-hidden="true">{initial(name)}</span>}
@@ -35,6 +90,7 @@ export function CallTile({ stream, version, name, ring, self, micOff, speaking, 
       {micOff && (
         <span className="cam-mic-off" title="Mic off"><MicOff size={9} strokeWidth={3} aria-hidden="true" /></span>
       )}
+      {resize && <TileResizeGrip corner={resize.corner} width={width} onResize={resize.onResize} onReset={resize.onReset} />}
     </span>
   );
 }
@@ -109,17 +165,18 @@ export function CallControls() {
 
 // Camera tiles over the match picture ("On video" layout).
 export function PipTiles({ people, isHost }) {
-  const { media, layout, speaking } = useCall();
+  const { media, layout, speaking, tileWidths, setTileWidth } = useCall();
   if (layout !== 'pip') return null;
   const live = people.filter((p) => media[p.userId]?.video);
   if (!live.length) return null;
+  const resize = { corner: 'tl', onResize: (w) => setTileWidth('pip', w), onReset: () => setTileWidth('pip', null) };
   return (
     <div className="pip-tiles" role="group" aria-label="Participant cameras" style={{ bottom: isHost ? 100 : 66 }}>
       {live.map((p) => {
         const m = media[p.userId];
         return (
           <CallTile key={p.userId} stream={m.stream} version={m.version} name={p.name} ring={p.ring} self={m.self}
-            micOff={!m.mic} speaking={speaking?.has(p.userId)} width={112} height={66} />
+            micOff={!m.mic} speaking={speaking?.has(p.userId)} width={tileWidths.pip} resize={resize} />
         );
       })}
     </div>
